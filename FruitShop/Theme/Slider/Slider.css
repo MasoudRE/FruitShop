@@ -1,0 +1,21 @@
+﻿.carousel-inner.onebyone-carosel { margin: auto; width: 90%; }
+.onebyone-carosel .active.left { left: -33.33%; }
+.onebyone-carosel .active.right { left: 33.33%; }
+.onebyone-carosel .next { left: 33.33%; }
+.onebyone-carosel .prev { left: -33.33%; }
+
+
+.carousel-control.left {
+background-image:url(../../Image/arrow_left.png);
+background-repeat:no-repeat;
+background-position-y:center;
+width:32px;
+}
+
+
+.carousel-control.right{
+background-image:url(../../Image/arrow_right.png);
+background-repeat:no-repeat;
+background-position-y:center;
+width:32px;
+}

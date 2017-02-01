@@ -1,11 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DropDownList.aspx.cs" Inherits="Page_DropDownList" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DropDownList.aspx.cs" Inherits="FruitShop.Element.DropDown" %>
+
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link href="../CSS/CSS.css" rel="stylesheet" />
+    <link href="/CSS/CSS.css" rel="stylesheet" />
+    <script src="../Theme/js/jquery.min.js"></script>
 
     <%-- bootstrap --%>
     <link href="/Theme/bootstrap-3.3.5/css/bootstrap-Theme.css" rel="stylesheet" />
@@ -20,11 +22,10 @@
     <link href="/Theme/MDL/material.css" rel="stylesheet" />
     <link href="/Theme/MDL/icon.css" rel="stylesheet" />
     <link href="/Theme/MDL/css.css" rel="stylesheet" />
-
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+      <div>
             <asp:Label runat="server" ID="Label_Status"></asp:Label>
         </div>
 
