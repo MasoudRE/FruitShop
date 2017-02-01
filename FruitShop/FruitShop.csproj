@@ -107,6 +107,7 @@
     <Content Include="bin\DataLayer.dll" />
     <Content Include="bin\DataLayer.pdb" />
     <Content Include="CSS\CSS.css" />
+    <Content Include="Element\DropDownList.aspx" />
     <Content Include="Element\GridView.aspx" />
     <Content Include="Mahsolat\Albalo.jpg" />
     <Content Include="Mahsolat\Ananas.jpg" />
@@ -428,6 +429,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Element\DropDownList.aspx.cs">
+      <DependentUpon>DropDownList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Element\DropDownList.aspx.designer.cs">
+      <DependentUpon>DropDownList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Element\GridView.aspx.cs">
       <DependentUpon>GridView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
