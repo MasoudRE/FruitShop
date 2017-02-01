@@ -10,8 +10,10 @@
             <li>
                 <a href="Customer.aspx">
                     <img alt="" src="Panel Management/image/statistics.png">
-                    <span>افزودن مشتری</span>
-                </a>
+                    <span>افزودن مشتری</span>    
+
+
+                </a>    
             </li>
             <li>
                 <a href="Update_Ashkhas.aspx">
