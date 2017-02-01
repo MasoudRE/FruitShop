@@ -107,6 +107,7 @@
     <Content Include="bin\DataLayer.dll" />
     <Content Include="bin\DataLayer.pdb" />
     <Content Include="CSS\CSS.css" />
+    <Content Include="Element\DropDownList.aspx" />
     <Content Include="Element\GridView.aspx" />
     <Content Include="Mahsolat\Albalo.jpg" />
     <Content Include="Mahsolat\Ananas.jpg" />
@@ -259,6 +260,7 @@
     <Content Include="Panel Management\Wordpress Tv - Free farsi wp learning video.url" />
     <Content Include="Customer.aspx" />
     <Content Include="Profile.aspx" />
+    <Content Include="ChangePass.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -428,6 +430,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Element\DropDownList.aspx.cs">
+      <DependentUpon>DropDownList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Element\GridView.aspx.cs">
       <DependentUpon>GridView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -527,6 +533,13 @@
     </Compile>
     <Compile Include="Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePass.aspx.cs">
+      <DependentUpon>ChangePass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePass.aspx.designer.cs">
+      <DependentUpon>ChangePass.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

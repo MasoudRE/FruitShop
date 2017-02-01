@@ -69,8 +69,8 @@
             <div runat="server" id="Div_Mohit" visible="true" style="margin-top: -49px; height: 32px; width:255px;">
 
                 <div>
-                     <span style="font-family: 'B Nazanin'; font-size: medium; margin-left:60px;">
-                        <asp:Label ID="lb" runat="server" Text="محیط کاربری" Font-Bold="true" ForeColor="Black"></asp:Label></span>
+                     <a href="Profile.aspx"><span style="font-family: 'B Nazanin'; font-size: medium; margin-left:60px;">
+                        <asp:Label ID="lb" runat="server" Text="محیط کاربری" Font-Bold="true" ForeColor="Black"/></span></a>
                     <span style="font-family: 'B Nazanin'; font-size: medium; margin-left:5px;">
                         <asp:Label ID="lb_Mohit" runat="server" Text="خالی" Font-Bold="true" ForeColor="White"></asp:Label></span>
                     <span style="font-family: 'B Nazanin'; font-size: larger; margin-left:10px;">
