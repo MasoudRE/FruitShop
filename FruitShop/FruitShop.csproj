@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9E89251D-074D-4D6D-AE3F-5CE9972F10DE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FruitShop</RootNamespace>
+    <AssemblyName>FruitShop</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\DataLayer.dll" />
+    <Content Include="bin\DataLayer.pdb" />
+    <Content Include="CSS\CSS.css" />
+    <Content Include="Element\GridView.aspx" />
+    <Content Include="Mahsolat\Albalo.jpg" />
+    <Content Include="Mahsolat\Ananas.jpg" />
+    <Content Include="Mahsolat\Ananas2.jpg" />
+    <Content Include="Mahsolat\Anar.jpg" />
+    <Content Include="Mahsolat\AnarBerjeston.jpg" />
+    <Content Include="Mahsolat\Beh1.jpg" />
+    <Content Include="Mahsolat\Beh2.jpg" />
+    <Content Include="Mahsolat\Gilas.jpg" />
+    <Content Include="Mahsolat\Golabi.jpg" />
+    <Content Include="Mahsolat\Gorje.jpg" />
+    <Content Include="Mahsolat\HoloZaferani.jpg" />
+    <Content Include="Mahsolat\Khormalo.jpg" />
+    <Content Include="Mahsolat\Kivi.jpg" />
+    <Content Include="Mahsolat\Limoshirin.jpg" />
+    <Content Include="Mahsolat\LimoTorsh.jpg" />
+    <Content Include="Mahsolat\Moz1.jpg" />
+    <Content Include="Mahsolat\Moz2.jpg" />
+    <Content Include="Mahsolat\Narangi.jpg" />
+    <Content Include="Mahsolat\Nargil.jpg" />
+    <Content Include="Mahsolat\PorteghalJonob.jpg" />
+    <Content Include="Mahsolat\PorteghalValensiya.jpg" />
+    <Content Include="Mahsolat\Shalil.jpg" />
+    <Content Include="Mahsolat\SibSabz.jpg" />
+    <Content Include="Mahsolat\Talebi.jpg" />
+    <Content Include="Mahsolat\TotFarangi1.jpg" />
+    <Content Include="Mahsolat\TotFarangi2.jpg" />
+    <Content Include="Mahsolat\ZardAlo.jpg" />
+    <Content Include="Menu\index.htm" />
+    <Content Include="Menu\index_files\ebab_mbmcp.gif" />
+    <Content Include="Menu\index_files\ebab_mbmcp_c.gif" />
+    <Content Include="Menu\index_files\ebab_mbmcp_c2.gif" />
+    <Content Include="Menu\index_files\ebab_mbmcp_d.gif" />
+    <Content Include="Menu\index_files\filelist_4i57.txt" />
+    <Content Include="Menu\index_files\mbcsmbmcp.css" />
+    <Content Include="Menu\index_files\mbjsmbmcp.js" />
+    <Content Include="Menu\index_files\menu_bg.png" />
+    <Content Include="Menu\index_files\menu_bg1.png" />
+    <Content Include="Mahsolat\Albalo.jpg" />
+    <Content Include="Mahsolat\Ananas.jpg" />
+    <Content Include="Mahsolat\Ananas2.jpg" />
+    <Content Include="Mahsolat\Anar.jpg" />
+    <Content Include="Mahsolat\AnarBerjeston.jpg" />
+    <Content Include="Mahsolat\Beh1.jpg" />
+    <Content Include="Mahsolat\Beh2.jpg" />
+    <Content Include="Mahsolat\Gilas.jpg" />
+    <Content Include="Mahsolat\Golabi.jpg" />
+    <Content Include="Mahsolat\Gorje.jpg" />
+    <Content Include="Mahsolat\HoloZaferani.jpg" />
+    <Content Include="Mahsolat\Khormalo.jpg" />
+    <Content Include="Mahsolat\Kivi.jpg" />
+    <Content Include="Mahsolat\Limoshirin.jpg" />
+    <Content Include="Mahsolat\LimoTorsh.jpg" />
+    <Content Include="Mahsolat\Moz1.jpg" />
+    <Content Include="Mahsolat\Moz2.jpg" />
+    <Content Include="Mahsolat\Narangi.jpg" />
+    <Content Include="Mahsolat\Nargil.jpg" />
+    <Content Include="Mahsolat\PorteghalJonob.jpg" />
+    <Content Include="Mahsolat\PorteghalValensiya.jpg" />
+    <Content Include="Mahsolat\Shalil.jpg" />
+    <Content Include="Mahsolat\SibSabz.jpg" />
+    <Content Include="Mahsolat\Talebi.jpg" />
+    <Content Include="Mahsolat\TotFarangi1.jpg" />
+    <Content Include="Mahsolat\TotFarangi2.jpg" />
+    <Content Include="Mahsolat\ZardAlo.jpg" />
+    <Content Include="Menu\index.htm" />
+    <Content Include="Menu\index_files\ebab_mbmcp.gif" />
+    <Content Include="Menu\index_files\ebab_mbmcp_c.gif" />
+    <Content Include="Menu\index_files\ebab_mbmcp_c2.gif" />
+    <Content Include="Menu\index_files\ebab_mbmcp_d.gif" />
+    <Content Include="Menu\index_files\filelist_4i57.txt" />
+    <Content Include="Menu\index_files\mbcsmbmcp.css" />
+    <Content Include="Menu\index_files\mbjsmbmcp.js" />
+    <Content Include="Menu\index_files\menu_bg.png" />
+    <Content Include="Menu\index_files\menu_bg1.png" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Management.master" />
+    <Content Include="MasterPage.master" />
+    <Content Include="bin\ApplicationInsights.config" />
+    <Content Include="bin\FruitShop.dll.config" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\FruitShop.csprojResolveAssemblyReference.cache" />
+    <Content Include="Panel Management\CSS\CSS.css" />
+    <Content Include="Panel Management\doc.js" />
+    <Content Include="Panel Management\image\1.jpg" />
+    <Content Include="Panel Management\image\2.jpg" />
+    <Content Include="Panel Management\image\3.png" />
+    <Content Include="Panel Management\image\Change.png" />
+    <Content Include="Panel Management\image\date.png" />
+    <Content Include="Panel Management\image\Edit_User.png" />
+    <Content Include="Panel Management\image\full-time.png" />
+    <Content Include="Panel Management\image\ico1.png" />
+    <Content Include="Panel Management\image\ico2.png" />
+    <Content Include="Panel Management\image\ico3.png" />
+    <Content Include="Panel Management\image\ico4.png" />
+    <Content Include="Panel Management\image\ico5.png" />
+    <Content Include="Panel Management\image\ico6.png" />
+    <Content Include="Panel Management\image\ico7.png" />
+    <Content Include="Panel Management\image\images.jpg" />
+    <Content Include="Panel Management\image\lock.png" />
+    <Content Include="Panel Management\image\logo.png" />
+    <Content Include="Panel Management\image\Mohit.png" />
+    <Content Include="Panel Management\image\my-account.png" />
+    <Content Include="Panel Management\image\nav.png" />
+    <Content Include="Panel Management\image\order-149.png" />
+    <Content Include="Panel Management\image\refresh.png" />
+    <Content Include="Panel Management\image\Sabad.png" />
+    <Content Include="Panel Management\image\shipping.png" />
+    <Content Include="Panel Management\image\statistics.png" />
+    <Content Include="Panel Management\image\User.png" />
+    <Content Include="Panel Management\jquery.flot.js" />
+    <Content Include="Panel Management\jquery.min.js" />
+    <Content Include="Panel Management\style.css" />
+    <Content Include="Theme\bootstrap-3.3.5\css\bootstrap-theme.css.map" />
+    <Content Include="Theme\bootstrap-3.3.5\css\bootstrap.css.map" />
+    <Content Include="Theme\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Theme\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Theme\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Theme\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Theme\FileUpload\dist\fonts\dropify.eot" />
+    <Content Include="Theme\FileUpload\dist\fonts\dropify.ttf" />
+    <Content Include="Theme\FileUpload\dist\fonts\dropify.woff" />
+    <Content Include="Theme\FileUpload\src\fonts\dropify.eot" />
+    <Content Include="Theme\FileUpload\src\fonts\dropify.ttf" />
+    <Content Include="Theme\FileUpload\src\fonts\dropify.woff" />
+    <Content Include="Theme\FileUpload\src\sass\demo.scss" />
+    <Content Include="Theme\FileUpload\src\sass\demo\helpers\_grid.scss" />
+    <Content Include="Theme\FileUpload\src\sass\demo\helpers\_mixins.scss" />
+    <Content Include="Theme\FileUpload\src\sass\demo\helpers\_shortcuts.scss" />
+    <Content Include="Theme\FileUpload\src\sass\demo\_grid.scss" />
+    <Content Include="Theme\FileUpload\src\sass\demo\_normalize.scss" />
+    <Content Include="Theme\FileUpload\src\sass\demo\_reset.scss" />
+    <Content Include="Theme\FileUpload\src\sass\demo\_typo.scss" />
+    <Content Include="Theme\FileUpload\src\sass\demo\_variables.scss" />
+    <Content Include="Theme\FileUpload\src\sass\dropify.scss" />
+    <Content Include="Theme\FileUpload\src\sass\_dropify-font.scss" />
+    <Content Include="Theme\Font\AdobeArabic-Regular.eot" />
+    <Content Include="Theme\Font\AdobeArabic-Regular.ttf" />
+    <Content Include="Theme\Font\AdobeArabic-Regular.woff" />
+    <Content Include="Theme\Font\AdobeArabic-Regular.woff2" />
+    <Content Include="Panel Management\font\BYekan.eot" />
+    <Content Include="Panel Management\font\BYekan.ttf" />
+    <Content Include="Panel Management\font\BYekan.woff" />
+    <Content Include="Panel Management\Wordpress Tv - Free farsi wp learning video.url" />
+    <Content Include="Customer.aspx" />
+    <Content Include="Profile.aspx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Access.aspx" />
+    <Content Include="Ashkhas.aspx" />
+    <Content Include="BarNameh.aspx" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\EntityFramework.xml" />
+    <Content Include="bin\FruitShop.dll" />
+    <Content Include="bin\FruitShop.pdb" />
+    <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
+    <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.xml" />
+    <Content Include="bin\Microsoft.AI.Web.dll" />
+    <Content Include="bin\Microsoft.AI.Web.xml" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.xml" />
+    <Content Include="bin\Microsoft.ApplicationInsights.dll" />
+    <Content Include="bin\Microsoft.ApplicationInsights.xml" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="DefaultMag.aspx" />
+    <Content Include="Gallery.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Login.aspx" />
+    <Content Include="Management.aspx" />
+    <Content Include="Miveh.aspx" />
+    <Content Include="obj\Debug\FruitShop.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\FruitShop.dll" />
+    <Content Include="obj\Debug\FruitShop.pdb" />
+    <Content Include="Panel Management\image\date.png" />
+    <Content Include="Panel Management\image\full-time.png" />
+    <Content Include="Panel Management\image\ico1.png" />
+    <Content Include="Panel Management\image\ico2.png" />
+    <Content Include="Panel Management\image\ico3.png" />
+    <Content Include="Panel Management\image\ico4.png" />
+    <Content Include="Panel Management\image\ico5.png" />
+    <Content Include="Panel Management\image\ico6.png" />
+    <Content Include="Panel Management\image\ico7.png" />
+    <Content Include="Panel Management\image\lock.png" />
+    <Content Include="Panel Management\image\logo.png" />
+    <Content Include="Panel Management\image\my-account.png" />
+    <Content Include="Panel Management\image\nav.png" />
+    <Content Include="Panel Management\image\order-149.png" />
+    <Content Include="Panel Management\image\refresh.png" />
+    <Content Include="Panel Management\image\shipping.png" />
+    <Content Include="Panel Management\image\statistics.png" />
+    <Content Include="Panel Management\jquery.flot.js" />
+    <Content Include="Panel Management\jquery.min.js" />
+    <Content Include="Sabad.aspx" />
+    <Content Include="Sab_Par.aspx" />
+    <Content Include="ShowProduct.aspx" />
+    <Content Include="Slider\images\Slid1-tn.jpg" />
+    <Content Include="Slider\images\Slid1.jpg" />
+    <Content Include="Slider\images\Slid2-tn.jpg" />
+    <Content Include="Slider\images\Slid2.jpg" />
+    <Content Include="Slider\images\Slid3-tn.jpg" />
+    <Content Include="Slider\images\Slid3.jpg" />
+    <Content Include="Slider\images\Slid4-tn.jpg" />
+    <Content Include="Slider\images\Slid4.jpg" />
+    <Content Include="Slider\images\Slid5-tn.jpg" />
+    <Content Include="Slider\images\Slid5.jpg" />
+    <Content Include="Slider\images\Slid6-tn.jpg" />
+    <Content Include="Slider\images\Slid6.jpg" />
+    <Content Include="Slider\images\Slid7-tn.jpg" />
+    <Content Include="Slider\images\Slid7.jpg" />
+    <Content Include="Slider\slider.html" />
+    <Content Include="Slider\sliderengine\amazingslider-1.css" />
+    <Content Include="Slider\sliderengine\amazingslider.js" />
+    <Content Include="Slider\sliderengine\bottomshadow-110-95-0.png" />
+    <Content Include="Slider\sliderengine\carouselarrows-32-32-0.png" />
+    <Content Include="Slider\sliderengine\html5boxplayer.swf" />
+    <Content Include="Slider\sliderengine\html5boxplayer_fullscreen.png" />
+    <Content Include="Slider\sliderengine\html5boxplayer_hd.png" />
+    <Content Include="Slider\sliderengine\html5boxplayer_playpause.png" />
+    <Content Include="Slider\sliderengine\html5boxplayer_playvideo.png" />
+    <Content Include="Slider\sliderengine\html5boxplayer_volume.png" />
+    <Content Include="Slider\sliderengine\initslider-1.js" />
+    <Content Include="Slider\sliderengine\jquery.js" />
+    <Content Include="Slider\sliderengine\lightbox-close.png" />
+    <Content Include="Slider\sliderengine\lightbox-loading.gif" />
+    <Content Include="Slider\sliderengine\lightbox-navnext.png" />
+    <Content Include="Slider\sliderengine\lightbox-navprev.png" />
+    <Content Include="Slider\sliderengine\lightbox-next.png" />
+    <Content Include="Slider\sliderengine\lightbox-playvideo.png" />
+    <Content Include="Slider\sliderengine\lightbox-prev.png" />
+    <Content Include="Slider\sliderengine\navarrows-20-20-1.png" />
+    <Content Include="Slider\sliderengine\navplaypause-20-20-1.png" />
+    <Content Include="Slider\sliderengine\playvideo-64-64-0.png" />
+    <Content Include="Theme\bootbox\bootbox.js" />
+    <Content Include="Theme\bootbox\bootbox.min.js" />
+    <Content Include="Theme\bootstrap-3.3.5\bootstrap-rtl.min.css" />
+    <Content Include="Theme\bootstrap-3.3.5\css\bootstrap-theme.css" />
+    <Content Include="Theme\bootstrap-3.3.5\css\bootstrap-theme.min.css" />
+    <Content Include="Theme\bootstrap-3.3.5\css\bootstrap.css" />
+    <Content Include="Theme\bootstrap-3.3.5\css\bootstrap.min.css" />
+    <Content Include="Theme\bootstrap-3.3.5\css\gridview_Style.css" />
+    <Content Include="Theme\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Theme\bootstrap-3.3.5\js\bootstrap.js" />
+    <Content Include="Theme\bootstrap-3.3.5\js\bootstrap.min.js" />
+    <Content Include="Theme\bootstrap-3.3.5\js\npm.js" />
+    <Content Include="Theme\chosen_v1.6.2\chosen-sprite.png" />
+    <Content Include="Theme\chosen_v1.6.2\chosen.css" />
+    <Content Include="Theme\chosen_v1.6.2\chosen.jquery.js" />
+    <Content Include="Theme\chosen_v1.6.2\chosen.jquery.min.js" />
+    <Content Include="Theme\chosen_v1.6.2\chosen.min.css" />
+    <Content Include="Theme\chosen_v1.6.2\chosen.proto.js" />
+    <Content Include="Theme\chosen_v1.6.2\chosen.proto.min.js" />
+    <Content Include="Theme\css\ClearFix.css" />
+    <Content Include="Theme\css\me_Style.css" />
+    <Content Include="Theme\css\styles_Dashboard.css" />
+    <Content Include="Theme\css\style_Login.css" />
+    <Content Include="Theme\Date_picker\js-persian-cal.css" />
+    <Content Include="Theme\Date_picker\js-persian-cal.min.js" />
+    <Content Include="Theme\Date_picker\pcal.png" />
+    <Content Include="Theme\Dialog\dialog-polyfill.css" />
+    <Content Include="Theme\Dialog\dialog-polyfill.js" />
+    <Content Include="Theme\FileUpload\dist\css\demo.css" />
+    <Content Include="Theme\FileUpload\dist\css\dropify.css" />
+    <Content Include="Theme\FileUpload\dist\css\dropify.min.css" />
+    <Content Include="Theme\FileUpload\dist\fonts\dropify.svg" />
+    <Content Include="Theme\FileUpload\dist\js\dropify.js" />
+    <Content Include="Theme\FileUpload\dist\js\dropify.min.js" />
+    <Content Include="Theme\FileUpload\src\fonts\dropify.svg" />
+    <Content Include="Theme\FileUpload\src\images\cover.jpg" />
+    <Content Include="Theme\FileUpload\src\images\test-image-1.jpg" />
+    <Content Include="Theme\FileUpload\src\images\test-image-2.jpg" />
+    <Content Include="Theme\FileUpload\src\js\dropify.js" />
+    <Content Include="Theme\Font\AdobeArabic-Regular.svg" />
+    <Content Include="Theme\Font\font.css" />
+    <Content Include="Theme\js\ionic.bundle.js" />
+    <Content Include="Theme\js\jquery.min.js" />
+    <Content Include="Theme\js\recaptcha\api.js" />
+    <Content Include="Theme\js\recaptcha\api_fa.js" />
+    <Content Include="Theme\materialize\materialize.min.css" />
+    <Content Include="Theme\materialize\materialize.min.js" />
+    <Content Include="Theme\MDL\css.css" />
+    <Content Include="Theme\MDL\icon.css" />
+    <Content Include="Theme\MDL\material.css" />
+    <Content Include="Theme\MDL\material.js" />
+    <Content Include="User.aspx" />
+    <Content Include="Varizi.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Element\GridView.aspx.cs">
+      <DependentUpon>GridView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Element\GridView.aspx.designer.cs">
+      <DependentUpon>GridView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Sabad.aspx.cs">
+      <DependentUpon>Sabad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sab_Par.aspx.cs">
+      <DependentUpon>Sab_Par.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowProduct.aspx.cs">
+      <DependentUpon>ShowProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Varizi.aspx.cs">
+      <DependentUpon>Varizi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Access.aspx.cs">
+      <DependentUpon>Access.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ashkhas.aspx.cs">
+      <DependentUpon>Ashkhas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BarNameh.aspx.cs">
+      <DependentUpon>BarNameh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultMag.aspx.cs">
+      <DependentUpon>DefaultMag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gallery.aspx.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management.aspx.cs">
+      <DependentUpon>Management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management.master.cs">
+      <DependentUpon>Management.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Miveh.aspx.cs">
+      <DependentUpon>Miveh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Customer.aspx.cs">
+      <DependentUpon>Customer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer.aspx.designer.cs">
+      <DependentUpon>Customer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="Theme\Semantic-UI-CSS-master\components\" />
+    <Folder Include="Theme\Semantic-UI-CSS-master\themes\default\assets\fonts\" />
+    <Folder Include="Theme\Semantic-UI-CSS-master\themes\default\assets\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{c0438355-d321-4cec-b5a5-c410e4abadf2}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7133</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:7133/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

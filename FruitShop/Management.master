@@ -1,0 +1,144 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Management.master.cs" Inherits="Management" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>مدیریت</title>
+    <link type="text/css" rel="stylesheet" href="Panel Management/style.css" />
+    <script type="text/javascript" src="Panel Management/jquery.min.js"></script>
+    <script type="text/javascript" src="Panel Management/jquery.flot.js"></script>
+    <script type="text/javascript" src="Panel Management/doc.js"></script>
+
+    <link type="text/css" href="CSS/CSS.css" rel="stylesheet" />
+
+
+
+    <%-- bootstrap --%>
+    <link href="Theme/bootstrap-3.3.5/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="Theme/bootstrap-3.3.5/css/bootstrap.css" rel="stylesheet" />
+    <link href="Theme/bootstrap-3.3.5/css/gridview_Style.css" rel="stylesheet" />
+    <script src="Theme/bootstrap-3.3.5/js/bootstrap.js"></script>
+    
+    <link href="Theme/bootstrap-3.3.5/bootstrap-rtl.min.css" rel="stylesheet" />
+
+    <%--material--%>
+    <script src="Theme/MDL/material.js"></script>
+    <link href="Theme/MDL/material.css" rel="stylesheet" />
+    <link href="Theme/MDL/icon.css" rel="stylesheet" />
+    <link href="Theme/MDL/css.css" rel="stylesheet" />
+
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div class="body_style">
+            <div class="menu">
+                <div style="background-color: #ce1818; width: 180px; height: 35px; float: right; margin-right: 10px; border: 1px solid #ce1818; border-radius: 5px;">
+                    <span style="font-family: 'B Nazanin'; margin-right: 28px;">
+                        <asp:Label ID="lb_mag" runat="server" Text="مدیریت سایت" Font-Bold="true" Font-Size="X-Large" /></span>
+                </div>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li class="active">
+                        <div class="fix">
+                            <span class="ico">
+                                <asp:Image ID="Image2" runat="server" ImageUrl="Panel Management/image/ico1.png" /></span>
+                            <a href="Management.aspx"><span class="value" style="color: #cccccc;">مدیریت</span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fix">
+                            <span class="ico">
+                                <asp:Image ID="Image1" runat="server" ImageUrl="Panel Management/image/ico2.png" /></span>
+                            <span class="value">مدیریت کاربران</span>
+                        </div>
+                        <ul>
+                            <li><a href="Ashkhas.aspx">مشتری</a></li>
+                            <li><a href="Ashkhas.aspx">صاحب بار</a></li>
+                            <li><a href="Ashkhas.aspx">پرسنل</a></li>
+                            <li><a href="About.aspx">مدیر</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="fix">
+                            <span class="ico">
+                                <asp:Image ID="Image3" runat="server" ImageUrl="Panel Management/image/ico3.png" /></span>
+                            <span class="value">مدیریت مالی</span>
+                        </div>
+                        <ul>
+                            <li><a href="Varizi.aspx">واریزی ها</a></li>
+                            <li><a href="/">گزارش هفته</a></li>
+                            <li><a href="/">گزارش ماه</a></li>
+                            <li><a href="/">گزارش سالانه</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="fix">
+                            <span class="ico">
+                                <asp:Image ID="Image4" runat="server" ImageUrl="Panel Management/image/ico4.png" /></span>
+                            <span class="value">بخش گزارش ها</span>
+                        </div>
+                        <ul>
+                            <li><a href="/">گزارش خرید ها</a></li>
+                            <li><a href="/">گزارش فروش ها</a></li>
+                            <li><a href="/">گزارش انبار</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="fix">
+                            <span class="ico">
+                                <img src="Panel Management/image/ico6.png"></span>
+                            <span class="value">میوه</span>
+                        </div>
+                        <ul>
+                            <li><a href="/">درج میوه در جدول خرید</a></li>
+                            <li><a href="Miveh.aspx">درج میوه در جدول محصولات</a></li>
+                            <li><a href="/">ویرایش جداول میوه</a></li>
+                            <li><a href="/">حذف میوه </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="fix">
+                            <span class="ico">
+                                <img src="Panel Management/image/ico5.png"></span>
+                            <span class="value">پیام ها</span>
+                        </div>
+                        <ul>
+                            <li><a href="/">پیام های سیستمی</a></li>
+                            <li><a href="/">پیام های کاربری</a></li>
+                            <li><a href="/">ارسال پیامس</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="fix">
+                            <span class="ico">
+                                <img src="Panel Management/image/ico7.png"></span>
+                            <span class="value">تنظیمات</span>
+                        </div>
+                        <ul>
+                            <li><a href="/">منو</a></li>
+                            <li><a href="/">اسلایدر</li>
+                            <li><a href="/">گالری</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="content">
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+
+            </div>
+
+        </div>
+
+    </form>
+</body>
+</html>

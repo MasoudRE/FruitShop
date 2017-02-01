@@ -1,0 +1,116 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>فروشگــــــــــــــاه آنــــــــلاین</title>
+    <!-- Start Menu -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="Menu/index_files/mbcsmbmcp.css" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- End Menu -->
+</head>
+<body>
+    <form id="form1" runat="server" style="background-color: #f3f3f3; height: 2100px;">
+
+        <div style="margin-left: 161px; width: 1010px;">
+            <!-- Strat Menu -->
+            <ul id="mbmcpebul_table" class="mbmcpebul_menulist css_menu" style="width: 1010px; height: 55px; border: 1px solid #008080; border-radius: 5px;">
+                <li class="topitem spaced_li">
+                    <div style="width: 245px;"><a class="button_1"></a></div>
+                </li>
+                <li class="topitem spaced_li">
+                    <div class="buttonbg" style="width: 100px;"><a href="Sabad.aspx">سبد خرید</a></div>
+                </li>
+                <li class="topitem spaced_li">
+                    <div class="buttonbg" style="width: 110px;"><a href="Contact.aspx">ارتباط با ما</a></div>
+                </li>
+                <li class="topitem spaced_li">
+                    <div class="arrow buttonbg" style="width: 145px;"><a class="button_4">حساب کاربری</a></div>
+                    <ul class="gradient_menu gradient81">
+                        <li><a href="Login.aspx">ورود</a></li>
+                        <li><a href="User.aspx">ثبت نام</a></li>
+                    </ul>
+                </li>
+                <li class="topitem spaced_li">
+                    <div class="buttonbg" style="width: 90px;"><a href="About.aspx">درباره ما</a></div>
+                </li>
+                <li class="topitem spaced_li">
+                    <div class="buttonbg" style="width: 115px;"><a href="Gallery.aspx">گالری تصاویر</a></div>
+                </li>
+                <li class="topitem spaced_li">
+                    <div class="arrow buttonbg" style="width: 125px;"><a class="button_7" href="ShowProduct.aspx">محصولات</a></div>
+                    <ul class="gradient_menu gradient121">
+                        <li><a title="">میوه ها</a></li>
+                        <li><a title="">صیفی جات</a></li>
+                        <li><a title="">سبزیجات</a></li>
+                    </ul>
+                </li>
+                <li class="topitem spaced_li">
+                    <div class="buttonbg" style="width: 60px;"><a href="Default.aspx">خانه</a></div>
+                </li>
+                <li class="topitem"></li>
+            </ul>
+
+            <script type="text/javascript" src="Menu/index.htm"></script>
+            <!-- End Menu -->
+
+            <!-- Btn Search -->
+            <div runat="server" id="Div_Search" visible="false" style="margin-top: -46px; margin-left: 22px;">
+                <asp:Button ID="btnSearch" Style="font-family: 'B Nazanin'; font-size: 14px;" runat="server" Text="جستجو" Width="60px" />
+                <div style="margin-top: -29px; margin-left: 73px;">
+                    <asp:TextBox runat="server" ID="txtSearch" Height="25px" Width="140px"></asp:TextBox>
+                </div>
+            </div>
+            <!-- End Btn -->
+
+            <div runat="server" id="Div_Mohit" visible="true" style="margin-top: -49px; height: 32px; width:255px;">
+
+                <div>
+                     <span style="font-family: 'B Nazanin'; font-size: medium; margin-left:60px;">
+                        <asp:Label ID="lb" runat="server" Text="محیط کاربری" Font-Bold="true" ForeColor="Black"></asp:Label></span>
+                    <span style="font-family: 'B Nazanin'; font-size: medium; margin-left:5px;">
+                        <asp:Label ID="lb_Mohit" runat="server" Text="خالی" Font-Bold="true" ForeColor="White"></asp:Label></span>
+                    <span style="font-family: 'B Nazanin'; font-size: larger; margin-left:10px;">
+                        <asp:Label ID="Exit" runat="server" Text="خروج" Font-Bold="true" ForeColor="White"></asp:Label></span>
+                        <div style="text-align:right; margin-top:-29px;"><asp:Image ID="Image1" runat="server" ImageUrl="~/Panel Management/image/Mohit.png" Width="30" Height="30"/></div>
+
+                </div>
+
+            </div>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <%--     <div style="background-color:grey; width:997px; height:100px; margin-top:7px; margin-left:5px; border: 1px solid #888; border-radius: 5px;">
+
+                <div class="footLink">
+                    <a href="/">خانه</a>
+                    | <a href="about.aspx">درباره</a>
+                    | <a href="contact.aspx">تماس</a>
+                    | <a href="news.aspx">اخبار</a>
+                    | <a href="members.aspx">ورود</a>
+                    | <a href="members.aspx?c=s">عضویت</a>
+                    <!--| <a href="winners.aspx">قرعه کشی</a>-->
+                    <!--| <a href="jobs.aspx">فرصت شغلی</a>-->
+                    | <a href="cooperation.aspx">همکاری</a>
+                </div>
+
+
+                <div class="copy">
+                    &copy طراحی و پیاده سازی 1389 - 1390، واحد فناوری اطلاعات کندوسلام.
+                    <br>
+                    حقوق مربوط به کلیه تصاویر و اطلاعات موجود درسایت متعلق به کندوسلام می باشد.
+		            <br>
+                    تمامی كالاها و خدمات این فروشگاه، حسب مورد دارای مجوزهای لازم از مراجع مربوطه می‌باشند و فعالیت‌های این سایت تابع قوانین و مقررات جمهوری اسلامی ایران است
+                </div>
+
+            </div>--%>
+            <div style="background-color: #008080; width: 997px; margin-left: 6px; height: 12px;">
+            </div>
+        </div>
+    </form>
+</body>
+</html>
