@@ -1,0 +1,14 @@
+﻿.quick-menu {
+    margin: 45px 0 0 0;
+    border-radius: 70px;
+    background-color: #4caf50;
+    padding: 14px;
+    text-align: center;
+    text-decoration: none !important;
+    color: #fff;
+}
+
+    .quick-menu a {
+        text-decoration: none !important;
+        color: #fff;
+    }
