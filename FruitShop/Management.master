@@ -59,9 +59,9 @@
                             <span class="value">مدیریت کاربران</span>
                         </div>
                         <ul>
-                            <li><a href="Ashkhas.aspx">مشتری</a></li>
+                            <li><a href="Customer.aspx">مشتری</a></li>
                             <li><a href="Ashkhas.aspx">صاحب بار</a></li>
-                            <li><a href="Ashkhas.aspx">پرسنل</a></li>
+                            <li><a href="Personnel.aspx">پرسنل</a></li>
                             <li><a href="About.aspx">مدیر</a></li>
                         </ul>
                     </li>
@@ -72,10 +72,8 @@
                             <span class="value">مدیریت مالی</span>
                         </div>
                         <ul>
-                            <li><a href="Varizi.aspx">واریزی ها</a></li>
-                            <li><a href="/">گزارش هفته</a></li>
-                            <li><a href="/">گزارش ماه</a></li>
-                            <li><a href="/">گزارش سالانه</a></li>
+                            <li><a href="Varizi.aspx">واریزی</a></li>
+                            <li><a href="BarNameh.aspx">بارنامه</a></li>
                         </ul>
                     </li>
                     <li>
@@ -85,22 +83,23 @@
                             <span class="value">بخش گزارش ها</span>
                         </div>
                         <ul>
-                            <li><a href="/">گزارش خرید ها</a></li>
-                            <li><a href="/">گزارش فروش ها</a></li>
-                            <li><a href="/">گزارش انبار</a></li>
+                            <li><a href="/">اطلاعات مانده حساب</a></li>
+                            <li><a href="BaghiMandeh_Product.aspx">باقی مانده محصول</a></li>
+                            <li><a href="/">گزارش فروش</a></li>
+                            <li><a href="/">گزارش خرید</a></li>
+                            <li><a href="/">گزارشات فردی</a></li>
                         </ul>
                     </li>
                     <li>
                         <div class="fix">
                             <span class="ico">
                                 <img src="Panel Management/image/ico6.png"></span>
-                            <span class="value">میوه</span>
+                            <span class="value">محصولات</span>
                         </div>
                         <ul>
-                            <li><a href="/">درج میوه در جدول خرید</a></li>
-                            <li><a href="Miveh.aspx">درج میوه در جدول محصولات</a></li>
-                            <li><a href="/">ویرایش جداول میوه</a></li>
-                            <li><a href="/">حذف میوه </a></li>
+                            <li><a href="Product.aspx">میوه</a></li>
+                            <li><a href="Product.aspx">صیفی جات</a></li>
+                            <li><a href="Product.aspx">سبد میوه</a></li>
                         </ul>
                     </li>
                     <li>

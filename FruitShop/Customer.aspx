@@ -30,7 +30,7 @@
         </div>
 
         <%-- Create Customer --%>
-        <div runat="server" visible="false" id="div_AddCustomer" style="border: 1px solid #2c2b3d; border-radius: 10px; width: 1000px; height: 400px; margin-top: 100px; margin-right: 70px;">
+        <div runat="server" visible="true" id="div_AddCustomer" style="border: 1px solid #2c2b3d; border-radius: 10px; width: 1000px; height: 450px; margin-top: 100px; margin-right: 70px;">
             <div style="margin-top: -30px; text-align: center;">
                 <asp:Image ID="Image1" runat="server" ImageUrl="~/Panel Management/image/images.jpg" Width="70px" Height="70px" />
             </div>
@@ -127,7 +127,7 @@
         </div>
 
         <%-- Edit Customer --%>
-        <div runat="server" visible="true" id="Div_EditCustomer" style="border: 1px solid #2c2b3d; border-radius: 10px; width: 1000px; height: 400px; margin-top: 100px; margin-right: 70px;">
+        <div runat="server" visible="false" id="Div_EditCustomer" style="border: 1px solid #2c2b3d; border-radius: 10px; width: 1000px; height: 400px; margin-top: 100px; margin-right: 70px;">
             <div style="margin-top: -30px; text-align: center;">
                 <asp:Image ID="Image2" runat="server" ImageUrl="~/Panel Management/image/images.jpg" Width="70px" Height="70px" />
             </div>
@@ -222,11 +222,7 @@
                     <asp:Label ID="Label20" runat="server" Text="Label" Font-Bold="true" ForeColor="#CC0000">
                 جهت نمایش
                     </asp:Label></span>
-            </div>
-
-            <div style="margin-right: 105px; margin-top: 30px;">
-                <asp:Button ID="Button2" runat="server" Text="تغییر کلمه عبور" ValidationGroup="Group_Login" Font-Bold="true" Width="100px" Height="30px" Font-Names="B Nazanin" Font-Size="Medium" BackColor="#E1E1E1" BorderColor="#333333" ForeColor="#000066" BorderWidth="1px" />
-            </div>            
+            </div>     
 
             <div style="margin-right: 20px; margin-top: 20px;">
                 <asp:Button ID="Button1" runat="server" Text="ثبت عضویت" ValidationGroup="Group_Login" Font-Bold="true" Width="80px" Height="30px" Font-Names="B Nazanin" Font-Size="Medium" BackColor="#E1E1E1" BorderColor="#333333" ForeColor="#000066" BorderWidth="1px" />
