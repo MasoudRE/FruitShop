@@ -144,7 +144,6 @@
     <Content Include="Menu\index_files\ebab_mbmcp_c2.gif" />
     <Content Include="Menu\index_files\ebab_mbmcp_d.gif" />
     <Content Include="Menu\index_files\filelist_4i57.txt" />
-    <Content Include="Menu\index_files\mbcsmbmcp.css" />
     <Content Include="Menu\index_files\mbjsmbmcp.js" />
     <Content Include="Menu\index_files\menu_bg.png" />
     <Content Include="Menu\index_files\menu_bg1.png" />
@@ -235,6 +234,7 @@
     <Content Include="Theme\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Theme\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Theme\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Theme\css\PageStyle\ProductStyle.css" />
     <Content Include="Theme\FileUpload\dist\fonts\dropify.eot" />
     <Content Include="Theme\FileUpload\dist\fonts\dropify.ttf" />
     <Content Include="Theme\FileUpload\dist\fonts\dropify.woff" />
@@ -336,7 +336,7 @@
     <Content Include="Panel Management\jquery.min.js" />
     <Content Include="Sabad.aspx" />
     <Content Include="Sab_Par.aspx" />
-    <Content Include="ShowProduct.aspx" />
+    <Content Include="SitePanel\ShowProduct.aspx" />
     <Content Include="Slider\images\Slid1-tn.jpg" />
     <Content Include="Slider\images\Slid1.jpg" />
     <Content Include="Slider\images\Slid2-tn.jpg" />
@@ -395,8 +395,6 @@
     <Content Include="Theme\chosen_v1.6.2\chosen.proto.min.js" />
     <Content Include="Theme\css\ClearFix.css" />
     <Content Include="Theme\css\me_Style.css" />
-    <Content Include="Theme\css\styles_Dashboard.css" />
-    <Content Include="Theme\css\style_Login.css" />
     <Content Include="Theme\Date_picker\js-persian-cal.css" />
     <Content Include="Theme\Date_picker\js-persian-cal.min.js" />
     <Content Include="Theme\Date_picker\pcal.png" />
@@ -466,7 +464,7 @@
       <DependentUpon>Sab_Par.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ShowProduct.aspx.cs">
+    <Compile Include="SitePanel\ShowProduct.aspx.cs">
       <DependentUpon>ShowProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

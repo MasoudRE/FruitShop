@@ -2,10 +2,6 @@
     font-family: 'Material Icons' !important;
 }
 
-* {
-    font-family: 'Adobe Arabic' !important;
-}
-
 .me-rtl {
     direction: rtl;
 }
@@ -32,3 +28,11 @@
 div.picker table {
     font: 16px Tahoma !important;
 }
+
+
+a {
+    text-decoration: none !important;
+}
+
+
+
