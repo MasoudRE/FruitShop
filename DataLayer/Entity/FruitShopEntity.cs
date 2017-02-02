@@ -24,6 +24,7 @@ namespace DataLayer.Models
         public virtual DbSet<SabtPardakhti> SabtPardakhtis { get; set; }
         public virtual DbSet<SoratHesab> SoratHesabs { get; set; }
         public virtual DbSet<SoratHesabItem> SoratHesabItems { get; set; }
+        public virtual DbSet<Sabzijat> Sabzijats { get; set; }
         public virtual DbSet<Users> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -47,14 +48,6 @@ namespace DataLayer.Models
                 .HasMany(e => e.SabtPardakhtis)
                 .WithOptional(e => e.BarNameh)
                 .HasForeignKey(e => e.FK_BarNamehID);
-
-            modelBuilder.Entity<Mahsolat>()
-                .Property(e => e.Gheymat)
-                .HasPrecision(19, 4);
-
-            modelBuilder.Entity<Mahsolat>()
-                .HasOptional(e => e.Anbar)
-                .WithRequired(e => e.Mahsolat);
 
             modelBuilder.Entity<SoratHesab>()
                 .HasMany(e => e.SabtDaryaftis)

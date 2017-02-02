@@ -12,29 +12,34 @@ namespace DataLayer.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Mahsolat()
         {
-            SoratHesabItems = new HashSet<SoratHesabItem>();
+            Mivehs = new HashSet<Miveh>();
+            Sabzijats = new HashSet<Sabzijat>();
         }
 
         public int MahsolatID { get; set; }
 
-        public int? MivehID { get; set; }
-
-        [StringLength(50)]
+        [StringLength(100)]
         public string Name { get; set; }
 
-        public DateTime? Time { get; set; }
+        [Column(TypeName = "money")]
+        public decimal? OldPrice { get; set; }
 
         [Column(TypeName = "money")]
-        public decimal? Gheymat { get; set; }
+        public decimal? NewPrice { get; set; }
 
-        [StringLength(50)]
-        public string Address { get; set; }
+        [StringLength(500)]
+        public string Description { get; set; }
 
-        public virtual Anbar Anbar { get; set; }
+        public bool? IsDiscount { get; set; }
 
-        public virtual Miveh Miveh { get; set; }
+        public byte? Type { get; set; }
+
+        public string ImageUrl { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SoratHesabItem> SoratHesabItems { get; set; }
+        public virtual ICollection<Miveh> Mivehs { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Sabzijat> Sabzijats { get; set; }
     }
 }
