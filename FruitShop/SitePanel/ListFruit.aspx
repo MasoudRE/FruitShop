@@ -8,16 +8,16 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12" style="padding: 20px;">
-                <strong>لیست محصولات میوه :
+                <strong>لیست میوه :
                 </strong>
             </div>
         </div>
-        <div class="row">
+        <div class="col-md-12">
             <asp:Repeater runat="server"
                 ID="Repeater_ListFruit"
                 OnItemDataBound="Repeater_ListFruit_ItemDataBound">
                 <ItemTemplate>
-                    <div class="col-md-3">
+                    <div class="col-md-3 product-item">
                         <div class="product-item">
                             <asp:HiddenField runat="server"
                                 ID="HiddenField_MahsolatID"

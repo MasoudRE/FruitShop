@@ -104,7 +104,7 @@
 
 
     .product-content .old-price {
-        margin: 5px;
+        /*margin: 5px;*/
         min-height: 20px;
         background-color: rgb(230, 230, 230);
         font-size: smaller;
@@ -118,3 +118,7 @@
         color: #4CAF50;
         padding: 5px;
     }
+
+.product-item {
+    min-height: 370px;
+}
