@@ -25,6 +25,25 @@ namespace DataLayer.Models
 
     public partial class Users
     {
+
+        public static bool Add(Users user)
+        {
+            try
+            {
+                using (FruitShopEntity db = new FruitShopEntity())
+                {
+                    db.Users.Add(user);
+                    db.SaveChanges();
+                }
+
+                return true;
+            }
+            catch (Exception ee)
+            {
+                return false;
+            }
+        }
+
         public static void Show(GridView gv, User_Type type)
         {
             try
