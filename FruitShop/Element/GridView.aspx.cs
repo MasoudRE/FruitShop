@@ -71,7 +71,7 @@ namespace FruitShop.Element
             {
                 Label_Status.Text = "Success";
                 Label_Status.ForeColor = System.Drawing.Color.Green;
-                Button_Cancel_Click(sender, e);
+                //Button_Cancel_Click(sender, e);
                 //کاربر با موفققیت ویرایش دش
             }
             else

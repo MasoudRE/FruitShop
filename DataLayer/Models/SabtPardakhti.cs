@@ -31,7 +31,7 @@ namespace DataLayer.Models
         [Column(TypeName = "date")]
         public DateTime? TimeTasviyeh { get; set; }
 
-        public virtual Ashkha Ashkha { get; set; }
+        public virtual Ashkhas Ashkha { get; set; }
 
         public virtual BarNameh BarNameh { get; set; }
     }

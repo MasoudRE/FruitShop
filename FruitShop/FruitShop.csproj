@@ -104,6 +104,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Ashkhas.aspx" />
     <Content Include="bin\DataLayer.dll" />
     <Content Include="bin\DataLayer.pdb" />
     <Content Include="Element\DropDownList.aspx" />
@@ -283,7 +284,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="Ashkhas.aspx" />
     <Content Include="BarNameh.aspx" />
     <Content Include="bin\EntityFramework.dll" />
     <Content Include="bin\EntityFramework.SqlServer.dll" />
@@ -440,6 +440,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ashkhas.aspx.cs">
+      <DependentUpon>Ashkhas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ashkhas.aspx.designer.cs">
+      <DependentUpon>Ashkhas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Element\DropDownList.aspx.cs">
       <DependentUpon>DropDownList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -490,10 +497,6 @@
     </Compile>
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Ashkhas.aspx.cs">
-      <DependentUpon>Ashkhas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BarNameh.aspx.cs">

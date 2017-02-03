@@ -13,7 +13,7 @@ namespace DataLayer.Models
         }
 
         public virtual DbSet<Anbar> Anbars { get; set; }
-        public virtual DbSet<Ashkha> Ashkhas { get; set; }
+        public virtual DbSet<Ashkhas> Ashkhas { get; set; }
         public virtual DbSet<BarNameh> BarNamehs { get; set; }
         public virtual DbSet<BarNamehItem> BarNamehItems { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
@@ -29,17 +29,17 @@ namespace DataLayer.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Ashkha>()
+            modelBuilder.Entity<Ashkhas>()
                 .HasMany(e => e.BarNamehs)
                 .WithOptional(e => e.Ashkha)
                 .HasForeignKey(e => e.FK_AshkhasID);
 
-            modelBuilder.Entity<Ashkha>()
+            modelBuilder.Entity<Ashkhas>()
                 .HasMany(e => e.BarNamehItems)
                 .WithOptional(e => e.Ashkha)
                 .HasForeignKey(e => e.FK_AshkhasID);
 
-            modelBuilder.Entity<Ashkha>()
+            modelBuilder.Entity<Ashkhas>()
                 .HasMany(e => e.SabtPardakhtis)
                 .WithOptional(e => e.Ashkha)
                 .HasForeignKey(e => e.FK_AshkhasID);

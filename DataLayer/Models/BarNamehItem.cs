@@ -33,7 +33,7 @@ namespace DataLayer.Models
 
         public int? GheymatForosh { get; set; }
 
-        public virtual Ashkha Ashkha { get; set; }
+        public virtual Ashkhas Ashkha { get; set; }
 
         public virtual Miveh Miveh { get; set; }
     }

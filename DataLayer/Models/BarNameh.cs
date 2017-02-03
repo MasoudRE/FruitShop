@@ -34,7 +34,7 @@ namespace DataLayer.Models
 
         public DateTime? Time { get; set; }
 
-        public virtual Ashkha Ashkha { get; set; }
+        public virtual Ashkhas Ashkha { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SabtPardakhti> SabtPardakhtis { get; set; }
