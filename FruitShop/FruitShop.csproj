@@ -102,8 +102,8 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="Toolkit.Drawing.Web, Version=1.0.5752.30692, Culture=neutral, PublicKeyToken=42bab8b7f5a25d78, processorArchitecture=MSIL">
-      <HintPath>..\packages\Toolkit.Drawing.Web.1.0.5752.30692\lib\net35\Toolkit.Drawing.Web.dll</HintPath>
+    <Reference Include="Toolkit.Drawing.Web, Version=1.0.5752.28158, Culture=neutral, PublicKeyToken=42bab8b7f5a25d78, processorArchitecture=MSIL">
+      <HintPath>..\packages\Toolkit.Drawing.Web.1.0.5752.28158\lib\net35\Toolkit.Drawing.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
