@@ -118,6 +118,7 @@ namespace DataLayer.Models
                 using (FruitShopEntity db = new FruitShopEntity())
                 {
                     var list = db.Mahsolats.Where(x => x.Type == type)
+                                        .OrderByDescending(x => x.MahsolatID)
                                         .ToList();
 
                     rp.DataSource = list;
