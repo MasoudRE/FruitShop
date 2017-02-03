@@ -193,5 +193,17 @@ namespace DataLayer.Models
                 return false;
             }
         }
+
+        public static string GetImagePath(object imageUrl)
+        {
+            try
+            {
+                return Utils.Image.DIRECTORY_FRUIT + imageUrl;
+            }
+            catch (Exception)
+            {
+                return Utils.Image.DEFAULT_IMAGE;
+            }
+        }
     }
 }
