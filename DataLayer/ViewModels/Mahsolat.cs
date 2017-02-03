@@ -8,30 +8,20 @@ using System.Web.UI.WebControls;
 
 namespace DataLayer.Models
 {
-    public enum User_Type : byte
+    public enum Mahsolat_Type : byte
     {
         None,
-
-        /// <summary>
-        /// مدیر
-        /// </summary>
-        Admin,
-
-        /// <summary>
-        /// مشتری
-        /// </summary>
-        Customer,
     }
 
-    public partial class Users
+    public partial class Mahsolat
     {
-        public static bool Add(Users user)
+        public static bool Add(Mahsolat mahsolat)
         {
             try 
             {
                 using (FruitShopEntity db = new FruitShopEntity())
                 {
-                    db.Users.Add(user);
+                    db.Mahsolats.Add(mahsolat);
                     db.SaveChanges();
                 }
 
@@ -43,17 +33,17 @@ namespace DataLayer.Models
             }
         }
 
-        public static void Show(GridView gv, User_Type type)
+        public static void Show(GridView gv, Mahsolat_Type type)
         {
             try
             {
                 string[] t = new string[1];
-                t[0] = "UserID";
+                t[0] = "MahsolatID";
                 gv.DataKeyNames = t;
 
                 using (FruitShopEntity db = new FruitShopEntity())
                 {
-                    var list = db.Users.Where(x => x.Type == type).ToList();
+                    var list = db.Mahsolats.Where(x => x.Type == type).ToList();
                     gv.DataSource = list;
                 }
                 gv.DataBind();
@@ -63,20 +53,20 @@ namespace DataLayer.Models
             }
         }
 
-        public static void Show(DropDownList ddl, User_Type type)
+        public static void Show(DropDownList ddl, Mahsolat_Type type)
         {
             try
             {
-                ddl.DataTextField = "FullName";
-                ddl.DataValueField = "UserID";
+                ddl.DataTextField = "Name";
+                ddl.DataValueField = "MahsolatID";
 
                 using (FruitShopEntity db = new FruitShopEntity())
                 {
-                    var list = db.Users.Where(x => x.Type == type)
+                    var list = db.Mahsolats.Where(x => x.Type == type)
                                         .Select(x => new
                                         {
-                                            x.UserID,
-                                            FullName = x.Name + " " + x.Family,
+                                            x.MahsolatID,
+                                            x.Name ,
                                         })
                                         .ToList();
 
@@ -89,20 +79,20 @@ namespace DataLayer.Models
             }
         }
 
-        public static void Show(ListBox lb, User_Type type)
+        public static void Show(ListBox lb, Mahsolat_Type type)
         {
             try
             {
-                lb.DataTextField = "FullName";
-                lb.DataValueField = "UserID";
+                lb.DataTextField = "Name";
+                lb.DataValueField = "MahsolatID";
 
                 using (FruitShopEntity db = new FruitShopEntity())
                 {
-                    var list = db.Users.Where(x => x.Type == type)
+                    var list = db.Mahsolats.Where(x => x.Type == type)
                                         .Select(x => new
                                         {
-                                            x.UserID,
-                                            FullName = x.Name + " " + x.Family,
+                                            x.MahsolatID,
+                                            x.Name,
                                         })
                                         .ToList();
 
@@ -115,46 +105,68 @@ namespace DataLayer.Models
             }
         }
 
-        public static List<Users> Get()
+        public static void Show(Repeater rp, Mahsolat_Type type)
         {
             try
             {
                 using (FruitShopEntity db = new FruitShopEntity())
                 {
-                    return db.Users.ToList();
+                    var list = db.Mahsolats.Where(x => x.Type == type)
+                                        .Select(x => new
+                                        {
+                                            x.MahsolatID,
+                                            x.Name,
+                                        })
+                                        .ToList();
+
+                    rp.DataSource = list;
+                }
+                rp.DataBind();
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        public static List<Mahsolat> Get()
+        {
+            try
+            {
+                using (FruitShopEntity db = new FruitShopEntity())
+                {
+                    return db.Mahsolats.ToList();
                 }
             }
             catch (Exception)
             {
-                return new List<Users>();
+                return new List<Mahsolat>();
             }
         }
 
-        public static Users Get(int id)
+        public static Mahsolat Get(int id)
         {
             try
             {
                 using (FruitShopEntity db = new FruitShopEntity())
                 {
-                    return db.Users.Single(x => x.UserID == id);
+                    return db.Mahsolats.Single(x => x.MahsolatID == id);
                 }
             }
             catch (Exception)
             {
-                return new Users();
+                return new Mahsolat();
             }
         }
 
-        public static bool Update(Users user)
+        public static bool Update(Mahsolat mahsolat)
         {
             try
             {
                 using (FruitShopEntity db = new FruitShopEntity())
                 {
-                    var model = db.Users.Single(x => x.UserID == user.UserID);
+                    var model = db.Mahsolats.Single(x => x.MahsolatID == mahsolat.MahsolatID);
 
-                    model.Name = user.Name;
-                    model.Family = user.Family;
+                    model.Name = mahsolat.Name;
 
                     db.SaveChanges();
                 }

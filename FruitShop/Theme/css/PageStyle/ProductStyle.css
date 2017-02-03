@@ -1,11 +1,12 @@
 ﻿.quick-menu {
     margin: 45px 0 0 0;
-    border-radius: 70px;
+    border-radius: 10px;
     background-color: #4caf50;
     padding: 14px;
     text-align: center;
     text-decoration: none !important;
     color: #fff;
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12), 0 3px 5px -1px rgba(0,0,0,.2);
 }
 
     .quick-menu a {

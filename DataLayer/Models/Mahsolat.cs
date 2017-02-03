@@ -32,7 +32,7 @@ namespace DataLayer.Models
 
         public bool? IsDiscount { get; set; }
 
-        public byte? Type { get; set; }
+        public Mahsolat_Type? Type { get; set; }
 
         public string ImageUrl { get; set; }
 
