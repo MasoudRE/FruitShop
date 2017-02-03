@@ -42,6 +42,5 @@ public partial class Ashkhas : System.Web.UI.Page
 
     protected void LinkButton_Edit_Click(object sender, EventArgs e)
     {
-
     }
 }

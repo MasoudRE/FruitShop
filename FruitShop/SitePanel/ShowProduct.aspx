@@ -1,6 +1,6 @@
-﻿<%@ Page Title="Product" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ShowProduct.aspx.cs" Inherits="ShowProduct" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="ShowProduct.aspx.cs" Inherits="FruitShop.SitePanel.ShowProduct" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script src="/Slider/sliderengine/jquery.js"></script>
     <script src="/Slider/sliderengine/amazingslider.js"></script>
     <link rel="stylesheet" type="text/css" href="/Slider/sliderengine/amazingslider-1.css" />
@@ -10,10 +10,13 @@
     <script src="../Theme/Slider/Slider.js"></script>
     <link href="../Theme/Slider/Slider.css" rel="stylesheet" />
 
+    <%--price--%>
+    <script src="../Theme/Price/price.js"></script>
+
     <%--page style--%>
     <link href="../Theme/css/PageStyle/ProductStyle.css" rel="stylesheet" />
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid">
         <!-- Start slider -->
         <div class="row" id="amazingslider-wrapper-1" style="display: block; position: relative; margin: 22px auto 0px;">
@@ -65,7 +68,207 @@
             </div>
         </div>
 
-        <%--slider list--%>
+
+
+
+        <%-------------------------------------------------
+            slider list
+            -----------------------------------------------%>
+
+
+        <%--slider Fruit--%>
+        <div class="slider">
+            <div class="slider-group">
+                <div class="slider-header">
+                    <strong>میوه
+                    </strong>
+                    <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored pull-left"
+                        href="#">
+                        <i class="material-icons">add</i>
+                        لیست کامل
+                    </a>
+                </div>
+                <div class="slider-body">
+                    <div id="Carousel_Fruit" class="carousel slide">
+
+                        <ol class="carousel-indicators">
+                            <li runat="server"
+                                id="liTag_SlideFruit_Item_Navigation_1"
+                                visible="false"
+                                data-target="#Carousel_Fruit"
+                                data-slide-to="0"
+                                class="active"></li>
+
+                            <li runat="server"
+                                id="liTag_SlideFruit_Item_Navigation_2"
+                                visible="false"
+                                data-target="#Carousel_Fruit"
+                                data-slide-to="1"></li>
+
+                            <li runat="server"
+                                id="liTag_SlideFruit_Item_Navigation_3"
+                                visible="false"
+                                data-target="#Carousel_Fruit"
+                                data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Carousel items -->
+                        <div class="carousel-inner">
+
+                            <div runat="server"
+                                id="Div_SlideFruit_Item_1"
+                                visible="false"
+                                class="item active">
+                                <div class="row">
+                                    <asp:Repeater runat="server"
+                                        ID="Repeater_SlideFruit_Item_1"
+                                        OnItemDataBound="Repeater_SlideFruit_Item_ItemDataBound">
+                                        <ItemTemplate>
+                                            <div class="col-md-3">
+                                                <asp:HiddenField runat="server"
+                                                    ID="HiddenField_MahsolatID"
+                                                    Value='<% Eval("MahsolatID") %>' />
+
+                                                <asp:HiddenField runat="server"
+                                                    ID="HiddenField_IsDiscount"
+                                                    Value='<%# Eval("IsDiscount") %>' />
+
+
+                                                <a href="#" class="thumbnail">
+                                                    <img src="http://placehold.it/250x250" alt="Image" style="max-width: 100%;">
+                                                </a>
+                                                <div class="product-content">
+                                                    <div class="name">
+                                                        <%# Eval("Name") %>
+                                                    </div>
+
+                                                    <div class="new-price price">
+                                                        <%# Eval("NewPrice") %>
+                                                        ریال
+                                                    </div>
+
+                                                    <div runat="server"
+                                                        id="Div_RPSliderItem_OldPrice"
+                                                        class="old-price price">
+                                                        <%# Eval("OldPrice") %>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                </div>
+                                <!--.row-->
+                            </div>
+                            <!--.item-->
+
+                            <div runat="server"
+                                id="Div_SlideFruit_Item_2"
+                                visible="false"
+                                class="item">
+                                <div class="row">
+                                    <asp:Repeater runat="server"
+                                        ID="Repeater_SlideFruit_Item_2"
+                                        OnItemDataBound="Repeater_SlideFruit_Item_ItemDataBound">
+                                        <ItemTemplate>
+                                            <div class="col-md-3">
+                                                <asp:HiddenField runat="server"
+                                                    ID="HiddenField_MahsolatID"
+                                                    Value='<% Eval("MahsolatID") %>' />
+
+                                                <asp:HiddenField runat="server"
+                                                    ID="HiddenField_IsDiscount"
+                                                    Value='<%# Eval("IsDiscount") %>' />
+
+
+                                                <a href="#" class="thumbnail">
+                                                    <img src="http://placehold.it/250x250" alt="Image" style="max-width: 100%;">
+                                                </a>
+                                                <div class="product-content">
+                                                    <div class="name">
+                                                        <%# Eval("Name") %>
+                                                    </div>
+
+                                                    <div class="new-price price">
+                                                        <%# Eval("NewPrice") %>
+                                                        ریال
+                                                    </div>
+
+                                                    <div runat="server"
+                                                        id="Div_RPSliderItem_OldPrice"
+                                                        class="old-price price">
+                                                        <%# Eval("OldPrice") %>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                </div>
+                                <!--.row-->
+                            </div>
+                            <!--.item-->
+
+                            <div runat="server"
+                                id="Div_SlideFruit_Item_3"
+                                visible="false"
+                                class="item">
+                                <div class="row">
+                                    <asp:Repeater runat="server"
+                                        ID="Repeater_SlideFruit_Item_3"
+                                        OnItemDataBound="Repeater_SlideFruit_Item_ItemDataBound">
+                                        <ItemTemplate>
+                                            <div class="col-md-3">
+                                                <asp:HiddenField runat="server"
+                                                    ID="HiddenField_MahsolatID"
+                                                    Value='<% Eval("MahsolatID") %>' />
+
+                                                <asp:HiddenField runat="server"
+                                                    ID="HiddenField_IsDiscount"
+                                                    Value='<%# Eval("IsDiscount") %>' />
+
+
+                                                <a href="#" class="thumbnail">
+                                                    <img src="http://placehold.it/250x250" alt="Image" style="max-width: 100%;">
+                                                </a>
+                                                <div class="product-content">
+                                                    <div class="name">
+                                                        <%# Eval("Name") %>
+                                                    </div>
+
+                                                    <div class="new-price price">
+                                                        <%# Eval("NewPrice") %>
+                                                        ریال
+                                                    </div>
+
+                                                    <div runat="server"
+                                                        id="Div_RPSliderItem_OldPrice"
+                                                        class="old-price price">
+                                                        <%# Eval("OldPrice") %>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                </div>
+                                <!--.row-->
+                            </div>
+                            <!--.item-->
+
+                        </div>
+                        <!--.carousel-inner-->
+                        <a data-slide="next" href="#Carousel_Fruit" class="left carousel-control">
+                            <span class="glyphicon glyphicon-menu-left carousel-icon" aria-hidden="true"></span>
+                        </a>
+                        <a data-slide="prev" href="#Carousel_Fruit" class="right carousel-control">
+                            <span class="glyphicon glyphicon-menu-right carousel-icon" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                    <!--.Carousel-->
+                </div>
+            </div>
+        </div>
+
+
+        <%--slider Fruit--%>
         <div class="slider">
             <div class="slider-group">
                 <div class="slider-header">
@@ -171,4 +374,5 @@
                 </div>
             </div>
         </div>
+    </div>
 </asp:Content>

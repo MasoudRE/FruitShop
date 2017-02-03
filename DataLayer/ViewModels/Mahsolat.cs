@@ -11,13 +11,19 @@ namespace DataLayer.Models
     public enum Mahsolat_Type : byte
     {
         None,
+
+        Miveh,
+
+        SeyfiJat,
+
+        Other,
     }
 
     public partial class Mahsolat
     {
         public static bool Add(Mahsolat mahsolat)
         {
-            try 
+            try
             {
                 using (FruitShopEntity db = new FruitShopEntity())
                 {
@@ -66,7 +72,7 @@ namespace DataLayer.Models
                                         .Select(x => new
                                         {
                                             x.MahsolatID,
-                                            x.Name ,
+                                            x.Name,
                                         })
                                         .ToList();
 
@@ -105,22 +111,11 @@ namespace DataLayer.Models
             }
         }
 
-        public static void Show(Repeater rp, Mahsolat_Type type)
+        public static void Show(Repeater rp, List<Mahsolat> list)
         {
             try
             {
-                using (FruitShopEntity db = new FruitShopEntity())
-                {
-                    var list = db.Mahsolats.Where(x => x.Type == type)
-                                        .Select(x => new
-                                        {
-                                            x.MahsolatID,
-                                            x.Name,
-                                        })
-                                        .ToList();
-
-                    rp.DataSource = list;
-                }
+                rp.DataSource = list;
                 rp.DataBind();
             }
             catch (Exception)
@@ -135,6 +130,26 @@ namespace DataLayer.Models
                 using (FruitShopEntity db = new FruitShopEntity())
                 {
                     return db.Mahsolats.ToList();
+                }
+            }
+            catch (Exception)
+            {
+                return new List<Mahsolat>();
+            }
+        }
+
+        public static List<Mahsolat> Get(Mahsolat_Type type, int pageIndex = 1, int pageSize = 4)
+        {
+            try
+            {
+                using (FruitShopEntity db = new FruitShopEntity())
+                {
+                    return db.Mahsolats.Where(x => x.Type == type)
+                        .Distinct()
+                        .OrderByDescending(x => x.MahsolatID)
+                        .Skip(pageSize * (pageIndex - 1))
+                        .Take(pageSize)
+                        .ToList();
                 }
             }
             catch (Exception)

@@ -7,12 +7,12 @@
     <title>فروشگــــــــــــــاه آنــــــــلاین</title>
     <!-- Start Menu -->
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="Menu/index_files/mbcsmbmcp.css" type="text/css" />
-    <script type="text/javascript" src="Menu/index.htm"></script>
+    <link rel="stylesheet" href="/Menu/index_files/mbcsmbmcp.css" type="text/css" />
+    <script type="text/javascript" src="/Menu/index.htm"></script>
     <!-- End Menu -->
 
     <%--jquery--%>
-    <script src="../Theme/js/jquery.min.js"></script>
+    <script src="/Theme/js/jquery.min.js"></script>
 
     <%-- bootstrap --%>
     <link href="/Theme/bootstrap-3.3.5/css/bootstrap-Theme.css" rel="stylesheet" />
@@ -23,14 +23,20 @@
     <link href="/Theme/bootstrap-3.3.5/bootstrap-rtl.min.css" rel="stylesheet" />
 
     <%--material--%>
-    <script src="Theme/MDL/material.js"></script>
-    <link href="Theme/MDL/css.css" rel="stylesheet" />
-    <link href="Theme/MDL/icon.css" rel="stylesheet" />
-    <link href="Theme/MDL/material.css" rel="stylesheet" />
+    <script src="/Theme/MDL/material.js"></script>
+    <link href="/Theme/MDL/css.css" rel="stylesheet" />
+    <link href="/Theme/MDL/icon.css" rel="stylesheet" />
+    <link href="/Theme/MDL/material.css" rel="stylesheet" />
 
     <%-- me style --%>
-    <link href="Theme/css/me_Style.css" rel="stylesheet" />
+    <link href="/Theme/css/me_Style.css" rel="stylesheet" />
     
+
+    <link rel="icon" 
+      type="image/png" 
+      href="~/Image/favIcon.png">
+
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>

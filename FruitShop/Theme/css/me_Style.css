@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'BYekan';
+    src: url('../Font/BYekan.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Iranian Sans';
+    src: url('../Font/Iranian Sans.ttf') format('truetype');
+}
+
 .material-icons {
     font-family: 'Material Icons' !important;
 }
