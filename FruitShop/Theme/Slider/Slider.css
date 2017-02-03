@@ -56,6 +56,7 @@
         padding: 12px;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
+        color: white;
     }
 
 
@@ -83,5 +84,37 @@
 
 
 .slider-image {
+    max-height: 100%;
     max-width: 100%;
 }
+
+
+
+.product-content {
+    word-break: break-word;
+    text-align: justify;
+    -moz-text-align-last: center;
+    text-align-last: center;
+}
+
+
+    .product-content .name {
+        padding: 5px;
+    }
+
+
+    .product-content .old-price {
+        margin: 5px;
+        min-height: 20px;
+        background-color: rgb(230, 230, 230);
+        font-size: smaller;
+        text-decoration: line-through;
+        color: rgb(179, 176, 176);
+        border-radius: 40px;
+    }
+
+
+    .product-content .new-price {
+        color: #4CAF50;
+        padding: 5px;
+    }

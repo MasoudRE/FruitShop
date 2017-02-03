@@ -6,12 +6,7 @@
     <link rel="stylesheet" type="text/css" href="/Slider/sliderengine/amazingslider-1.css" />
     <script src="/Slider/sliderengine/initslider-1.js"></script>
 
-    <%--slider--%>
-    <script src="../Theme/Slider/Slider.js"></script>
-    <link href="../Theme/Slider/Slider.css" rel="stylesheet" />
-
-    <%--price--%>
-    <script src="../Theme/Price/price.js"></script>
+   
 
     <%--page style--%>
     <link href="../Theme/css/PageStyle/ProductStyle.css" rel="stylesheet" />
@@ -51,19 +46,19 @@
         <div class="row quick-menu">
             <div class="col-lg-4 col-md-4  col-sm-12">
                 <a
-                    href="#">میوه
+                    href="ListFruit.aspx">میوه
                 </a>
             </div>
 
             <div class="col-lg-4 col-md-4 col-sm-12">
                 <a
-                    href="#">سبزیجات و صیفیجات
+                    href="ListVegetebles.aspx">صیفی جات
                 </a>
             </div>
 
             <div class="col-lg-4 col-md-4 col-sm-12">
                 <a
-                    href="#">دیگر محصولات
+                    href="ListOtherProduct.aspx">دیگر محصولات
                 </a>
             </div>
         </div>
@@ -84,7 +79,7 @@
                     </strong>
                     <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored pull-left"
                         style="background: #acbd00;"
-                        href="#">
+                        href="ListFruit.aspx">
                         <i class="material-icons">add</i>
                         لیست کامل
                     </a>
@@ -142,14 +137,14 @@
                                                         <%# Eval("Name") %>
                                                     </div>
 
-                                                    <div class="new-price price">
+                                                    <div class="new-price">
                                                         <%# Eval("NewPrice") %>
                                                         ریال
                                                     </div>
 
                                                     <div runat="server"
                                                         id="Div_RPSliderItem_OldPrice"
-                                                        class="old-price price">
+                                                        class="old-price">
                                                         <%# Eval("OldPrice") %>
                                                     </div>
                                                 </div>
@@ -188,14 +183,14 @@
                                                         <%# Eval("Name") %>
                                                     </div>
 
-                                                    <div class="new-price price">
+                                                    <div class="new-price">
                                                         <%# Eval("NewPrice") %>
                                                         ریال
                                                     </div>
 
                                                     <div runat="server"
                                                         id="Div_RPSliderItem_OldPrice"
-                                                        class="old-price price">
+                                                        class="old-price">
                                                         <%# Eval("OldPrice") %>
                                                     </div>
                                                 </div>
@@ -234,14 +229,14 @@
                                                         <%# Eval("Name") %>
                                                     </div>
 
-                                                    <div class="new-price price">
+                                                    <div class="new-price">
                                                         <%# Eval("NewPrice") %>
                                                         ریال
                                                     </div>
 
                                                     <div runat="server"
                                                         id="Div_RPSliderItem_OldPrice"
-                                                        class="old-price price">
+                                                        class="old-price">
                                                         <%# Eval("OldPrice") %>
                                                     </div>
                                                 </div>
@@ -272,11 +267,11 @@
         <div class="slider">
             <div class="slider-group">
                 <div class="slider-header">
-                    <strong>فرنگیجات و سبزیجات
+                    <strong> صیفی جات
                     </strong>
                     <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored pull-left"
                         style="background: #acbd00;"
-                        href="#">
+                        href="ListVegetebles.aspx">
                         <i class="material-icons">add</i>
                         ليست کامل
                     </a>
@@ -334,14 +329,14 @@
                                                         <%# Eval("Name") %>
                                                     </div>
 
-                                                    <div class="new-price price">
+                                                    <div class="new-price">
                                                         <%# Eval("NewPrice") %>
                                                         ريال
                                                     </div>
 
                                                     <div runat="server"
                                                         id="Div_RPSliderItem_OldPrice"
-                                                        class="old-price price">
+                                                        class="old-price">
                                                         <%# Eval("OldPrice") %>
                                                     </div>
                                                 </div>
@@ -380,14 +375,14 @@
                                                         <%# Eval("Name") %>
                                                     </div>
 
-                                                    <div class="new-price price">
+                                                    <div class="new-price">
                                                         <%# Eval("NewPrice") %>
                                                         ريال
                                                     </div>
 
                                                     <div runat="server"
                                                         id="Div_RPSliderItem_OldPrice"
-                                                        class="old-price price">
+                                                        class="old-price">
                                                         <%# Eval("OldPrice") %>
                                                     </div>
                                                 </div>
@@ -426,14 +421,14 @@
                                                         <%# Eval("Name") %>
                                                     </div>
 
-                                                    <div class="new-price price">
+                                                    <div class="new-price">
                                                         <%# Eval("NewPrice") %>
                                                         ريال
                                                     </div>
 
                                                     <div runat="server"
                                                         id="Div_RPSliderItem_OldPrice"
-                                                        class="old-price price">
+                                                        class="old-price ">
                                                         <%# Eval("OldPrice") %>
                                                     </div>
                                                 </div>
@@ -472,7 +467,7 @@
                     </strong>
                     <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored pull-left"
                         style="background: #acbd00;"
-                        href="#">
+                        href="ListOtherProduct.aspx">
                         <i class="material-icons">add</i>
                         ليست کامل
                     </a>
@@ -530,14 +525,14 @@
                                                         <%# Eval("Name") %>
                                                     </div>
 
-                                                    <div class="new-price price">
+                                                    <div class="new-price">
                                                         <%# Eval("NewPrice") %>
                                                         ريال
                                                     </div>
 
                                                     <div runat="server"
                                                         id="Div_RPSliderItem_OldPrice"
-                                                        class="old-price price">
+                                                        class="old-price">
                                                         <%# Eval("OldPrice") %>
                                                     </div>
                                                 </div>
@@ -576,14 +571,14 @@
                                                         <%# Eval("Name") %>
                                                     </div>
 
-                                                    <div class="new-price price">
+                                                    <div class="new-price">
                                                         <%# Eval("NewPrice") %>
                                                         ريال
                                                     </div>
 
                                                     <div runat="server"
                                                         id="Div_RPSliderItem_OldPrice"
-                                                        class="old-price price">
+                                                        class="old-price">
                                                         <%# Eval("OldPrice") %>
                                                     </div>
                                                 </div>
@@ -622,14 +617,14 @@
                                                         <%# Eval("Name") %>
                                                     </div>
 
-                                                    <div class="new-price price">
+                                                    <div class="new-price">
                                                         <%# Eval("NewPrice") %>
                                                         ريال
                                                     </div>
 
                                                     <div runat="server"
                                                         id="Div_RPSliderItem_OldPrice"
-                                                        class="old-price price">
+                                                        class="old-price">
                                                         <%# Eval("OldPrice") %>
                                                     </div>
                                                 </div>

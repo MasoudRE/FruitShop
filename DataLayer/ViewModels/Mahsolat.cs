@@ -111,6 +111,24 @@ namespace DataLayer.Models
             }
         }
 
+        public static void Show(Repeater rp, Mahsolat_Type type)
+        {
+            try
+            {
+                using (FruitShopEntity db = new FruitShopEntity())
+                {
+                    var list = db.Mahsolats.Where(x => x.Type == type)
+                                        .ToList();
+
+                    rp.DataSource = list;
+                }
+                rp.DataBind();
+            }
+            catch (Exception)
+            {
+            }
+        }
+
         public static void Show(Repeater rp, List<Mahsolat> list)
         {
             try
