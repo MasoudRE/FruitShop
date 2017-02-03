@@ -19,13 +19,13 @@
                 </a>
             </li>
             <li>
-                <a href="Sabt_Pardakhti.aspx">
+                <a href="Dashbord/Ashkhas.aspx">
                     <img alt="" src="Panel Management/image/order-149.png">
                     <span>افزودن شخص</span>
                 </a>
             </li>
             <li>
-                <a href="Insert_Product.aspx">
+                <a href="Dashbord/Insert_Product.aspx">
                     <img alt="" src="Panel Management/image/order-149.png">
                     <span>افزودن محصول</span>
                 </a>

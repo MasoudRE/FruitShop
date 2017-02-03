@@ -5,10 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-    public partial class Product : System.Web.UI.Page
+namespace FruitShop.Dashbord
+{
+    public partial class Page_SeyfiJat : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
     }
+}
