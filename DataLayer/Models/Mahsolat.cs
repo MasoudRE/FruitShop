@@ -13,7 +13,7 @@ namespace DataLayer.Models
         public Mahsolat()
         {
             Mivehs = new HashSet<Miveh>();
-            Sabzijats = new HashSet<Sabzijat>();
+            Sabzijats = new HashSet<SeyfiJat>();
         }
 
         public int MahsolatID { get; set; }
@@ -40,6 +40,6 @@ namespace DataLayer.Models
         public virtual ICollection<Miveh> Mivehs { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Sabzijat> Sabzijats { get; set; }
+        public virtual ICollection<SeyfiJat> Sabzijats { get; set; }
     }
 }

@@ -6,11 +6,11 @@ namespace DataLayer.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Sabzijat")]
-    public partial class Sabzijat
+    [Table("SeyfiJat")]
+    public partial class SeyfiJat
     {
         [Key]
-        public int SabzijatID { get; set; }
+        public int SeyfiJatID { get; set; }
 
         public int? MahsolatID { get; set; }
 
