@@ -138,6 +138,7 @@
     <Content Include="Mahsolat\TotFarangi1.jpg" />
     <Content Include="Mahsolat\TotFarangi2.jpg" />
     <Content Include="Mahsolat\ZardAlo.jpg" />
+    <Content Include="Management.aspx" />
     <Content Include="Menu\index.htm" />
     <Content Include="Menu\index_files\ebab_mbmcp.gif" />
     <Content Include="Menu\index_files\ebab_mbmcp_c.gif" />
@@ -202,6 +203,7 @@
     <Content Include="Panel Management\image\1.jpg" />
     <Content Include="Panel Management\image\2.jpg" />
     <Content Include="Panel Management\image\3.png" />
+    <Content Include="Panel Management\image\Bar.jpg" />
     <Content Include="Panel Management\image\Change.png" />
     <Content Include="Panel Management\image\date.png" />
     <Content Include="Panel Management\image\Edit_User.png" />
@@ -216,6 +218,7 @@
     <Content Include="Panel Management\image\images.jpg" />
     <Content Include="Panel Management\image\lock.png" />
     <Content Include="Panel Management\image\logo.png" />
+    <Content Include="Panel Management\image\Miveh.png" />
     <Content Include="Panel Management\image\Mohit.png" />
     <Content Include="Panel Management\image\my-account.png" />
     <Content Include="Panel Management\image\nav.png" />
@@ -263,6 +266,13 @@
     <Content Include="Customer.aspx" />
     <Content Include="Profile.aspx" />
     <Content Include="ChangePass.aspx" />
+    <Content Include="Personnel.aspx" />
+    <Content Include="Insert_BarNameh.aspx" />
+    <Content Include="Insert_Product.aspx" />
+    <Content Include="SeyfiJat.aspx" />
+    <Content Include="Product.aspx" />
+    <Content Include="BaghiMandeh_Product.aspx" />
+    <Content Include="Max_Buy.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -272,7 +282,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="Access.aspx" />
     <Content Include="Ashkhas.aspx" />
     <Content Include="BarNameh.aspx" />
     <Content Include="bin\EntityFramework.dll" />
@@ -310,7 +319,6 @@
     <Content Include="Gallery.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
-    <Content Include="Management.aspx" />
     <Content Include="Miveh.aspx" />
     <Content Include="obj\Debug\FruitShop.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\FruitShop.dll" />
@@ -335,8 +343,7 @@
     <Content Include="Panel Management\jquery.flot.js" />
     <Content Include="Panel Management\jquery.min.js" />
     <Content Include="Sabad.aspx" />
-    <Content Include="Sab_Par.aspx" />
-    <Content Include="SitePanel\ShowProduct.aspx" />
+    <Content Include="Sabt_Pardakhti.aspx" />
     <Content Include="Slider\images\Slid1-tn.jpg" />
     <Content Include="Slider\images\Slid1.jpg" />
     <Content Include="Slider\images\Slid2-tn.jpg" />
@@ -453,6 +460,10 @@
     <Compile Include="Element\Slider.aspx.designer.cs">
       <DependentUpon>Slider.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Management.aspx.cs">
+      <DependentUpon>Management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -460,8 +471,8 @@
       <DependentUpon>Sabad.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Sab_Par.aspx.cs">
-      <DependentUpon>Sab_Par.aspx</DependentUpon>
+    <Compile Include="Sabt_Pardakhti.aspx.cs">
+      <DependentUpon>Sabt_Pardakhti.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SitePanel\ShowProduct.aspx.cs">
@@ -478,10 +489,6 @@
     </Compile>
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Access.aspx.cs">
-      <DependentUpon>Access.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Ashkhas.aspx.cs">
@@ -513,10 +520,6 @@
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Management.aspx.cs">
-      <DependentUpon>Management.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Management.master.cs">
@@ -552,6 +555,55 @@
     </Compile>
     <Compile Include="ChangePass.aspx.designer.cs">
       <DependentUpon>ChangePass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Personnel.aspx.cs">
+      <DependentUpon>Personnel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Personnel.aspx.designer.cs">
+      <DependentUpon>Personnel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Insert_BarNameh.aspx.cs">
+      <DependentUpon>Insert_BarNameh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Insert_BarNameh.aspx.designer.cs">
+      <DependentUpon>Insert_BarNameh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Insert_Product.aspx.cs">
+      <DependentUpon>Insert_Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Insert_Product.aspx.designer.cs">
+      <DependentUpon>Insert_Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SeyfiJat.aspx.cs">
+      <DependentUpon>SeyfiJat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SeyfiJat.aspx.designer.cs">
+      <DependentUpon>SeyfiJat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaghiMandeh_Product.aspx.cs">
+      <DependentUpon>BaghiMandeh_Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaghiMandeh_Product.aspx.designer.cs">
+      <DependentUpon>BaghiMandeh_Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Max_Buy.aspx.cs">
+      <DependentUpon>Max_Buy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Max_Buy.aspx.designer.cs">
+      <DependentUpon>Max_Buy.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

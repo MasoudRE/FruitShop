@@ -22,10 +22,9 @@
 
 
         <h2 style="width: 1125px; height: 25px; float: left;"></h2>
-        <%--<h3 style="font-size: 14px; margin-right: 18px;">نمایش اطلاعات اشخاص</h3>--%>
 
 
-        <div runat="server" visible="false" id="Div_AshkhasShow" style="width: 1105px; margin-right: 18px; height: 350px; margin-top: 5px; background-color: cadetblue;">
+        <div runat="server" visible="true" id="Div_AshkhasShow" style="width: 1105px; margin-right: 18px; height: 350px; margin-top: 5px; background-color: cadetblue;">
         </div>
 
         <div runat="server" visible="true" id="Div_AddAshkhas" style="border: 1px solid #2c2b3d; border-radius: 10px; width: 1000px; height: 430px; margin-top: 100px; margin-right: 70px;">
@@ -112,7 +111,7 @@
 
         </div>
 
-         
+
 
     </div>
 </asp:Content>

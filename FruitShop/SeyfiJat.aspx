@@ -1,8 +1,8 @@
-﻿<%@ Page Title="میوه" Language="C#" MasterPageFile="~/Management.master" AutoEventWireup="true" CodeFile="Miveh.aspx.cs" Inherits="Miveh" %>
+﻿<%@ Page Title="صیفی جات" Language="C#" MasterPageFile="~/Management.master" AutoEventWireup="true" CodeBehind="SeyfiJat.aspx.cs" Inherits="SeyfiJat" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div style="height: 900px;">
         <ul data-collapse="collapse" class="quick">
@@ -21,7 +21,7 @@
         </ul>
         <h2 style="font-family: 'B Nazanin'; text-align: center; font-size: 30px; color: #0c0939;">ثبت میوه</h2>
 
-        <div runat="server" visible="true" id="Div_InsertMiveh" style="border: 1px solid #2c2b3d; border-radius: 10px; width: 1000px; height: 400px; margin-top: 50px; margin-right: 70px;">
+        <div runat="server" visible="true" id="Div_InsertSeyfiJat" style="border: 1px solid #2c2b3d; border-radius: 10px; width: 1000px; height: 400px; margin-top: 50px; margin-right: 70px;">
             <div style="margin-top: -45px; text-align: center;">
                 <asp:Image ID="Image1" runat="server" ImageUrl="~/Panel Management/image/Miveh.png" Width="80px" Height="80px" />
             </div>
@@ -88,4 +88,3 @@
     </div>
 
 </asp:Content>
-
