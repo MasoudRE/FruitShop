@@ -274,6 +274,8 @@
     <Content Include="Product.aspx" />
     <Content Include="BaghiMandeh_Product.aspx" />
     <Content Include="Max_Buy.aspx" />
+    <Content Include="Theme\Font\BYekan.ttf" />
+    <Content Include="Theme\Font\Iranian Sans.ttf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -431,6 +433,7 @@
     <Content Include="Theme\MDL\icon.css" />
     <Content Include="Theme\MDL\material.css" />
     <Content Include="Theme\MDL\material.js" />
+    <Content Include="Theme\Price\price.js" />
     <Content Include="Theme\Slider\Slider.css" />
     <Content Include="Theme\Slider\Slider.js" />
     <Content Include="User.aspx" />
@@ -479,6 +482,9 @@
     <Compile Include="SitePanel\ShowProduct.aspx.cs">
       <DependentUpon>ShowProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SitePanel\ShowProduct.aspx.designer.cs">
+      <DependentUpon>ShowProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="User.aspx.cs">
       <DependentUpon>User.aspx</DependentUpon>

@@ -22,10 +22,10 @@ namespace DataLayer.Models
         public string Name { get; set; }
 
         [Column(TypeName = "money")]
-        public decimal? OldPrice { get; set; }
+        public long? OldPrice { get; set; }
 
         [Column(TypeName = "money")]
-        public decimal? NewPrice { get; set; }
+        public long? NewPrice { get; set; }
 
         [StringLength(500)]
         public string Description { get; set; }
