@@ -111,6 +111,25 @@ namespace DataLayer.Models
             }
         }
 
+        public static void Show(Repeater rp, Mahsolat_Type type)
+        {
+            try
+            {
+                using (FruitShopEntity db = new FruitShopEntity())
+                {
+                    var list = db.Mahsolats.Where(x => x.Type == type)
+                                        .OrderByDescending(x => x.MahsolatID)
+                                        .ToList();
+
+                    rp.DataSource = list;
+                }
+                rp.DataBind();
+            }
+            catch (Exception)
+            {
+            }
+        }
+
         public static void Show(Repeater rp, List<Mahsolat> list)
         {
             try
@@ -191,6 +210,18 @@ namespace DataLayer.Models
             catch (Exception)
             {
                 return false;
+            }
+        }
+
+        public static string GetImagePath(object imageUrl)
+        {
+            try
+            {
+                return Utils.Image.DIRECTORY_FRUIT + imageUrl;
+            }
+            catch (Exception)
+            {
+                return Utils.Image.DEFAULT_IMAGE;
             }
         }
     }

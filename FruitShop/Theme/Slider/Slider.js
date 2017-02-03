@@ -1,15 +1,15 @@
 ﻿$(document).ready(function () {
-    $('#Carousel').carousel({
+    $('#Carousel_Fruit').carousel({
         interval: 5000
     })
 
 
-    $('#Carousel').carousel({
+    $('#Carousel_Vegetables').carousel({
         interval: 5000
     })
 
 
-    $('#Carousel').carousel({
+    $('#Carousel_OtherProduct').carousel({
         interval: 5000
     })
 });

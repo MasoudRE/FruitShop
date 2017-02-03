@@ -30,17 +30,21 @@
 
     <%-- me style --%>
     <link href="/Theme/css/me_Style.css" rel="stylesheet" />
-    
 
-    <link rel="icon" 
-      type="image/png" 
-      href="~/Image/favIcon.png">
+    <%--slider--%>
+    <script src="/Theme/Slider/Slider.js"></script>
+    <link href="/Theme/Slider/Slider.css" rel="stylesheet" />
+
+    <%--favicon--%>
+    <link rel="icon"
+        type="image/png"
+        href="~/Image/favIcon.png">
 
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body style="font-family:'B Nazanin',sans-serif;">
+<body style="font-family: 'B Nazanin',sans-serif;">
     <form id="form1" runat="server">
 
         <div class="container">
@@ -80,14 +84,14 @@
                     <li class="topitem spaced_li">
                         <div class="arrow buttonbg" style="width: 125px;"><a class="button_7" href="ShowProduct.aspx">محصولات</a></div>
                         <ul class="gradient_menu gradient121">
-                            <li><a title="">میوه ها</a></li>
-                            <li><a title="">صیفی جات</a></li>
-                            <li><a title="">سبزیجات</a></li>
+                            <li><a title="" href="/SitePanel/ListFruit.aspx">میوه ها</a></li>
+                            <li><a title="" href="/SitePanel/ListVegetebles.aspx">صیفی جات</a></li>
+                            <li><a title="" href="/SitePanel/ListOtherProduct.aspx">دیگر محصولات</a></li>
                         </ul>
                     </li>
 
                     <li class="topitem spaced_li">
-                        <div class="buttonbg" style="width: 60px;"><a href="Default.aspx">خانه</a></div>
+                        <div class="buttonbg" style="width: 60px;"><a href="/Default.aspx">خانه</a></div>
                     </li>
 
 
@@ -96,10 +100,13 @@
             <!-- End Menu -->
 
 
-            <div class="mdl-shadow--2dp" style="background-color: white; border-radius: 2px;background-color:#f5f5f5">
+            <div class="mdl-shadow--2dp" style="background-color: white; border-radius: 2px; background-color: #f5f5f5">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
+
+            <footer style="padding: 20px;">
+            </footer>
         </div>
     </form>
 </body>
