@@ -24,7 +24,7 @@ namespace DataLayer.Models
         public virtual DbSet<SabtPardakhti> SabtPardakhtis { get; set; }
         public virtual DbSet<SoratHesab> SoratHesabs { get; set; }
         public virtual DbSet<SoratHesabItem> SoratHesabItems { get; set; }
-        public virtual DbSet<Sabzijat> Sabzijats { get; set; }
+        public virtual DbSet<SeyfiJat> Sabzijats { get; set; }
         public virtual DbSet<Users> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
