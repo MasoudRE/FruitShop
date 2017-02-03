@@ -231,6 +231,7 @@
     <Content Include="Panel Management\jquery.flot.js" />
     <Content Include="Panel Management\jquery.min.js" />
     <Content Include="Panel Management\style.css" />
+    <Content Include="SitePanel\ShowProduct.aspx" />
     <Content Include="Theme\bootstrap-3.3.5\css\bootstrap-theme.css.map" />
     <Content Include="Theme\bootstrap-3.3.5\css\bootstrap.css.map" />
     <Content Include="Theme\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.eot" />

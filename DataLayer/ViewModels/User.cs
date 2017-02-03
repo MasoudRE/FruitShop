@@ -25,7 +25,6 @@ namespace DataLayer.Models
 
     public partial class Users
     {
-
         public static bool Add(Users user)
         {
             try
@@ -38,7 +37,7 @@ namespace DataLayer.Models
 
                 return true;
             }
-            catch (Exception ee)
+            catch (Exception)
             {
                 return false;
             }
@@ -143,24 +142,6 @@ namespace DataLayer.Models
             catch (Exception)
             {
                 return new Users();
-            }
-        }
-
-        public static bool Add(Users user)
-        {
-            try
-            {
-                using (FruitShopEntity db = new FruitShopEntity())
-                {
-                    db.Users.Add(user);
-                    db.SaveChanges();
-                }
-
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
             }
         }
 
