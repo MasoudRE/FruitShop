@@ -25,7 +25,8 @@
                                 ID="HiddenField_IsDiscount"
                                 Value='<%# Eval("IsDiscount") %>' />
 
-                            <a href="#" class="thumbnail">
+                            <a href="/SitePanel/DetailsFruit.aspx?ProductID=<%# Eval("MahsolatID") %>" 
+                                 class="thumbnail">
                                 <img src='<%# DataLayer.Models.Mahsolat.GetImagePath(Eval("ImageUrl"))%>' alt="Image" class="slider-image">
                             </a>
                             <div class="product-content">

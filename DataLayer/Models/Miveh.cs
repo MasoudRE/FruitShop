@@ -18,7 +18,7 @@ namespace DataLayer.Models
         [StringLength(100)]
         public string Amount { get; set; }
 
-        public byte? Type { get; set; }
+        public Miveh_Type? Type { get; set; }
 
         public virtual Mahsolat Mahsolat { get; set; }
     }

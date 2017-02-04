@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="/Slider/sliderengine/amazingslider-1.css" />
     <script src="/Slider/sliderengine/initslider-1.js"></script>
 
-   
+
 
     <%--page style--%>
     <link href="../Theme/css/PageStyle/ProductStyle.css" rel="stylesheet" />
@@ -129,7 +129,7 @@
                                                     ID="HiddenField_IsDiscount"
                                                     Value='<%# Eval("IsDiscount") %>' />
 
-                                                <a href="#" class="thumbnail">
+                                                <a href="/SitePanel/DetailsFruit.aspx?ProductID=<%# Eval("MahsolatID") %>" class="thumbnail">
                                                     <img src='<%# DataLayer.Models.Mahsolat.GetImagePath(Eval("ImageUrl"))%>' alt="Image" class="slider-image">
                                                 </a>
                                                 <div class="product-content">
@@ -175,7 +175,8 @@
                                                     Value='<%# Eval("IsDiscount") %>' />
 
 
-                                                <a href="#" class="thumbnail">
+                                                <a href="/SitePanel/DetailsFruit.aspx?ProductID=<%# Eval("MahsolatID") %>" 
+                                                     class="thumbnail">
                                                     <img src='<%# DataLayer.Models.Mahsolat.GetImagePath(Eval("ImageUrl"))%>' alt="Image" class="slider-image">
                                                 </a>
                                                 <div class="product-content">
@@ -221,7 +222,8 @@
                                                     Value='<%# Eval("IsDiscount") %>' />
 
 
-                                                <a href="#" class="thumbnail">
+                                                <a href="/SitePanel/DetailsFruit.aspx?ProductID=<%# Eval("MahsolatID") %>" 
+                                                     class="thumbnail">
                                                     <img src='<%# DataLayer.Models.Mahsolat.GetImagePath(Eval("ImageUrl"))%>' alt="Image" class="slider-image">
                                                 </a>
                                                 <div class="product-content">
@@ -267,7 +269,7 @@
         <div class="slider">
             <div class="slider-group">
                 <div class="slider-header">
-                    <strong> صیفی جات
+                    <strong>صیفی جات
                     </strong>
                     <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored pull-left"
                         style="background: #acbd00;"
@@ -321,7 +323,8 @@
                                                     ID="HiddenField_IsDiscount"
                                                     Value='<%# Eval("IsDiscount") %>' />
 
-                                                <a href="#" class="thumbnail">
+                                                <a href="/SitePanel/DetailsFruit.aspx?ProductID=<%# Eval("MahsolatID") %>" 
+                                                     class="thumbnail">
                                                     <img src='<%# DataLayer.Models.Mahsolat.GetImagePath(Eval("ImageUrl"))%>' alt="Image" class="slider-image">
                                                 </a>
                                                 <div class="product-content">
@@ -367,7 +370,8 @@
                                                     Value='<%# Eval("IsDiscount") %>' />
 
 
-                                                <a href="#" class="thumbnail">
+                                                <a href="/SitePanel/DetailsFruit.aspx?ProductID=<%# Eval("MahsolatID") %>" 
+                                                     class="thumbnail">
                                                     <img src='<%# DataLayer.Models.Mahsolat.GetImagePath(Eval("ImageUrl"))%>' alt="Image" class="slider-image">
                                                 </a>
                                                 <div class="product-content">
@@ -413,7 +417,8 @@
                                                     Value='<%# Eval("IsDiscount") %>' />
 
 
-                                                <a href="#" class="thumbnail">
+                                                <a href="/SitePanel/DetailsFruit.aspx?ProductID=<%# Eval("MahsolatID") %>" 
+                                                     class="thumbnail">
                                                     <img src='<%# DataLayer.Models.Mahsolat.GetImagePath(Eval("ImageUrl"))%>' alt="Image" class="slider-image">
                                                 </a>
                                                 <div class="product-content">
@@ -517,7 +522,8 @@
                                                     ID="HiddenField_IsDiscount"
                                                     Value='<%# Eval("IsDiscount") %>' />
 
-                                                <a href="#" class="thumbnail">
+                                                <a href="/SitePanel/DetailsFruit.aspx?ProductID=<%# Eval("MahsolatID") %>" 
+                                                     class="thumbnail">
                                                     <img src='<%# DataLayer.Models.Mahsolat.GetImagePath(Eval("ImageUrl"))%>' alt="Image" class="slider-image">
                                                 </a>
                                                 <div class="product-content">
@@ -563,7 +569,8 @@
                                                     Value='<%# Eval("IsDiscount") %>' />
 
 
-                                                <a href="#" class="thumbnail">
+                                                <a href="/SitePanel/DetailsFruit.aspx?ProductID=<%# Eval("MahsolatID") %>" 
+                                                     class="thumbnail">
                                                     <img src='<%# DataLayer.Models.Mahsolat.GetImagePath(Eval("ImageUrl"))%>' alt="Image" class="slider-image">
                                                 </a>
                                                 <div class="product-content">
@@ -609,7 +616,8 @@
                                                     Value='<%# Eval("IsDiscount") %>' />
 
 
-                                                <a href="#" class="thumbnail">
+                                                <a href="/SitePanel/DetailsFruit.aspx?ProductID=<%# Eval("MahsolatID") %>" 
+                                                     class="thumbnail">
                                                     <img src='<%# DataLayer.Models.Mahsolat.GetImagePath(Eval("ImageUrl"))%>' alt="Image" class="slider-image">
                                                 </a>
                                                 <div class="product-content">

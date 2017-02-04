@@ -30,7 +30,6 @@ namespace FruitShop.Element
 
                 //نمایش ان در دایو ویرایش
                 Fill_DivEdit(user);
-
             }
             catch (Exception ee)
             {

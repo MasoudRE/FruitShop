@@ -108,7 +108,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Ashkhas.aspx" />
     <Content Include="bin\DataLayer.dll" />
     <Content Include="bin\DataLayer.pdb" />
     <Content Include="Element\DropDownList.aspx" />
@@ -117,19 +116,20 @@
     <Content Include="Image\arrow_left.png" />
     <Content Include="Image\arrow_right.png" />
     <Content Include="Image\favIcon.png" />
-    <Content Include="Image\Product\Fruit\1.jpg" />
-    <Content Include="Image\Product\Fruit\10.jpg" />
-    <Content Include="Image\Product\Fruit\11.jpg" />
-    <Content Include="Image\Product\Fruit\12.jpg" />
-    <Content Include="Image\Product\Fruit\13.jpg" />
-    <Content Include="Image\Product\Fruit\2.jpg" />
-    <Content Include="Image\Product\Fruit\3.jpg" />
-    <Content Include="Image\Product\Fruit\4.jpg" />
-    <Content Include="Image\Product\Fruit\5.jpg" />
-    <Content Include="Image\Product\Fruit\6.jpg" />
-    <Content Include="Image\Product\Fruit\7.jpg" />
-    <Content Include="Image\Product\Fruit\8.jpg" />
-    <Content Include="Image\Product\Fruit\9.jpg" />
+    <Content Include="Image\Product\250x250.png" />
+    <Content Include="Image\Product\ImgeUrl\1.jpg" />
+    <Content Include="Image\Product\ImgeUrl\10.jpg" />
+    <Content Include="Image\Product\ImgeUrl\11.jpg" />
+    <Content Include="Image\Product\ImgeUrl\12.jpg" />
+    <Content Include="Image\Product\ImgeUrl\13.jpg" />
+    <Content Include="Image\Product\ImgeUrl\2.jpg" />
+    <Content Include="Image\Product\ImgeUrl\3.jpg" />
+    <Content Include="Image\Product\ImgeUrl\4.jpg" />
+    <Content Include="Image\Product\ImgeUrl\5.jpg" />
+    <Content Include="Image\Product\ImgeUrl\6.jpg" />
+    <Content Include="Image\Product\ImgeUrl\7.jpg" />
+    <Content Include="Image\Product\ImgeUrl\8.jpg" />
+    <Content Include="Image\Product\ImgeUrl\9.jpg" />
     <Content Include="Mahsolat\Albalo.jpg" />
     <Content Include="Mahsolat\Ananas.jpg" />
     <Content Include="Mahsolat\Ananas2.jpg" />
@@ -250,6 +250,7 @@
     <Content Include="Panel Management\jquery.flot.js" />
     <Content Include="Panel Management\jquery.min.js" />
     <Content Include="Panel Management\style.css" />
+    <Content Include="SitePanel\DetailsFruit.aspx" />
     <Content Include="SitePanel\ListFruit.aspx" />
     <Content Include="SitePanel\ListOtherProduct.aspx" />
     <Content Include="SitePanel\ListVegetebles.aspx" />
@@ -262,6 +263,7 @@
     <Content Include="Theme\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Theme\css\PageStyle\ListFruitStyle.css" />
     <Content Include="Theme\css\PageStyle\ProductStyle.css" />
+    <Content Include="Theme\css\PageStyle\DetailsFruitStype.css" />
     <Content Include="Theme\FileUpload\dist\fonts\dropify.eot" />
     <Content Include="Theme\FileUpload\dist\fonts\dropify.ttf" />
     <Content Include="Theme\FileUpload\dist\fonts\dropify.woff" />
@@ -336,7 +338,6 @@
     <Content Include="Gallery.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
-    <Content Include="Miveh.aspx" />
     <Content Include="obj\Debug\FruitShop.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\FruitShop.dll" />
     <Content Include="obj\Debug\FruitShop.pdb" />
@@ -456,13 +457,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ashkhas.aspx.cs">
-      <DependentUpon>Ashkhas.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Ashkhas.aspx.designer.cs">
-      <DependentUpon>Ashkhas.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Element\DropDownList.aspx.cs">
       <DependentUpon>DropDownList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -498,6 +492,13 @@
     <Compile Include="Sabt_Pardakhti.aspx.cs">
       <DependentUpon>Sabt_Pardakhti.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SitePanel\DetailsFruit.aspx.cs">
+      <DependentUpon>DetailsFruit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SitePanel\DetailsFruit.aspx.designer.cs">
+      <DependentUpon>DetailsFruit.aspx</DependentUpon>
     </Compile>
     <Compile Include="SitePanel\ListFruit.aspx.cs">
       <DependentUpon>ListFruit.aspx</DependentUpon>
@@ -572,10 +573,6 @@
     </Compile>
     <Compile Include="MasterPage.master.cs">
       <DependentUpon>MasterPage.master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Miveh.aspx.cs">
-      <DependentUpon>Miveh.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

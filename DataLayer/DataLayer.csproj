@@ -187,6 +187,7 @@
     <Compile Include="Template_User.cs" />
     <Compile Include="Utils\ExtensionMethods.cs" />
     <Compile Include="Utils\Utils.cs" />
+    <Compile Include="ViewModels\Miveh.cs" />
     <Compile Include="ViewModels\Mahsolat.cs" />
     <Compile Include="ViewModels\Ashkhas.cs" />
     <Compile Include="ViewModels\User.cs" />

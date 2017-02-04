@@ -12,7 +12,7 @@ namespace DataLayer.Utils
     {
         public const int MAX_SIZE_BYTE = int.MaxValue;
         public const string DEFAULT_IMAGE = "";
-        public const string DIRECTORY_FRUIT = "/Image/Product/Fruit/";
+        public const string DIRECTORY_FRUIT = "/Image/Product/ImgeUrl/";
 
         public enum UploadErrors : int
         {

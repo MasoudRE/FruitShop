@@ -8,26 +8,20 @@ using System.Web.UI.WebControls;
 
 namespace DataLayer.Models
 {
-    public enum Mahsolat_Type : byte
+    public enum Miveh_Type : byte
     {
         None,
-
-        Miveh,
-
-        SeyfiJat,
-
-        Other,
     }
 
-    public partial class Mahsolat
+    public partial class Miveh
     {
-        public static bool Add(Mahsolat mahsolat)
+        public static bool Add(Miveh mahsolat)
         {
             try
             {
                 using (FruitShopEntity db = new FruitShopEntity())
                 {
-                    db.Mahsolats.Add(mahsolat);
+                    db.Mivehs.Add(mahsolat);
                     db.SaveChanges();
                 }
 
@@ -39,17 +33,17 @@ namespace DataLayer.Models
             }
         }
 
-        public static void Show(GridView gv, Mahsolat_Type type)
+        public static void Show(GridView gv, Miveh_Type type)
         {
             try
             {
                 string[] t = new string[1];
-                t[0] = "MahsolatID";
+                t[0] = "MivehID";
                 gv.DataKeyNames = t;
 
                 using (FruitShopEntity db = new FruitShopEntity())
                 {
-                    var list = db.Mahsolats.Where(x => x.Type == type).ToList();
+                    var list = db.Mivehs.Where(x => x.Type == type).ToList();
                     gv.DataSource = list;
                 }
                 gv.DataBind();
@@ -59,20 +53,20 @@ namespace DataLayer.Models
             }
         }
 
-        public static void Show(DropDownList ddl, Mahsolat_Type type)
+        public static void Show(DropDownList ddl, Miveh_Type type)
         {
             try
             {
                 ddl.DataTextField = "Name";
-                ddl.DataValueField = "MahsolatID";
+                ddl.DataValueField = "MivehID";
 
                 using (FruitShopEntity db = new FruitShopEntity())
                 {
-                    var list = db.Mahsolats.Where(x => x.Type == type)
+                    var list = db.Mivehs.Where(x => x.Type == type)
                                         .Select(x => new
                                         {
-                                            x.MahsolatID,
-                                            x.Name,
+                                            x.MivehID,
+                                            x.Mahsolat.Name,
                                         })
                                         .ToList();
 
@@ -85,20 +79,20 @@ namespace DataLayer.Models
             }
         }
 
-        public static void Show(ListBox lb, Mahsolat_Type type)
+        public static void Show(ListBox lb, Miveh_Type type)
         {
             try
             {
                 lb.DataTextField = "Name";
-                lb.DataValueField = "MahsolatID";
+                lb.DataValueField = "MivehID";
 
                 using (FruitShopEntity db = new FruitShopEntity())
                 {
-                    var list = db.Mahsolats.Where(x => x.Type == type)
+                    var list = db.Mivehs.Where(x => x.Type == type)
                                         .Select(x => new
                                         {
-                                            x.MahsolatID,
-                                            x.Name,
+                                            x.MivehID,
+                                            x.Mahsolat.Name,
                                         })
                                         .ToList();
 
@@ -111,14 +105,14 @@ namespace DataLayer.Models
             }
         }
 
-        public static void Show(Repeater rp, Mahsolat_Type type)
+        public static void Show(Repeater rp, Miveh_Type type)
         {
             try
             {
                 using (FruitShopEntity db = new FruitShopEntity())
                 {
-                    var list = db.Mahsolats.Where(x => x.Type == type)
-                                        .OrderByDescending(x => x.MahsolatID)
+                    var list = db.Mivehs.Where(x => x.Type == type)
+                                        .OrderByDescending(x => x.MivehID)
                                         .ToList();
 
                     rp.DataSource = list;
@@ -130,7 +124,7 @@ namespace DataLayer.Models
             }
         }
 
-        public static void Show(Repeater rp, List<Mahsolat> list)
+        public static void Show(Repeater rp, List<Miveh> list)
         {
             try
             {
@@ -142,30 +136,30 @@ namespace DataLayer.Models
             }
         }
 
-        public static List<Mahsolat> Get()
+        public static List<Miveh> Get()
         {
             try
             {
                 using (FruitShopEntity db = new FruitShopEntity())
                 {
-                    return db.Mahsolats.ToList();
+                    return db.Mivehs.ToList();
                 }
             }
             catch (Exception)
             {
-                return new List<Mahsolat>();
+                return new List<Miveh>();
             }
         }
 
-        public static List<Mahsolat> Get(Mahsolat_Type type, int pageIndex = 1, int pageSize = 4)
+        public static List<Miveh> Get(Miveh_Type type, int pageIndex = 1, int pageSize = 4)
         {
             try
             {
                 using (FruitShopEntity db = new FruitShopEntity())
                 {
-                    return db.Mahsolats.Where(x => x.Type == type)
+                    return db.Mivehs.Where(x => x.Type == type)
                         .Distinct()
-                        .OrderByDescending(x => x.MahsolatID)
+                        .OrderByDescending(x => x.MivehID)
                         .Skip(pageSize * (pageIndex - 1))
                         .Take(pageSize)
                         .ToList();
@@ -173,34 +167,32 @@ namespace DataLayer.Models
             }
             catch (Exception)
             {
-                return new List<Mahsolat>();
+                return new List<Miveh>();
             }
         }
 
-        public static Mahsolat Get(int id)
+        public static Miveh Get(int id)
         {
             try
             {
                 using (FruitShopEntity db = new FruitShopEntity())
                 {
-                    return db.Mahsolats.Single(x => x.MahsolatID == id);
+                    return db.Mivehs.Single(x => x.MivehID == id);
                 }
             }
             catch (Exception)
             {
-                return new Mahsolat();
+                return new Miveh();
             }
         }
 
-        public static bool Update(Mahsolat mahsolat)
+        public static bool Update(Miveh mahsolat)
         {
             try
             {
                 using (FruitShopEntity db = new FruitShopEntity())
                 {
-                    var model = db.Mahsolats.Single(x => x.MahsolatID == mahsolat.MahsolatID);
-
-                    model.Name = mahsolat.Name;
+                    var model = db.Mivehs.Single(x => x.MivehID == mahsolat.MivehID);
 
                     db.SaveChanges();
                 }
@@ -222,31 +214,6 @@ namespace DataLayer.Models
             catch (Exception)
             {
                 return Utils.Image.DEFAULT_IMAGE;
-            }
-        }
-
-
-        public static string GetTypeName(Mahsolat_Type? type)
-        {
-            try
-            {
-                switch (type.Value)
-                {
-                    case Mahsolat_Type.None:
-                        return "نامشخص";
-                    case Mahsolat_Type.Miveh:
-                        return "میوه";
-                    case Mahsolat_Type.SeyfiJat:
-                        return "صیفی‌جات";
-                    case Mahsolat_Type.Other:
-                        return "دیگرمحصولات";
-                    default:
-                        return "نامشخص";
-                }
-            }
-            catch (Exception)
-            {
-                return "نامشخص";
             }
         }
     }

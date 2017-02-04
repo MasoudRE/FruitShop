@@ -16,7 +16,20 @@ namespace DataLayer.Utils
             }
             catch (Exception)
             {
-                return false;
+                return true;
+            }
+        }
+
+
+        public static bool IsNullOrEmpty(this long? str)
+        {
+            try
+            {
+                return string.IsNullOrEmpty(str.Value.ToString());
+            }
+            catch (Exception)
+            {
+                return true;
             }
         }
 

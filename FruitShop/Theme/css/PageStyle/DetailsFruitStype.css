@@ -1,0 +1,11 @@
+﻿.old-price {
+    font-size: 13px;
+    text-decoration: line-through;
+    color: #a9a6a6;
+}
+
+.new-price {
+    font-weight: bold;
+    color: green;
+    font-size: 25px;
+}
