@@ -12,7 +12,7 @@ namespace DataLayer.Models
     {
         public static bool Add(Ashkhas shakhs)
         {
-            try 
+            try
             {
                 using (FruitShopEntity db = new FruitShopEntity())
                 {
@@ -25,6 +25,26 @@ namespace DataLayer.Models
             catch (Exception)
             {
                 return false;
+            }
+        }
+
+        public static int GetNextID()
+        {
+            try
+            {
+                using (FruitShopEntity db = new FruitShopEntity())
+                {
+                    var model = db.Ashkhas.ToList()
+                             .OrderByDescending(x => x.AshkhasID)
+                             .First();
+
+                    return model.AshkhasID + 1;
+
+                }
+            }
+            catch (Exception)
+            {
+                return -1;
             }
         }
 

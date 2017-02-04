@@ -190,7 +190,8 @@
     <Compile Include="ViewModels\Miveh.cs" />
     <Compile Include="ViewModels\Mahsolat.cs" />
     <Compile Include="ViewModels\Ashkhas.cs" />
-    <Compile Include="ViewModels\User.cs" />
+    <Compile Include="ViewModels\BarNameh.cs" />
+    <Compile Include="ViewModels\Users.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\DataLayer.dll" />

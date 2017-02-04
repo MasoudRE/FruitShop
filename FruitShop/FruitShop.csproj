@@ -556,7 +556,6 @@
     </Compile>
     <Compile Include="BarNameh.aspx.cs">
       <DependentUpon>BarNameh.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -612,28 +611,24 @@
     </Compile>
     <Compile Include="Insert_BarNameh.aspx.cs">
       <DependentUpon>Insert_BarNameh.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Insert_BarNameh.aspx.designer.cs">
       <DependentUpon>Insert_BarNameh.aspx</DependentUpon>
     </Compile>
     <Compile Include="Insert_Product.aspx.cs">
       <DependentUpon>Insert_Product.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Insert_Product.aspx.designer.cs">
       <DependentUpon>Insert_Product.aspx</DependentUpon>
     </Compile>
     <Compile Include="SeyfiJat.aspx.cs">
       <DependentUpon>SeyfiJat.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SeyfiJat.aspx.designer.cs">
       <DependentUpon>SeyfiJat.aspx</DependentUpon>
     </Compile>
     <Compile Include="Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Product.aspx.designer.cs">
       <DependentUpon>Product.aspx</DependentUpon>

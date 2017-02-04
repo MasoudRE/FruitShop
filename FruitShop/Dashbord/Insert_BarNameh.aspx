@@ -1,5 +1,4 @@
-﻿<%@ Page Title="افزودن بارنامه" Language="C#" MasterPageFile="~/Management.master" AutoEventWireup="true" CodeBehind="Insert_BarNameh.aspx.cs" Inherits="Insert_BarNameh" %>
-
+﻿<%@ Page Title="افزودن بارنامه" Language="C#" MasterPageFile="~/Management.master" AutoEventWireup="true" CodeBehind="Insert_BarNameh.aspx.cs" Inherits="FruitShop.Dashbord.Pgae_Insert_BarNameh" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -116,6 +115,11 @@
 
             <div style="margin-right: 105px; margin-top: -30px;">
                 <asp:Button ID="Repeat" runat="server" Text="دوباره" ValidationGroup="Group_Login" Font-Bold="true" Width="45px" Height="30px" Font-Names="B Nazanin" Font-Size="Medium" BackColor="#E1E1E1" BorderColor="#333333" ForeColor="#000066" BorderWidth="1px" />
+            </div>
+
+            <div style="margin-right: 160px; margin-top: -30px;">
+                <asp:Button ID="Exit" runat="server" Text="انصراف" ValidationGroup="Group_Login" Font-Bold="true" Width="55px" Height="30px" Font-Names="B Nazanin" Font-Size="Medium" BackColor="#E1E1E1" BorderColor="#333333" ForeColor="#000066" BorderWidth="1px" />
+
             </div>
 
         </div>
