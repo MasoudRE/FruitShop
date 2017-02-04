@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="ListFruit.aspx.cs" Inherits="FruitShop.SitePanel.Page_ListMiveh" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="SiteMaster.master" AutoEventWireup="true" CodeBehind="ListFruit.aspx.cs" Inherits="FruitShop.SitePanel.Page_ListMiveh" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <%-- page Style --%>

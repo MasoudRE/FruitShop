@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="ShowProduct.aspx.cs" Inherits="FruitShop.SitePanel.ShowProduct" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="SiteMaster.master" AutoEventWireup="true" CodeBehind="ShowProduct.aspx.cs" Inherits="FruitShop.SitePanel.ShowProduct" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script src="/Slider/sliderengine/jquery.js"></script>

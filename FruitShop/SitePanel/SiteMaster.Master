@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMaster.master.cs" Inherits="FruitShop.SitePanel.SiteMaster" %>
 
 <!DOCTYPE html>
 
@@ -44,10 +44,10 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body style="font-family: 'B Nazanin',sans-serif;">
+<body  style="font-family: 'B Nazanin',sans-serif;">
     <form id="form1" runat="server">
-
-        <div class="container">
+    <div>
+       <div class="container">
             <!-- Strat Menu -->
             <div class="row">
                 <ul id="mbmcpebul_table" class="mbmcpebul_menulist css_menu col-md-12 mdl-shadow--3dp " style="height: 55px; border: 1px solid #008080; border-radius: 2px; margin-top: 5px; margin-bottom: 10px;">
@@ -58,7 +58,11 @@
                     </li>
 
                     <li class="topitem spaced_li">
-                        <div class="buttonbg" style="width: 100px;"><a href="Sabad.aspx">سبد خرید</a></div>
+                        <div class="buttonbg" style="width: 100px;">
+                            <a href="Sabad.aspx">سبد خرید
+                                <asp:Label runat="server" ID="lbl_cardItemCount" CssClass="badge card">0</asp:Label>
+                            </a>
+                        </div>
                     </li>
 
                     <li class="topitem spaced_li">
@@ -108,6 +112,7 @@
             <footer style="padding: 20px;">
             </footer>
         </div>
+    </div>
     </form>
 </body>
 </html>

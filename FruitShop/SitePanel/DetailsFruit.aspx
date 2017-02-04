@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="DetailsFruit.aspx.cs" Inherits="FruitShop.SitePanel.DetailsFruit" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="SiteMaster.master" AutoEventWireup="true" CodeBehind="DetailsFruit.aspx.cs" Inherits="FruitShop.SitePanel.DetailsFruit" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <%--page style--%>
@@ -74,9 +74,12 @@
 
 
                 <div class="form-group">
-                    <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+                    <a runat="server"
+                        id="btn_AddCard"
+                        onserverclick="btn_AddCard_ServerClick"
+                         class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
                         style="background: #4caf50;"
-                        href="ListFruit.aspx">
+                        href="#">
                         <i class="material-icons">add_shopping_cart</i>
                         افزودن به سبد خرید
                     </a>

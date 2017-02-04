@@ -1,15 +1,17 @@
-﻿using DataLayer.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class _Default : System.Web.UI.Page
+namespace FruitShop
 {
-    protected void Page_Load(object sender, EventArgs e)
+    public partial class Default : System.Web.UI.Page
     {
-        Response.Redirect("/SitePanel/ShowProduct.aspx");
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            Response.Redirect("/SitePanel/ShowProduct.aspx");
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="ListVegetebles.aspx.cs" Inherits="FruitShop.SitePanel.Page_ListVegetebles" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="SiteMaster.master" AutoEventWireup="true" CodeBehind="ListVegetebles.aspx.cs" Inherits="FruitShop.SitePanel.Page_ListVegetebles" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

@@ -110,6 +110,7 @@
   <ItemGroup>
     <Content Include="bin\DataLayer.dll" />
     <Content Include="bin\DataLayer.pdb" />
+    <Content Include="Default.aspx" />
     <Content Include="Element\DropDownList.aspx" />
     <Content Include="Element\GridView.aspx" />
     <Content Include="Element\Slider.aspx" />
@@ -209,7 +210,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Management.master" />
-    <Content Include="MasterPage.master" />
     <Content Include="bin\ApplicationInsights.config" />
     <Content Include="bin\FruitShop.dll.config" />
     <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
@@ -301,6 +301,7 @@
     <Content Include="Max_Buy.aspx" />
     <Content Include="Theme\Font\BYekan.ttf" />
     <Content Include="Theme\Font\Iranian Sans.ttf" />
+    <Content Include="SitePanel\SiteMaster.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -333,7 +334,6 @@
     <Content Include="bin\roslyn\vbc.exe" />
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
     <Content Include="Contact.aspx" />
-    <Content Include="Default.aspx" />
     <Content Include="DefaultMag.aspx" />
     <Content Include="Gallery.aspx" />
     <Content Include="Global.asax" />
@@ -457,6 +457,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Element\DropDownList.aspx.cs">
       <DependentUpon>DropDownList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -528,6 +535,13 @@
     <Compile Include="SitePanel\ShowProduct.aspx.designer.cs">
       <DependentUpon>ShowProduct.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SitePanel\SiteMaster.Master.cs">
+      <DependentUpon>SiteMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SitePanel\SiteMaster.Master.designer.cs">
+      <DependentUpon>SiteMaster.Master</DependentUpon>
+    </Compile>
     <Compile Include="User.aspx.cs">
       <DependentUpon>User.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -548,10 +562,6 @@
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="DefaultMag.aspx.cs">
       <DependentUpon>DefaultMag.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -569,10 +579,6 @@
     </Compile>
     <Compile Include="Management.master.cs">
       <DependentUpon>Management.master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MasterPage.master.cs">
-      <DependentUpon>MasterPage.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
