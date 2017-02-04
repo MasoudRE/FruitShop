@@ -13,13 +13,13 @@ namespace FruitShop.Dashbord {
     public partial class Page_BarNameh {
         
         /// <summary>
-        /// Div_AshkhasShow control.
+        /// Div_ShowBarNameh control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div_AshkhasShow;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div_ShowBarNameh;
         
         /// <summary>
         /// div_list control.

@@ -10,6 +10,7 @@ namespace FruitShop.Dashbord
 {
     public partial class Page_Ashkhas : System.Web.UI.Page
     {
+        public static int AshkhasID = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             var nextID = Ashkhas.GetNextID();
@@ -25,6 +26,111 @@ namespace FruitShop.Dashbord
 
         protected void LinkButton_Edit_Click(object sender, EventArgs e)
         {
+            try
+            {
+                LinkButton btn = sender as LinkButton;
+                GridViewRow gvr = btn.NamingContainer as GridViewRow;
+                AshkhasID = int.Parse(GridView_listAshkhas.DataKeys[gvr.RowIndex].Value.ToString());
+
+                //دریافت اطلاعات کاربر از بانک
+                var shakhs = Ashkhas.Get(id: AshkhasID);
+
+                //نمایش ان در دایو ویرایش
+                Fill_DivEdit(shakhs);
+
+            }
+            catch (Exception ee)
+            {
+            }
+        }
+
+        private void Fill_DivEdit(Ashkhas shakhs)
+        {
+            Div_ShowAshkhas.Visible = false;
+
+            Div_EditAshkhas.Visible = true;
+
+            txt_Family_DEdit.Text = shakhs.Family;
+            txt_Name_DEdit.Text = shakhs.Name;
+            txt_CodeMeli_DEdit.Text = shakhs.CodeMeli.ToString();
+            txt_Tel_DEdit.Text = shakhs.Tel;
+            txt_Mobile_DEdit.Text = shakhs.Mobile;
+            txt_Address_DEdit.Text = shakhs.Address;
+        }
+
+        protected void Exit_DivAdd_Click(object sender, EventArgs e)
+        {
+            Div_ShowAshkhas.Visible = true;
+
+            Div_AddAshkhas.Visible = false;
+        }
+
+        protected void btn_EditAshkhas_Click(object sender, EventArgs e)
+        {
+            var shakhs = new Ashkhas()
+            {
+                AshkhasID= AshkhasID,
+                Family = txt_Family_DEdit.Text,
+                Name = txt_Name_DEdit.Text,
+                Tel = txt_Tel_DEdit.Text,
+                Mobile = txt_Mobile_DEdit.Text,
+                Address = txt_Address_DEdit.Text
+            };
+            if (Ashkhas.Update(shakhs))
+            {
+                lb_Status_DEdit.Visible = true;
+                lb_Status_DEdit.Text = "ویرایش با موفقیت انجام شد";
+                lb_Status_DEdit.ForeColor = System.Drawing.Color.Green;
+
+            }
+            else
+            {
+                lb_Status_DEdit.Text = "مشکل در ویرایش";
+            }
+
+        }
+
+        protected void Exit_DivEdit_Click(object sender, EventArgs e)
+        {
+            Div_ShowAshkhas.Visible = true;
+
+            Div_EditAshkhas.Visible = false;
+        }
+
+        protected void Repeat_DivEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Repeat_DivAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btn_AddAshkhas_Click(object sender, EventArgs e)
+        {
+            var shakhs = new Ashkhas()
+            {
+                Family = txt_Family_DEdit.Text,
+                Name = txt_Name_DEdit.Text,
+                CodeMeli = int.Parse(txt_CodeMeli_DEdit.Text),
+                Tel = txt_Tel_DEdit.Text,
+                Mobile = txt_Mobile_DEdit.Text,
+                Address = txt_Address_DEdit.Text
+            };
+
+            if (Ashkhas.Add(shakhs))
+            {
+                lb_Status_DAdd.Visible = true;
+                lb_Status_DAdd.Text = "ویرایش با موفقیت انجام شد";
+                lb_Status_DAdd.ForeColor = System.Drawing.Color.Green;
+                //کاربر با موفققیت ویرایش دش
+            }
+            else
+            {
+                lb_Status_DAdd.Text = "اشکال در ویرایش";
+                //ایراد در وارایش کاربر
+            }
         }
     }
 }

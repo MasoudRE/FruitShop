@@ -35,7 +35,7 @@
         <h2 style="width: 1142px; height: 25px; float: left;"></h2>
 
 
-        <div runat="server" visible="true" id="Div_AshkhasShow" style="width: 1105px; margin-right: 18px; margin-top: 90px; background-color: cadetblue;">
+        <div runat="server" visible="true" id="Div_ShowBarNameh" style="width: 1105px; margin-right: 18px; margin-top: 90px; background-color: cadetblue;">
 
             <div runat="server" visible="true" id="div_list">
                 <div class="mdl-cell mdl-cell--12-col" style="overflow-x: auto;">
@@ -52,12 +52,13 @@
                         PagerSettings-NextPageImageUrl="~/image/Icon/Arrow/ic_chevron_left_black_24px.svg"
                         PagerSettings-PreviousPageImageUrl="~/image/Icon/Arrow/ic_chevron_right_black_24px.svg">
                         <Columns>
+                            <asp:BoundField DataField="AshkhasID" HeaderText="کد صاحب بار" />
                             <asp:BoundField DataField="CodeMeli" HeaderText="کد ملی" />
-
                             <asp:BoundField DataField="Name" HeaderText="نام" />
-
                             <asp:BoundField DataField="Family" HeaderText="نام خانوادگی" />
-
+                            <asp:BoundField DataField="Tel" HeaderText="تلفن ثابت" />
+                            <asp:BoundField DataField="Mobile" HeaderText="تلفن همراه" />
+                            <asp:BoundField DataField="Address" HeaderText="آدرس" />
                             <asp:TemplateField>
                                 <ItemTemplate>
                                     <asp:LinkButton runat="server"

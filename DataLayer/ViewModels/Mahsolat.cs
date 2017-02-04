@@ -49,7 +49,9 @@ namespace DataLayer.Models
 
                 using (FruitShopEntity db = new FruitShopEntity())
                 {
-                    var list = db.Mahsolats.Where(x => x.Type == type).ToList();
+                    var list = db.Mahsolats.Where(x => x.Type == type)
+                                            .OrderByDescending(x => x.MahsolatID)
+                                            .ToList();
                     gv.DataSource = list;
                 }
                 gv.DataBind();

@@ -1,0 +1,10 @@
+﻿.image-item {
+    width: 50px;
+}
+
+
+.lable-oldPrice {
+    text-decoration: line-through;
+    font-size: 11px;
+    color: #afaca8;
+}

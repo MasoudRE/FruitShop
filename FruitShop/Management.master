@@ -10,7 +10,7 @@
     <script type="text/javascript" src="Panel Management/jquery.flot.js"></script>
     <script type="text/javascript" src="Panel Management/doc.js"></script>
 
-   <script src="../Theme/js/jquery.min.js"></script>
+    <script src="../Theme/js/jquery.min.js"></script>
 
     <%-- bootstrap --%>
     <link href="/Theme/bootstrap-3.3.5/css/bootstrap-Theme.css" rel="stylesheet" />
@@ -26,13 +26,15 @@
     <link href="/Theme/MDL/icon.css" rel="stylesheet" />
     <link href="/Theme/MDL/css.css" rel="stylesheet" />
 
-
-
+    <%--favicon--%>
+    <link rel="icon"
+        type="image/png"
+        href="~/Image/favIcon.png">
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
+<body style="font-family: BYekan !important;">
     <form id="form1" runat="server">
 
         <div class="body_style">
@@ -59,7 +61,7 @@
                         </div>
                         <ul>
                             <li><a href="Customer.aspx">مشتری</a></li>
-                            <li><a href="Ashkhas.aspx">صاحب بار</a></li>
+                            <li><a href="Dashbord/Ashkhas.aspx">صاحب بار</a></li>
                             <li><a href="Personnel.aspx">پرسنل</a></li>
                             <li><a href="About.aspx">مدیر</a></li>
                         </ul>
@@ -96,9 +98,9 @@
                             <span class="value">محصولات</span>
                         </div>
                         <ul>
-                            <li><a href="Dashbord/Product.aspx">میوه</a></li>
-                            <li><a href="Dashbord/Product.aspx">صیفی جات</a></li>
-                            <li><a href="Dashbord/Product.aspx">سبد میوه</a></li>
+                            <li><a href="Dashbord/Miveh.aspx">میوه</a></li>
+                            <li><a href="Dashbord/SeyfiJat.aspx">صیفی جات</a></li>
+                            <li><a href="Dashbord/Product.aspx">دیگر محصولات</a></li>
                         </ul>
                     </li>
                     <li>

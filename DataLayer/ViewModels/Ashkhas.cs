@@ -157,10 +157,11 @@ namespace DataLayer.Models
                 using (FruitShopEntity db = new FruitShopEntity())
                 {
                     var model = db.Ashkhas.Single(x => x.AshkhasID == shakhs.AshkhasID);
-
                     model.Name = shakhs.Name;
                     model.Family = shakhs.Family;
-
+                    model.Tel = shakhs.Tel;
+                    model.Mobile = shakhs.Mobile;
+                    model.Address = shakhs.Address;
                     db.SaveChanges();
                 }
 
