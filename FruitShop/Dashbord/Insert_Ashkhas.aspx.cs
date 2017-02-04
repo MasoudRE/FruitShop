@@ -32,18 +32,18 @@ namespace FruitShop.Dashbord
             };
 
 
-            if (DataLayer.Models.Ashkhas.Add(Shakhs))
-            {
-                lb_Status.Text = "ثبت با موفقیت انجام شد";
-                lb_Status.ForeColor = System.Drawing.Color.Green;
+            //if (DataLayer.Models.Ashkhas.Add(Shakhs))
+            //{
+            //    lb_Status.Text = "ثبت با موفقیت انجام شد";
+            //    lb_Status.ForeColor = System.Drawing.Color.Green;
 
 
-            }
-            else
-            {
-                lb_Status.Text = "Error";
-                //ایراد در وارایش کاربر
-            }
+            //}
+            //else
+            //{
+            //    lb_Status.Text = "Error";
+            //    //ایراد در وارایش کاربر
+            //}
         }
     }
 }

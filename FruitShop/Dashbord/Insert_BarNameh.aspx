@@ -1,5 +1,4 @@
-﻿<%@ Page Title="افزودن بارنامه" Language="C#" MasterPageFile="~/Management.master" AutoEventWireup="true" CodeBehind="Insert_BarNameh.aspx.cs" Inherits="Insert_BarNameh" %>
-
+﻿<%@ Page Title="افزودن بارنامه" Language="C#" MasterPageFile="~/Management.master" AutoEventWireup="true" CodeBehind="Insert_BarNameh.aspx.cs" Inherits="FruitShop.Dashbord.Pgae_Insert_BarNameh" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

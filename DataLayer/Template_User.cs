@@ -25,22 +25,22 @@ namespace DataLayer.Models
             throw new NotImplementedException();
         }
 
-        public static List<Models.Users> Get()
+        public static List<Models.BarNameh> Get()
         {
             throw new NotImplementedException();
         }
 
-        public static Users Get(int id)
+        public static BarNameh Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public  static bool Add(Models.Users user)
+        public  static bool Add(Models.BarNameh user)
         {
             throw new NotImplementedException();
         }
 
-        public static bool Update(Models.Users user)
+        public static bool Update(Models.BarNameh user)
         {
             throw new NotImplementedException();
         }

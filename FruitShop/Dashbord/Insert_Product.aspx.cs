@@ -18,11 +18,11 @@ namespace FruitShop.Dashbord
         {
             DataLayer.Models.Mahsolat Shakhs = new DataLayer.Models.Mahsolat()
             {
-                Name = txt_Name.Text.Trim(),
-                OldPrice = Convert.ToDouble(txt_OldPrice.Text.Trim(),
-                NewPrice = Convert.ToDouble( txt_NewPrice.Text.Trim(),
-                Description = txt_Description.Text.Trim(),
-                //....
+                //Name = txt_Name.Text.Trim(),
+                //OldPrice = Convert.ToDouble(txt_OldPrice.Text.Trim(),
+                //NewPrice = Convert.ToDouble( txt_NewPrice.Text.Trim(),
+                //Description = txt_Description.Text.Trim(),
+                ////....
             };
         }
     }
