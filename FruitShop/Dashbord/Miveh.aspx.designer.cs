@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Page_FruitShop.Dashbord {
+namespace FruitShop.Dashbord {
     
     
-    public partial class Miveh {
+    public partial class Page_Miveh {
         
         /// <summary>
         /// Div_MivehShow control.
@@ -22,13 +22,13 @@ namespace Page_FruitShop.Dashbord {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div_MivehShow;
         
         /// <summary>
-        /// div_list control.
+        /// div_listMiveh control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_list;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_listMiveh;
         
         /// <summary>
         /// GridView_listMiveh control.

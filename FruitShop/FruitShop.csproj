@@ -110,6 +110,16 @@
   <ItemGroup>
     <Content Include="bin\DataLayer.dll" />
     <Content Include="bin\DataLayer.pdb" />
+    <Content Include="Dashbord\Ashkhas.aspx" />
+    <Content Include="Dashbord\BarNameh.aspx" />
+    <Content Include="Dashbord\Insert_Ashkhas.aspx" />
+    <Content Include="Dashbord\Insert_BarNameh.aspx" />
+    <Content Include="Dashbord\Insert_Miveh.aspx" />
+    <Content Include="Dashbord\Insert_Product.aspx" />
+    <Content Include="Dashbord\Insert_SeyfiJat.aspx" />
+    <Content Include="Dashbord\Miveh.aspx" />
+    <Content Include="Dashbord\Product.aspx" />
+    <Content Include="Dashbord\SeyfiJat.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Element\DropDownList.aspx" />
     <Content Include="Element\GridView.aspx" />
@@ -262,6 +272,7 @@
     <Content Include="Theme\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Theme\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Theme\css\PageStyle\ListFruitStyle.css" />
+    <Content Include="Theme\css\PageStyle\MiheStyle.css" />
     <Content Include="Theme\css\PageStyle\ProductStyle.css" />
     <Content Include="Theme\css\PageStyle\DetailsFruitStype.css" />
     <Content Include="Theme\FileUpload\dist\fonts\dropify.eot" />
@@ -461,7 +472,73 @@
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
+    <Compile Include="Dashbord\Ashkhas.aspx.designer.cs">
+      <DependentUpon>Ashkhas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashbord\BarNameh.aspx.cs">
+      <DependentUpon>BarNameh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashbord\BarNameh.aspx.designer.cs">
+      <DependentUpon>BarNameh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashbord\Insert_Ashkhas.aspx.cs">
+      <DependentUpon>Insert_Ashkhas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashbord\Insert_Ashkhas.aspx.designer.cs">
+      <DependentUpon>Insert_Ashkhas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashbord\Insert_BarNameh.aspx.cs">
+      <DependentUpon>Insert_BarNameh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashbord\Insert_BarNameh.aspx.designer.cs">
+      <DependentUpon>Insert_BarNameh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashbord\Insert_Miveh.aspx.cs">
+      <DependentUpon>Insert_Miveh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashbord\Insert_Miveh.aspx.designer.cs">
+      <DependentUpon>Insert_Miveh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashbord\Insert_Product.aspx.cs">
+      <DependentUpon>Insert_Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashbord\Insert_Product.aspx.designer.cs">
+      <DependentUpon>Insert_Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashbord\Insert_SeyfiJat.aspx.cs">
+      <DependentUpon>Insert_SeyfiJat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashbord\Insert_SeyfiJat.aspx.designer.cs">
+      <DependentUpon>Insert_SeyfiJat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashbord\Miveh.aspx.cs">
+      <DependentUpon>Miveh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashbord\Miveh.aspx.designer.cs">
+      <DependentUpon>Miveh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashbord\Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashbord\Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashbord\SeyfiJat.aspx.cs">
+      <DependentUpon>SeyfiJat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashbord\SeyfiJat.aspx.designer.cs">
+      <DependentUpon>SeyfiJat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Element\DropDownList.aspx.cs">
@@ -651,7 +728,6 @@
   <ItemGroup>
     <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
-    <Folder Include="CSS\" />
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="Theme\Semantic-UI-CSS-master\components\" />
