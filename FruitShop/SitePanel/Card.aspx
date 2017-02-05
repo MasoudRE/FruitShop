@@ -88,7 +88,15 @@
                                     ID="LinkButton_Delete"
                                     OnClick="LinkButton_Delete_Click"
                                     CssClass="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
-                                 <i class="material-icons">delete</i>
+                        <i class="material-icons">keyboard_arrow_down</i>
+                                </asp:LinkButton>
+
+
+                                <asp:LinkButton runat="server"
+                                    ID="LinkButton_Add"
+                                    OnClick="LinkButton_Add_Click"
+                                    CssClass="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                        <i class="material-icons">keyboard_arrow_up</i>
                                 </asp:LinkButton>
                             </ItemTemplate>
                         </asp:TemplateField>

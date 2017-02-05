@@ -20,7 +20,6 @@ namespace FruitShop.SitePanel
             }
             catch (Exception)
             {
-
             }
         }
 
@@ -55,7 +54,25 @@ namespace FruitShop.SitePanel
                 MahsolatID = int.Parse(GridView_Card.DataKeys[gvr.RowIndex].Value.ToString());
 
 
-                Card.Delete(id: MahsolatID);
+                Card.Delete(MahsolatID,Session);
+
+                Card.Show(GridView_Card, Session);
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        protected void LinkButton_Add_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                LinkButton btn = sender as LinkButton;
+                GridViewRow gvr = btn.NamingContainer as GridViewRow;
+                MahsolatID = int.Parse(GridView_Card.DataKeys[gvr.RowIndex].Value.ToString());
+
+
+                Card.Add(MahsolatID, Session);
 
                 Card.Show(GridView_Card, Session);
             }
