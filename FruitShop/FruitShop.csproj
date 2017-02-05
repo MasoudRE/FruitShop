@@ -260,6 +260,9 @@
     <Content Include="SitePanel\ListFruit.aspx" />
     <Content Include="SitePanel\ListOtherProduct.aspx" />
     <Content Include="SitePanel\ListVegetebles.aspx" />
+    <Content Include="SitePanel\Login.aspx" />
+    <Content Include="SitePanel\Profile.aspx" />
+    <Content Include="SitePanel\Register.aspx" />
     <Content Include="SitePanel\ShowProduct.aspx" />
     <Content Include="Theme\bootstrap-3.3.5\css\bootstrap-theme.css.map" />
     <Content Include="Theme\bootstrap-3.3.5\css\bootstrap.css.map" />
@@ -297,7 +300,6 @@
     <Content Include="Panel Management\font\BYekan.woff" />
     <Content Include="Panel Management\Wordpress Tv - Free farsi wp learning video.url" />
     <Content Include="Customer.aspx" />
-    <Content Include="Profile.aspx" />
     <Content Include="ChangePass.aspx" />
     <Content Include="Personnel.aspx" />
     <Content Include="BaghiMandeh_Product.aspx" />
@@ -338,7 +340,6 @@
     <Content Include="Contact.aspx" />
     <Content Include="DefaultMag.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Login.aspx" />
     <Content Include="obj\Debug\FruitShop.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\FruitShop.dll" />
     <Content Include="obj\Debug\FruitShop.pdb" />
@@ -566,6 +567,27 @@
     <Compile Include="SitePanel\ListVegetebles.aspx.designer.cs">
       <DependentUpon>ListVegetebles.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SitePanel\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SitePanel\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SitePanel\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SitePanel\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SitePanel\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SitePanel\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SitePanel\ShowProduct.aspx.cs">
       <DependentUpon>ShowProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -603,10 +625,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Management.master.cs">
       <DependentUpon>Management.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -618,13 +636,6 @@
     </Compile>
     <Compile Include="Customer.aspx.designer.cs">
       <DependentUpon>Customer.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Profile.aspx.cs">
-      <DependentUpon>Profile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Profile.aspx.designer.cs">
-      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="ChangePass.aspx.cs">
       <DependentUpon>ChangePass.aspx</DependentUpon>

@@ -63,5 +63,17 @@ namespace DataLayer.Utils
                 return null;
             }
         }
+
+        public static int? ToInt(this string value)
+        {
+            try
+            {
+                return int.Parse(value);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
     }
 }
