@@ -472,15 +472,6 @@ namespace FruitShop.Dashbord {
         protected global::System.Web.UI.WebControls.Button btn_EditAshkhas;
         
         /// <summary>
-        /// Repeat_DivEdit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Repeat_DivEdit;
-        
-        /// <summary>
         /// Exit_DivEdit control.
         /// </summary>
         /// <remarks>

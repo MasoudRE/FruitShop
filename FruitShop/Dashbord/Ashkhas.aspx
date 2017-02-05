@@ -244,10 +244,6 @@
             </div>
 
             <div style="margin-right: 105px; margin-top: -30px;">
-                <asp:Button ID="Repeat_DivEdit" runat="server" Text="دوباره" ValidationGroup="Group_Login" Font-Bold="true" Width="45px" Height="30px" Font-Names="B Nazanin" Font-Size="Medium" BackColor="#E1E1E1" BorderColor="#333333" ForeColor="#000066" BorderWidth="1px" OnClick="Repeat_DivEdit_Click" />
-            </div>
-
-            <div style="margin-right: 160px; margin-top: -30px;">
                 <asp:Button ID="Exit_DivEdit" runat="server" Text="انصراف" ValidationGroup="Group_Login" Font-Bold="true" Width="55px" Height="30px" Font-Names="B Nazanin" Font-Size="Medium" BackColor="#E1E1E1" BorderColor="#333333" ForeColor="#000066" BorderWidth="1px" OnClick="Exit_DivEdit_Click" />
             </div>
 

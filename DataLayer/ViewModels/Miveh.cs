@@ -74,7 +74,8 @@ namespace DataLayer.Models
 
                     model.Name = mahsol.Name;
                     model.Description = mahsol.Description;
-
+                    model.OldPrice = mahsol.OldPrice;
+                    model.NewPrice = mahsol.NewPrice;
                     db.SaveChanges();
                 }
 
