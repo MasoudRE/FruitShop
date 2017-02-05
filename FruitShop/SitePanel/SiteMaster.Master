@@ -44,75 +44,94 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body  style="font-family: 'B Nazanin',sans-serif;">
+<body style="font-family: 'B Nazanin',sans-serif;">
     <form id="form1" runat="server">
-    <div>
-       <div class="container">
-            <!-- Strat Menu -->
-            <div class="row">
-                <ul id="mbmcpebul_table" class="mbmcpebul_menulist css_menu col-md-12 mdl-shadow--3dp " style="height: 55px; border: 1px solid #008080; border-radius: 2px; margin-top: 5px; margin-bottom: 10px;">
-                    <li class="topitem spaced_li">
-                        <div style="width: 245px;">
-                            <a class="button_1"></a>
-                        </div>
-                    </li>
+        <div>
+            <div class="container">
+                <!-- Strat Menu -->
+                <div class="row">
+                    <ul id="mbmcpebul_table" class="mbmcpebul_menulist css_menu col-md-12 mdl-shadow--3dp " style="height: 55px; border: 1px solid #008080; border-radius: 2px; margin-top: 5px; margin-bottom: 10px;">
+                        <li class="topitem spaced_li">
+                            <div style="width: 245px;">
+                                <a class="button_1"></a>
+                            </div>
+                        </li>
 
-                    <li class="topitem spaced_li">
-                        <div class="buttonbg" style="width: 100px;">
-                            <a href="Card.aspx">سبد خرید
+
+                         <li class="topitem spaced_li" runat="server" id="li_Menu_Profile" visible="false">
+                            <div class="arrow buttonbg" >
+                                <a class="button_7"
+                                    href="#">
+                                    <asp:Label Text="نام کاربر" runat="server"
+                                        ID="lbl_NameUser" />
+                                </a>
+                            </div>
+                            <ul class="gradient_menu gradient121">
+                                <li><a title="" href="/SitePanel/Profile.aspx">پروفایل</a></li>
+                                <li><a runat="server"
+                                    id="btn_LogOut"
+                                    onserverclick="btn_LogOut_ServerClick">خروج
+                                </a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="topitem spaced_li">
+                            <div class="buttonbg" style="width: 100px;">
+                                <a href="Card.aspx">سبد خرید
                                 <asp:Label runat="server" ID="lbl_cardItemCount" CssClass="badge card">0</asp:Label>
-                            </a>
-                        </div>
-                    </li>
+                                </a>
+                            </div>
+                        </li>
 
-                    <li class="topitem spaced_li">
-                        <div class="buttonbg" style="width: 110px;"><a href="Contact.aspx">ارتباط با ما</a></div>
-                    </li>
+                        <li class="topitem spaced_li">
+                            <div class="buttonbg" style="width: 110px;"><a href="Contact.aspx">ارتباط با ما</a></div>
+                        </li>
 
-                    <li class="topitem spaced_li">
-                        <div class="arrow buttonbg" style="width: 145px;"><a class="button_4">حساب کاربری</a></div>
-                        <ul class="gradient_menu gradient81">
-                            <li><a href="Login.aspx">ورود</a></li>
-                            <li><a href="User.aspx">ثبت نام</a></li>
-                        </ul>
-                    </li>
+                        <li class="topitem spaced_li">
+                            <div class="arrow buttonbg" style="width: 145px;"><a class="button_4">حساب کاربری</a></div>
+                            <ul class="gradient_menu gradient81">
+                                <li><a href="/SitePanel/Login.aspx">ورود</a></li>
+                                <li><a href="/SitePanel/Register.aspx">ثبت نام</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="topitem spaced_li">
-                        <div class="buttonbg" style="width: 90px;"><a href="About.aspx">درباره ما</a></div>
-                    </li>
+                        <li class="topitem spaced_li">
+                            <div class="buttonbg" style="width: 90px;"><a href="About.aspx">درباره ما</a></div>
+                        </li>
 
-                    <li class="topitem spaced_li">
-                        <div class="buttonbg" style="width: 115px;"><a href="Gallery.aspx">گالری تصاویر</a></div>
-                    </li>
+                        <li class="topitem spaced_li">
+                            <div class="buttonbg" style="width: 115px;"><a href="Gallery.aspx">گالری تصاویر</a></div>
+                        </li>
 
-                    <li class="topitem spaced_li">
-                        <div class="arrow buttonbg" style="width: 125px;"><a class="button_7" href="ShowProduct.aspx">محصولات</a></div>
-                        <ul class="gradient_menu gradient121">
-                            <li><a title="" href="/SitePanel/ListFruit.aspx">میوه ها</a></li>
-                            <li><a title="" href="/SitePanel/ListVegetebles.aspx">صیفی جات</a></li>
-                            <li><a title="" href="/SitePanel/ListOtherProduct.aspx">دیگر محصولات</a></li>
-                        </ul>
-                    </li>
+                        <li class="topitem spaced_li">
+                            <div class="arrow buttonbg" style="width: 125px;"><a class="button_7" href="ShowProduct.aspx">محصولات</a></div>
+                            <ul class="gradient_menu gradient121">
+                                <li><a title="" href="/SitePanel/ListFruit.aspx">میوه ها</a></li>
+                                <li><a title="" href="/SitePanel/ListVegetebles.aspx">صیفی جات</a></li>
+                                <li><a title="" href="/SitePanel/ListOtherProduct.aspx">دیگر محصولات</a></li>
+                            </ul>
+                        </li>
 
-                    <li class="topitem spaced_li">
-                        <div class="buttonbg" style="width: 60px;"><a href="/Default.aspx">خانه</a></div>
-                    </li>
+                        <li class="topitem spaced_li">
+                            <div class="buttonbg" style="width: 60px;"><a href="/Default.aspx">خانه</a></div>
+                        </li>
+
+                       
+                    </ul>
+                </div>
+                <!-- End Menu -->
 
 
-                </ul>
+                <div class="mdl-shadow--2dp" style="background-color: white; border-radius: 2px; background-color: #f5f5f5">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+
+                <footer style="padding: 20px;">
+                </footer>
             </div>
-            <!-- End Menu -->
-
-
-            <div class="mdl-shadow--2dp" style="background-color: white; border-radius: 2px; background-color: #f5f5f5">
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                </asp:ContentPlaceHolder>
-            </div>
-
-            <footer style="padding: 20px;">
-            </footer>
         </div>
-    </div>
     </form>
 </body>
 </html>

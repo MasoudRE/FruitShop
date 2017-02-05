@@ -63,10 +63,52 @@ namespace DataLayer.Models
             gv.DataBind();
         }
 
-        public static bool Delete(int id)
+        public static bool Add(int mahsolatID, HttpSessionState session)
         {
             try
             {
+                List<Card> list = new List<Card>();
+                //get from session
+                if (session["CARD"] != null)
+                {
+                    list = session["CARD"] as List<Card>;
+                }
+
+                var model = list.First(x => x.MahsolatID == mahsolatID);
+                model.Count++;
+
+                session["CARD"] = list;
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public static bool Delete(int mahsolatID, HttpSessionState session)
+        {
+            try
+            {
+                List<Card> list = new List<Card>();
+                //get from session
+                if (session["CARD"] != null)
+                {
+                    list = session["CARD"] as List<Card>;
+                }
+
+                var model = list.First(x => x.MahsolatID == mahsolatID);
+
+                if (model.Count > 1)
+                {
+                    model.Count--;
+                }
+                else
+                {
+                    list.Remove(model);
+                }
+
+                session["CARD"] = list;
                 return true;
             }
             catch (Exception)

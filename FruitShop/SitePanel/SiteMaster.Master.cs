@@ -16,12 +16,33 @@ namespace FruitShop.SitePanel
             {
                 try
                 {
-                   
                     lbl_cardItemCount.Text = Card.GetCount(Session).ToString();
+
+
+                    var loginUser = Users.GetLogin(Session);
+                    if (loginUser.UserID > 0)
+                    {
+                        lbl_NameUser.Text = loginUser.Name + " " + loginUser.Family;
+                        li_Menu_Profile.Visible = true;
+                    }
+
                 }
                 catch (Exception)
                 {
                 }
+            }
+        }
+
+        protected void btn_LogOut_ServerClick(object sender, EventArgs e)
+        {
+            try
+            {
+                Session.Remove("LOGIN");
+
+                Response.Redirect("/SitePanel/Login.aspx");
+            }
+            catch (Exception)
+            {
             }
         }
     }

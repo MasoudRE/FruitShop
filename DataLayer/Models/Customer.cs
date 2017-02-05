@@ -9,7 +9,6 @@ namespace DataLayer.Models
     [Table("Customer")]
     public partial class Customer
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CustomerID { get; set; }
 
         public int? FK_UserID { get; set; }
