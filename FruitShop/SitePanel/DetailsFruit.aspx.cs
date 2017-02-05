@@ -28,6 +28,35 @@ namespace FruitShop.SitePanel
             }
         }
 
+
+        protected void btn_AddCard_ServerClick(object sender, EventArgs e)
+        {
+            try
+            {
+                List<Mahsolat> list = new List<Mahsolat>();
+                //get from session
+                if (Session["CARD"] != null)
+                {
+                    list = Session["CARD"] as List<Mahsolat>;
+                }
+
+
+                //add to card
+                var model = Mahsolat.Get(productId);
+                list.Add(model);
+
+                //set session
+                Session["CARD"] = list;
+
+                var lbl_CardItemCount = Page.Master.FindControl("lbl_cardItemCount") as Label;
+                lbl_CardItemCount.Text = list.Count.ToString();
+            }
+            catch (Exception ee)
+            {
+            }
+        }
+
+
         //--------------------------------
         //base function
         //--------------------------------
@@ -77,31 +106,5 @@ namespace FruitShop.SitePanel
             }
         }
 
-        protected void btn_AddCard_ServerClick(object sender, EventArgs e)
-        {
-            try
-            {
-                List<Mahsolat> list = new List<Mahsolat>();
-                //get from session
-                if (Session["CARD"] != null)
-                {
-                    list = Session["CARD"] as List<Mahsolat>;
-                }
-
-
-                //add to card
-                var model = Mahsolat.Get(productId);
-                list.Add(model);
-
-                //set session
-                Session["CARD"] = list;
-
-                var lbl_CardItemCount = Page.Master.FindControl("lbl_cardItemCount") as Label;
-                lbl_CardItemCount.Text = list.Count.ToString();
-            }
-            catch (Exception ee)
-            {
-            }
-        }
     }
 }

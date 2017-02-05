@@ -255,6 +255,7 @@
     <Content Include="Panel Management\jquery.flot.js" />
     <Content Include="Panel Management\jquery.min.js" />
     <Content Include="Panel Management\style.css" />
+    <Content Include="SitePanel\Card.aspx" />
     <Content Include="SitePanel\DetailsFruit.aspx" />
     <Content Include="SitePanel\ListFruit.aspx" />
     <Content Include="SitePanel\ListOtherProduct.aspx" />
@@ -535,6 +536,13 @@
     <Compile Include="Sabt_Pardakhti.aspx.cs">
       <DependentUpon>Sabt_Pardakhti.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SitePanel\Card.aspx.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SitePanel\Card.aspx.designer.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
     </Compile>
     <Compile Include="SitePanel\DetailsFruit.aspx.cs">
       <DependentUpon>DetailsFruit.aspx</DependentUpon>

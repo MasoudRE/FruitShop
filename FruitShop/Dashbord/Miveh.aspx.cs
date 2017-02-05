@@ -52,6 +52,7 @@ namespace FruitShop.Dashbord
                 GridViewRow gvr = btn.NamingContainer as GridViewRow;
                 MahsolatID = int.Parse(GridView_listMiveh.DataKeys[gvr.RowIndex].Value.ToString());
 
+
                 //دریافت اطلاعات کاربر از بانک
                 var mahsol = Mahsolat.Get(id: MahsolatID);
 

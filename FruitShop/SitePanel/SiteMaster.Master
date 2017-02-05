@@ -59,7 +59,7 @@
 
                     <li class="topitem spaced_li">
                         <div class="buttonbg" style="width: 100px;">
-                            <a href="Sabad.aspx">سبد خرید
+                            <a href="Card.aspx">سبد خرید
                                 <asp:Label runat="server" ID="lbl_cardItemCount" CssClass="badge card">0</asp:Label>
                             </a>
                         </div>
