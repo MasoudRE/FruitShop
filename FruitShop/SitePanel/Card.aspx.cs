@@ -11,12 +11,12 @@ namespace FruitShop.SitePanel
 {
     public partial class Page_Card : System.Web.UI.Page
     {
-        public static int productId = 0;
+        public static int MahsolatID = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
-                Fill_Card(GridView_Card);
+                Card.Show(GridView_Card, Session);
             }
             catch (Exception)
             {
@@ -24,46 +24,40 @@ namespace FruitShop.SitePanel
             }
         }
 
-        //--------------------------------
-        //base function
-        //--------------------------------
-        public void Fill_Card(GridView gv)
+        protected void GridView_Card_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             try
             {
-                List<Mahsolat> list = new List<Mahsolat>();
-                //get from session
-                if (Session["CARD"] != null)
+                if (e.Row.RowType == DataControlRowType.DataRow)
                 {
-                    list = Session["CARD"] as List<Mahsolat>;
+
+                    var lbl_Price = e.Row.FindControl("lbl_Price") as Label;
+                    var txt_Count = e.Row.FindControl("txt_Count") as Label;
+                    var lbl_CountTotalPrice = e.Row.FindControl("lbl_CountTotalPrice") as Label;
+
+                    var price = lbl_Price.Text.ToLong();
+                    var count = txt_Count.Text.ToLong();
+                    lbl_CountTotalPrice.Text = (price * count).ToString();
+
                 }
+            }
+            catch (Exception)
+            {
+            }
+        }
 
-                var listProduct = list.Select(x => new
-                {
-                    mahsol = x,
-                    count = list.Where(i => i.MahsolatID == x.MahsolatID).Count()//دریافت تعداد محصولات مشابه
-                }).ToList();
-
-
-
-
-                //----------------------------------------
-                //حذف محصولات تکراری
-                //----------------------------------------
-
-                //دریافت محصولات تکراری
-                var listDuplicateProduct = listProduct.Where(x => x.count > 1);
-
-                foreach (var item in listDuplicateProduct)
-                {
-                    //محصول تکراری را از لیست اصلی حذف می کند
-                    var a = list.Where(x => x.MahsolatID == item.mahsol.MahsolatID);
-                }
+        protected void LinkButton_Delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                LinkButton btn = sender as LinkButton;
+                GridViewRow gvr = btn.NamingContainer as GridViewRow;
+                MahsolatID = int.Parse(GridView_Card.DataKeys[gvr.RowIndex].Value.ToString());
 
 
-                string[] t = new string[1];
-                t[0] = "MahsolatID";
-                gv.DataKeyNames = t;
+                Card.Delete(id: MahsolatID);
+
+                Card.Show(GridView_Card, Session);
             }
             catch (Exception)
             {

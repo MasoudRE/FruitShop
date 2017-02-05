@@ -2,6 +2,7 @@
 using DataLayer.Utils;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -20,11 +21,22 @@ namespace FruitShop.SitePanel
 
                 var model = Mahsolat.Get(productId);
 
+                //اگر محصول انتخاب نشده باشد
+                if (model == null ||
+                    model.MahsolatID <= 0)
+                {
+                    lbl_Status.Text = "محصول انتخاب شده موجود نیست !";
+                    lbl_Status.Visible = true;
+                    return;
+                }
+
+
                 Fill_Details(model);
             }
             catch (Exception)
             {
-
+                lbl_Status.Text = "محصول انتخاب شده موجود نیست !";
+                lbl_Status.Visible = true;
             }
         }
 
@@ -33,22 +45,55 @@ namespace FruitShop.SitePanel
         {
             try
             {
-                List<Mahsolat> list = new List<Mahsolat>();
+                var mahsol = Mahsolat.Get(productId);
+                if (mahsol == null ||
+                    mahsol.MahsolatID <= 0)
+                {
+                    lbl_Status.Text = "محصول انتخاب شده موجود نیست !";
+                    lbl_Status.Visible = true;
+
+
+                    var fontSize = lbl_Status.Font.Size.Unit.Value;
+                    if (fontSize < 20)
+                        lbl_Status.Font.Size = 20;
+                    else if (fontSize >= 30)
+                        lbl_Status.Font.Size = 30;
+                    else
+                        lbl_Status.Font.Size = (int)(fontSize + 5);
+
+                    return;
+                }
+
+                List<Card> list = new List<Card>();
                 //get from session
                 if (Session["CARD"] != null)
                 {
-                    list = Session["CARD"] as List<Mahsolat>;
+                    list = Session["CARD"] as List<Card>;
                 }
 
-                //add to card
-                var model = Mahsolat.Get(productId);
-                list.Add(model);
+                //دریافت محصلی که قبلا وارد سبد خرید شده است
+                var existModel = list.FirstOrDefault(x => x.MahsolatID == productId);
+
+                if (existModel == null)
+                //افزودن به سبد خرید
+                {
+                    list.Add(new Card()
+                    {
+                        MahsolatID = productId,
+                        Count = 1
+                    });
+                }
+                else
+                //افزایش مقدار محصول
+                {
+                    existModel.Count++;
+                }
 
                 //set session
                 Session["CARD"] = list;
 
                 var lbl_CardItemCount = Page.Master.FindControl("lbl_cardItemCount") as Label;
-                lbl_CardItemCount.Text = list.Count.ToString();
+                lbl_CardItemCount.Text = Card.GetCount(Session).ToString();
             }
             catch (Exception ee)
             {

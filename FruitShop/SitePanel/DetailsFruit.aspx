@@ -6,6 +6,15 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid" style="padding: 20px;">
+        <div class="row" style="text-align: center;">
+            <asp:Label
+                ID="lbl_Status"
+                Text=""
+                style="color:red;"
+                Visible="false"
+                runat="server" />
+        </div>
+
         <div class="row">
             <div class="col-md-3">
                 <a href="#" class="thumbnail">
@@ -77,7 +86,7 @@
                     <a runat="server"
                         id="btn_AddCard"
                         onserverclick="btn_AddCard_ServerClick"
-                         class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+                        class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
                         style="background: #4caf50;"
                         href="#">
                         <i class="material-icons">add_shopping_cart</i>

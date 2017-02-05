@@ -14,13 +14,14 @@ namespace FruitShop.SitePanel
         {
             if (!IsPostBack)
             {
-                List<Mahsolat> list = new List<Mahsolat>();
-                //get from session
-                if (Session["CARD"] != null)
+                try
                 {
-                    list = Session["CARD"] as List<Mahsolat>;
+                   
+                    lbl_cardItemCount.Text = Card.GetCount(Session).ToString();
                 }
-                lbl_cardItemCount.Text = list.Count.ToString();
+                catch (Exception)
+                {
+                }
             }
         }
     }
