@@ -79,6 +79,18 @@ namespace FruitShop.Dashbord
 
 
             img.Src = DataLayer.Models.Mahsolat.GetImagePath(mahsol.ImageUrl);
+
+
+            if (mahsol.IsDiscount == true)
+            {
+                rbl_Isdiscount_DEdit.SelectedValue = "1";
+                div_OldPrive_DEdit.Visible = true;
+            }
+            else
+            {
+                rbl_Isdiscount_DEdit.SelectedValue = "0";
+                div_OldPrive_DEdit.Visible = false;
+            }
         }
 
         protected void btn_AddMiveh_Click(object sender, EventArgs e)
@@ -172,9 +184,19 @@ namespace FruitShop.Dashbord
                     }
             }
 
+
+            bool isDiscount = false;
+
+            if (rbl_Isdiscount_DEdit.SelectedValue.Equals("1"))
+                isDiscount = true;
+            else if (rbl_Isdiscount_DEdit.SelectedValue.Equals("0"))
+                isDiscount = false;
+
             var mahsol = new Mahsolat()
             {
                 ImageUrl = imageUrl,
+
+                IsDiscount = isDiscount,
 
                 MahsolatID = MahsolatID,
                 Name = txt_Name_DEdit.Text,
@@ -209,6 +231,21 @@ namespace FruitShop.Dashbord
             Div_AddMiveh.Visible = true;
             Div_EditMiveh.Visible = false;
             Div_MivehShow.Visible = false;
+        }
+
+        protected void rbl_Isdiscount_DEdit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (rbl_Isdiscount_DEdit.SelectedValue.Equals("1"))
+                    div_OldPrive_DEdit.Visible = true;
+
+                else if (rbl_Isdiscount_DEdit.SelectedValue.Equals("0"))
+                    div_OldPrive_DEdit.Visible = false;
+            }
+            catch (Exception)
+            {
+            }
         }
     }
 }

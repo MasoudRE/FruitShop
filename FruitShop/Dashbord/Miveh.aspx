@@ -211,22 +211,40 @@
                     <asp:Label ID="Label6" runat="server" Text="قیمت :" Font-Bold="true" /></span>
                 <asp:TextBox ID="txt_NewPrice_DEdit" runat="server" Width="310px" Height="25px" BackColor="#ECEEF3" BorderColor="#006699" BorderWidth="1px" ValidationGroup="Group_Login" />
             </div>
-            <div style="margin-top: 5px; margin-right: 25px;">
-                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 133px;">
-                    <asp:Label ID="Label5" runat="server" Text="قیمت برای شما :" Font-Bold="true" /></span>
-                <asp:TextBox ID="txt_OldPrice_DEdit" runat="server" Width="310px" Height="25px" BackColor="#ECEEF3" BorderColor="#006699" BorderWidth="1px" ValidationGroup="Group_Login" />
-            </div>
-            
+
+
 
             <div style="margin-top: 10px; margin-right: 25px;">
-                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 177px;">
-                    <asp:Label ID="Label7" runat="server" Text="تخفیف :" Font-Bold="true" /></span>
-                <asp:RadioButton ID="RB_IsDiscount_True_DEdit" runat="server" />
-                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 177px;">
-                    <label>دارد</label></span>
-                <asp:RadioButton ID="RB_IsDiscount_False_DEdit" runat="server" />
-                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 177px;">
-                    <label>ندارد</label></span>
+
+                <div class="col-md-3" style="padding: 0;">
+                    <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976;">
+                        <asp:Label ID="Label7" runat="server" Text="تخفیف :" Font-Bold="true" />
+                    </span>
+                </div>
+
+                <div class="col-md-9">
+                    <asp:RadioButtonList
+                        ID="rbl_Isdiscount_DEdit"
+                        runat="server"
+                        RepeatDirection="Horizontal"
+                        AutoPostBack="true"
+                        OnSelectedIndexChanged="rbl_Isdiscount_DEdit_SelectedIndexChanged">
+                        <asp:ListItem Text="دارد" Value="1" />
+                        <asp:ListItem Text="ندارد" Value="0" Selected="True" />
+                    </asp:RadioButtonList>
+                </div>
+            </div>
+
+
+            <div runat="server"
+                id="div_OldPrive_DEdit"
+                visible="false"
+                style="margin-top: 5px; margin-right: 25px;">
+                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 133px;">
+                    <asp:Label ID="Label5" runat="server" Text="قیمت برای شما :" Font-Bold="true" />
+
+                </span>
+                <asp:TextBox ID="txt_OldPrice_DEdit" runat="server" Width="310px" Height="25px" BackColor="#ECEEF3" BorderColor="#006699" BorderWidth="1px" ValidationGroup="Group_Login" />
             </div>
 
 
@@ -256,7 +274,7 @@
                 <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976;">
                     <asp:Label ID="lb_Status_DEdit" runat="server" Text="" Visible="false"></asp:Label></span>
             </div>
-            <div style=" margin-top: -30px; margin-right:250px;">
+            <div style="margin-top: -30px; margin-right: 250px;">
                 <a href="#" class="thumbnail image-item">
                     <img runat="server"
                         id="img"

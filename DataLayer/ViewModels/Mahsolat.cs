@@ -203,6 +203,10 @@ namespace DataLayer.Models
                     var model = db.Mahsolats.Single(x => x.MahsolatID == mahsolat.MahsolatID);
 
                     model.Name = mahsolat.Name;
+                    model.NewPrice = mahsolat.NewPrice;
+                    model.OldPrice = mahsolat.OldPrice;
+                    model.Description = mahsolat.Description;
+                    model.IsDiscount = mahsolat.IsDiscount;
 
                     if (!string.IsNullOrEmpty(mahsolat.ImageUrl))
                         model.ImageUrl = mahsolat.ImageUrl;
