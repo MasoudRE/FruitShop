@@ -7,12 +7,12 @@ using DataLayer.Models;
 
 namespace DataLayer.ViewModels
 {
+    public enum SeyfiJat_Type : byte
+    {
+        None,
+    }
     public partial class SeyfiJat
     {
-        public enum SeyfiJat_Type : byte
-        {
-            None,
-        }
         public partial class Miveh
         {
             public static bool Add(Mahsolat mahsol)

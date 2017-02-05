@@ -123,29 +123,45 @@ namespace FruitShop.Dashbord
                     }
             }
 
+            bool isDiscount = false;
+
+            if (rbl_Isdiscount_DAdd.SelectedValue.Equals("1"))
+                isDiscount = true;
+            else if (rbl_Isdiscount_DAdd.SelectedValue.Equals("0"))
+                isDiscount = false;
 
             var mahsol = new Mahsolat()
             {
                 ImageUrl = imageUrl,
+                IsDiscount=isDiscount,
                 MahsolatID = MahsolatID,
                 Name = txt_Name_DAdd.Text,
                 OldPrice = txt_OldPrice_DAdd.Text.ToLong(),
                 NewPrice = txt_NewPrice_DAdd.Text.ToLong(),
                 Description = txt_Description_DAdd.Text,
+
+                Type = Mahsolat_Type.Miveh,
             };
+
+            //ثبت میوه
+            mahsol.Mivehs.Add(new Miveh()
+            {
+            });
 
             if (Mahsolat.Add(mahsol))
             {
                 lb_Status_DAdd.Visible = true;
-                lb_Status_DAdd.Text = "ویرایش با موفقیت انجام شد";
+                lb_Status_DAdd.Text = "ثبت با موفقیت انجام شد";
                 lb_Status_DAdd.ForeColor = System.Drawing.Color.Green;
                 //کاربر با موفققیت ویرایش دش
             }
             else
             {
-                lb_Status_DAdd.Text = "اشکال در ویرایش";
+                lb_Status_DAdd.Text = "اشکال در ثبت";
                 //ایراد در وارایش کاربر
             }
+
+            Mahsolat.Show(GridView_listMiveh, Mahsolat_Type.Miveh);
         }
 
         protected void btn_Repeat_DAdd_Click(object sender, EventArgs e)
@@ -215,6 +231,8 @@ namespace FruitShop.Dashbord
             {
                 lb_Status_DEdit.Text = "مشکل در ویرایش";
             }
+
+            Mahsolat.Show(GridView_listMiveh, Mahsolat_Type.Miveh);
         }
 
         protected void btn_Exit_DEdit_Click(object sender, EventArgs e)
@@ -242,6 +260,21 @@ namespace FruitShop.Dashbord
 
                 else if (rbl_Isdiscount_DEdit.SelectedValue.Equals("0"))
                     div_OldPrive_DEdit.Visible = false;
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        protected void rbl_Isdiscount_DAdd_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (rbl_Isdiscount_DAdd.SelectedValue.Equals("1"))
+                    div_OldPrive_DAdd.Visible = true;
+
+                else if (rbl_Isdiscount_DAdd.SelectedValue.Equals("0"))
+                    div_OldPrive_DAdd.Visible = false;
             }
             catch (Exception)
             {

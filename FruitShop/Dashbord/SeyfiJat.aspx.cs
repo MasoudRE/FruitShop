@@ -92,28 +92,43 @@ namespace FruitShop.Dashbord
             }
 
 
+            bool isDiscount = false;
+
+            if (rbl_Isdiscount_DAdd.SelectedValue.Equals("1"))
+                isDiscount = true;
+            else if (rbl_Isdiscount_DAdd.SelectedValue.Equals("0"))
+                isDiscount = false;
+
             var mahsol = new Mahsolat()
             {
+                IsDiscount = isDiscount,
                 ImageUrl = imageUrl,
                 MahsolatID = MahsolatID,
                 Name = txt_Name_DAdd.Text,
                 OldPrice = txt_OldPrice_DAdd.Text.ToLong(),
                 NewPrice = txt_NewPrice_DAdd.Text.ToLong(),
                 Description = txt_Description_DAdd.Text,
+
+                Type = Mahsolat_Type.SeyfiJat,
             };
+
+            mahsol.Sabzijats.Add(new SeyfiJat());
 
             if (Mahsolat.Add(mahsol))
             {
                 lb_Status_DAdd.Visible = true;
-                lb_Status_DAdd.Text = "ویرایش با موفقیت انجام شد";
+                lb_Status_DAdd.Text = "ثبت با موفقیت انجام شد";
                 lb_Status_DAdd.ForeColor = System.Drawing.Color.Green;
                 //کاربر با موفققیت ویرایش دش
             }
             else
             {
-                lb_Status_DAdd.Text = "اشکال در ویرایش";
+                lb_Status_DAdd.Text = "اشکال در ثبت";
                 //ایراد در وارایش کاربر
             }
+
+
+            Mahsolat.Show(GridView_listSeyfiJat, Mahsolat_Type.SeyfiJat);
         }
 
 
@@ -126,6 +141,7 @@ namespace FruitShop.Dashbord
         {
             Div_AddSeyfiJat.Visible = false;
             Div_ShowSeyfiJat.Visible = true;
+            Mahsolat.Show(GridView_listSeyfiJat, Mahsolat_Type.SeyfiJat);
         }
 
         protected void GridView_listSeyfiJat_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -156,6 +172,7 @@ namespace FruitShop.Dashbord
         {
             Div_EditSeyfiJat.Visible = false;
             Div_ShowSeyfiJat.Visible = true;
+            Mahsolat.Show(GridView_listSeyfiJat, Mahsolat_Type.SeyfiJat);
         }
 
         protected void btn_EditSeyfiJat_DEdit_Click(object sender, EventArgs e)
@@ -182,9 +199,20 @@ namespace FruitShop.Dashbord
                     }
             }
 
+            bool isDiscount = false;
+
+            if (rbl_Isdiscount_DEdit.SelectedValue.Equals("1"))
+                isDiscount = true;
+            else if (rbl_Isdiscount_DEdit.SelectedValue.Equals("0"))
+                isDiscount = false;
+
+
             var mahsol = new Mahsolat()
             {
                 ImageUrl = imageUrl,
+
+                IsDiscount = isDiscount,
+
 
                 MahsolatID = MahsolatID,
                 Name = txt_Name_DEdit.Text,
@@ -202,6 +230,38 @@ namespace FruitShop.Dashbord
             else
             {
                 lb_Status_DEdit.Text = "مشکل در ویرایش";
+            }
+
+            Mahsolat.Show(GridView_listSeyfiJat, Mahsolat_Type.SeyfiJat);
+        }
+
+        protected void rbl_Isdiscount_DEdit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (rbl_Isdiscount_DEdit.SelectedValue.Equals("1"))
+                    div_OldPrive_DEdit.Visible = true;
+
+                else if (rbl_Isdiscount_DEdit.SelectedValue.Equals("0"))
+                    div_OldPrive_DEdit.Visible = false;
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        protected void rbl_Isdiscount_DAdd_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (rbl_Isdiscount_DAdd.SelectedValue.Equals("1"))
+                    div_OldPrive_DAdd.Visible = true;
+
+                else if (rbl_Isdiscount_DAdd.SelectedValue.Equals("0"))
+                    div_OldPrive_DAdd.Visible = false;
+            }
+            catch (Exception)
+            {
             }
         }
     }

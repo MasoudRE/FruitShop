@@ -9,15 +9,10 @@
 
         <ul data-collapse="collapse" class="quick">
             <li>
-                <a href="Insert_Ashkhas.aspx">
-                    <img alt="" src="Panel Management/image/statistics.png">
+                 <a runat="server"
+                    onserverclick="Unnamed_ServerClick">
+                    <img alt="" src="/Panel Management/image/statistics.png">
                     <span>افزودن صاحب بار</span>
-                </a>
-            </li>
-            <li>
-                <a href="Update_Ashkhas.aspx">
-                    <img alt="" src="Panel Management/image/order-149.png">
-                    <span>جستجو</span>
                 </a>
             </li>
         </ul>
@@ -133,11 +128,11 @@
                 <asp:TextBox ID="txt_Mobile_DAdd" runat="server" Width="310px" Height="25px" BackColor="#ECEEF3" BorderColor="#006699" BorderWidth="1px" ValidationGroup="Group_Login"></asp:TextBox>
             </div>
 
-            <div style="margin-top: 5px; margin-right: 25px;">
+          <%--  <div style="margin-top: 5px; margin-right: 25px;">
                 <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 181px;">
                     <asp:Label ID="lb_Email" runat="server" Text="معرف :" Font-Bold="true" /></span>
                 <asp:DropDownList ID="txt_Moaref_DAdd" runat="server" Width="310px" Height="25px" BackColor="#ECEEF3" BorderColor="#006699" BorderWidth="1px" ValidationGroup="Group_Login" />
-            </div>
+            </div>--%>
 
             <div style="margin-top: 5px; margin-right: 25px;">
                 <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 179px;">
@@ -211,7 +206,12 @@
                     <asp:Label ID="Label12" runat="server" Text="کد ملی :" Font-Bold="true" /></span>
                 <asp:TextBox ID="txt_CodeMeli_DEdit" runat="server" Width="310px" Height="25px" BackColor="#C9C9C9" BorderColor="#006699" BorderWidth="1px" ValidationGroup="Group_Login" ReadOnly="true" />
             </div>
-
+            <div style="margin-top: -25px; margin-right: 570px;">
+                <span style="font-family: 'B Nazanin'; font-size: 15px;">
+                    <asp:Label ID="Label4" runat="server" Text="Label" Font-Bold="true" ForeColor="#CC0000">
+                قابل تغییر نمی باشد
+                    </asp:Label></span>
+            </div>
 
             <div style="margin-top: 5px; margin-right: 25px;">
                 <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 158px;">
@@ -225,11 +225,11 @@
                 <asp:TextBox ID="txt_Mobile_DEdit" runat="server" Width="310px" Height="25px" BackColor="#ECEEF3" BorderColor="#006699" BorderWidth="1px" ValidationGroup="Group_Login"></asp:TextBox>
             </div>
 
-            <div style="margin-top: 5px; margin-right: 25px;">
+           <%-- <div style="margin-top: 5px; margin-right: 25px;">
                 <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 181px;">
                     <asp:Label ID="Label15" runat="server" Text="معرف :" Font-Bold="true" /></span>
                 <asp:DropDownList ID="DropDownList1" runat="server" Width="310px" Height="25px" BackColor="#ECEEF3" BorderColor="#006699" BorderWidth="1px" ValidationGroup="Group_Login" />
-            </div>
+            </div>--%>
 
             <div style="margin-top: 5px; margin-right: 25px;">
                 <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 179px;">

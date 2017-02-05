@@ -12,17 +12,11 @@
                     <span>بارنامه</span>
                 </a>
             </li>
-            <li>
-                <a href="Ashkhas.aspx">
-                    <img alt="" src="Panel Management/image/order-149.png">
-                    <span>صاحب بار</span>
-                </a>
-            </li>
         </ul>
 
         <h2 style="font-family:'B Nazanin'; text-align:center; font-size:30px; color:#0c0939;">ثبت پرداختی ها</h2>
 
-        <div runat="server" visible="true" id="Div_AddAshkhas" style="border: 1px solid #2c2b3d; border-radius: 10px; width: 1000px; height: 500px; margin-top: 50px; margin-right: 70px;">
+        <div runat="server" visible="true" id="Div_Sabt_ParDakhti" style="border: 1px solid #2c2b3d; border-radius: 10px; width: 1000px; height: 500px; margin-top: 50px; margin-right: 70px;">
             <div style="margin-top: -30px; text-align: center;">
                 <asp:Image ID="Image1" runat="server" ImageUrl="~/Panel Management/image/Bar.jpg" Width="80px" Height="80px" />
             </div>

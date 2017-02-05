@@ -5,12 +5,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>مدیریت</title>
-    <link type="text/css" rel="stylesheet" href="Panel Management/style.css" />
-    <script type="text/javascript" src="Panel Management/jquery.min.js"></script>
-    <script type="text/javascript" src="Panel Management/jquery.flot.js"></script>
-    <script type="text/javascript" src="Panel Management/doc.js"></script>
+    <link type="text/css" rel="stylesheet" href="/Panel Management/style.css" />
+    <script type="text/javascript" src="/Panel Management/jquery.min.js"></script>
+    <script type="text/javascript" src="/Panel Management/jquery.flot.js"></script>
+    <script type="text/javascript" src="/Panel Management/doc.js"></script>
 
-    <script src="../Theme/js/jquery.min.js"></script>
+    <script src="/Theme/js/jquery.min.js"></script>
 
     <%-- bootstrap --%>
     <link href="/Theme/bootstrap-3.3.5/css/bootstrap-Theme.css" rel="stylesheet" />
@@ -29,7 +29,7 @@
     <%--favicon--%>
     <link rel="icon"
         type="image/png"
-        href="~/Image/favIcon.png">
+        href="/Image/favIcon.png">
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -49,43 +49,43 @@
                     <li class="active">
                         <div class="fix">
                             <span class="ico">
-                                <asp:Image ID="Image2" runat="server" ImageUrl="~/Panel Management/image/ico1.png" /></span>
-                            <a href="Management.aspx"><span class="value" style="color: #cccccc;">مدیریت</span></a>
+                                <asp:Image ID="Image2" runat="server" ImageUrl="/Panel Management/image/ico1.png" /></span>
+                            <a href="/Management.aspx"><span class="value" style="color: #cccccc;">مدیریت</span></a>
                         </div>
                     </li>
                     <li>
                         <div class="fix">
                             <span class="ico">
-                                <asp:Image ID="Image1" runat="server" ImageUrl="Panel Management/image/ico2.png" /></span>
+                                <asp:Image ID="Image1" runat="server" ImageUrl="/Panel Management/image/ico2.png" /></span>
                             <span class="value">مدیریت کاربران</span>
                         </div>
                         <ul>
-                            <li><a href="Customer.aspx">مشتری</a></li>
-                            <li><a href="Dashbord/Ashkhas.aspx">صاحب بار</a></li>
-                            <li><a href="Personnel.aspx">پرسنل</a></li>
-                            <li><a href="About.aspx">مدیر</a></li>
+                            <li><a href="/Customer.aspx">مشتری</a></li>
+                            <li><a href="/Dashbord/Ashkhas.aspx">صاحب بار</a></li>
+                            <li><a href="/Personnel.aspx">پرسنل</a></li>
+                            <li><a href="/About.aspx">مدیر</a></li>
                         </ul>
                     </li>
                     <li>
                         <div class="fix">
                             <span class="ico">
-                                <asp:Image ID="Image3" runat="server" ImageUrl="Panel Management/image/ico3.png" /></span>
+                                <asp:Image ID="Image3" runat="server" ImageUrl="/Panel Management/image/ico3.png" /></span>
                             <span class="value">مدیریت مالی</span>
                         </div>
                         <ul>
-                            <li><a href="Varizi.aspx">واریزی</a></li>
-                            <li><a href="BarNameh.aspx">بارنامه</a></li>
+                            <li><a href="/Varizi.aspx">واریزی</a></li>
+                            <li><a href="/BarNameh.aspx">بارنامه</a></li>
                         </ul>
                     </li>
                     <li>
                         <div class="fix">
                             <span class="ico">
-                                <asp:Image ID="Image4" runat="server" ImageUrl="Panel Management/image/ico4.png" /></span>
+                                <asp:Image ID="Image4" runat="server" ImageUrl="/Panel Management/image/ico4.png" /></span>
                             <span class="value">بخش گزارش ها</span>
                         </div>
                         <ul>
                             <li><a href="/">اطلاعات مانده حساب</a></li>
-                            <li><a href="BaghiMandeh_Product.aspx">باقی مانده محصول</a></li>
+                            <li><a href="/BaghiMandeh_Product.aspx">باقی مانده محصول</a></li>
                             <li><a href="/">گزارش فروش</a></li>
                             <li><a href="/">گزارش خرید</a></li>
                             <li><a href="/">گزارشات فردی</a></li>
@@ -94,19 +94,19 @@
                     <li>
                         <div class="fix">
                             <span class="ico">
-                                <img src="Panel Management/image/ico6.png"></span>
+                                <img src="/Panel Management/image/ico6.png"></span>
                             <span class="value">محصولات</span>
                         </div>
                         <ul>
-                            <li><a href="Dashbord/Miveh.aspx">میوه</a></li>
-                            <li><a href="Dashbord/SeyfiJat.aspx">صیفی جات</a></li>
-                            <li><a href="Dashbord/Product.aspx">دیگر محصولات</a></li>
+                            <li><a href="/Dashbord/Miveh.aspx">میوه</a></li>
+                            <li><a href="/Dashbord/SeyfiJat.aspx">صیفی جات</a></li>
+                            <li><a href="/Dashbord/Product.aspx">دیگر محصولات</a></li>
                         </ul>
                     </li>
-                    <li>
+                <%--    <li>
                         <div class="fix">
                             <span class="ico">
-                                <img src="Panel Management/image/ico5.png"></span>
+                                <img src="/Panel Management/image/ico5.png"></span>
                             <span class="value">پیام ها</span>
                         </div>
                         <ul>
@@ -114,11 +114,11 @@
                             <li><a href="/">پیام های کاربری</a></li>
                             <li><a href="/">ارسال پیامس</a></li>
                         </ul>
-                    </li>
-                    <li>
+                    </li>--%>
+               <%--     <li>
                         <div class="fix">
                             <span class="ico">
-                                <img src="Panel Management/image/ico7.png"></span>
+                                <img src="/Panel Management/image/ico7.png"></span>
                             <span class="value">تنظیمات</span>
                         </div>
                         <ul>
@@ -126,7 +126,7 @@
                             <li><a href="/">اسلایدر</li>
                             <li><a href="/">گالری</a></li>
                         </ul>
-                    </li>
+                    </li>--%>
                 </ul>
             </div>
 

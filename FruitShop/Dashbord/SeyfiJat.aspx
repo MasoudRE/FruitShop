@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Management.master" AutoEventWireup="true" CodeBehind="SeyfiJat.aspx.cs" Inherits="FruitShop.Dashbord.Page_SeyfiJat" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="../Theme/css/PageStyle/MiheStyle.css" rel="stylesheet" />
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div style="height: 900px;">
@@ -15,7 +17,7 @@
         </ul>
         <h2 style="font-family: 'B Nazanin'; text-align: center; font-size: 30px; color: #0c0939;">نمایش صیفی جات</h2>
 
-        <div runat="server" visible="false" id="Div_ShowSeyfiJat" style="width: 1105px; margin-right: 18px; margin-top: 5px; background-color: cadetblue;">
+        <div runat="server" visible="true" id="Div_ShowSeyfiJat" style="width: 1105px; margin-right: 18px; margin-top: 5px; background-color: cadetblue;">
 
             <div runat="server" visible="true" id="GridView_ShowSeyfiJat">
                 <div class="mdl-cell mdl-cell--12-col" style="overflow-x: auto;">
@@ -128,16 +130,35 @@
             <div style="margin-top: 5px; margin-right: 25px;">
                 <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 185px;">
                     <asp:Label ID="Label6" runat="server" Text="قیمت :" Font-Bold="true" /></span>
-                <asp:TextBox ID="txt_OldPrice_DAdd" runat="server" Width="310px" Height="25px" BackColor="#C9C9C9" BorderColor="#006699" BorderWidth="1px" ValidationGroup="Group_Login" />
+                <asp:TextBox ID="txt_OldPrice_DAdd" runat="server" Width="310px" Height="25px" BackColor="#ECEEF3" BorderColor="#006699" BorderWidth="1px" ValidationGroup="Group_Login" />
             </div>
-            <div style="margin-top: -25px; margin-right: 570px;">
-                <span style="font-family: 'B Nazanin'; font-size: 15px;">
-                    <asp:Label ID="Label7" runat="server" Text="Label" Font-Bold="true" ForeColor="#CC0000">
-                جهت نمایش
-                    </asp:Label></span>
+         
+
+            <div style="margin-top: 10px; margin-right: 25px;">
+
+                <div class="col-md-3" style="padding: 0;">
+                    <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976;">
+                        <asp:Label ID="Label10" runat="server" Text="تخفیف :" Font-Bold="true" />
+                    </span>
+                </div>
+
+                <div class="col-md-9">
+                    <asp:RadioButtonList
+                        ID="rbl_Isdiscount_DAdd"
+                        runat="server"
+                        RepeatDirection="Horizontal"
+                        AutoPostBack="true"
+                        OnSelectedIndexChanged="rbl_Isdiscount_DAdd_SelectedIndexChanged">
+                        <asp:ListItem Text="دارد" Value="1" />
+                        <asp:ListItem Text="ندارد" Value="0" Selected="True" />
+                    </asp:RadioButtonList>
+                </div>
             </div>
 
-            <div style="margin-top: 5px; margin-right: 25px;">
+            <div  runat="server"
+                id="div_OldPrive_DAdd"
+                visible="false"
+                 style="margin-top: 5px; margin-right: 25px;">
                 <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 133px;">
                     <asp:Label ID="lb_Family" runat="server" Text="قیمت برای شما :" Font-Bold="true" /></span>
                 <asp:TextBox ID="txt_NewPrice_DAdd" runat="server" Width="310px" Height="25px" BackColor="#ECEEF3" BorderColor="#006699" BorderWidth="1px" ValidationGroup="Group_Login" />
@@ -173,7 +194,7 @@
         </div>
 
         <%--Div EditSeyfiJat--%>
-        <div runat="server" visible="true" id="Div_EditSeyfiJat" style="border: 1px solid #2c2b3d; border-radius: 10px; width: 1000px; height: 400px; margin-top: 50px; margin-right: 70px;">
+        <div runat="server" visible="false" id="Div_EditSeyfiJat" style="border: 1px solid #2c2b3d; border-radius: 10px; width: 1000px; height: 400px; margin-top: 50px; margin-right: 70px;">
             <div style="margin-top: -45px; text-align: center;">
                 <asp:Image ID="Image2" runat="server" ImageUrl="~/Panel Management/image/Miveh.png" Width="80px" Height="80px" />
             </div>
@@ -201,7 +222,32 @@
                 <asp:TextBox ID="txt_OldPrice_Dedit" runat="server" Width="310px" Height="25px" BackColor="#C9C9C9" BorderColor="#006699" BorderWidth="1px" ValidationGroup="Group_Login" />
             </div>
 
-            <div style="margin-top: 5px; margin-right: 25px;">
+             <div style="margin-top: 10px; margin-right: 25px;">
+
+                <div class="col-md-3" style="padding: 0;">
+                    <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976;">
+                        <asp:Label ID="Label7" runat="server" Text="تخفیف :" Font-Bold="true" />
+                    </span>
+                </div>
+
+                <div class="col-md-9">
+                    <asp:RadioButtonList
+                        ID="rbl_Isdiscount_DEdit"
+                        runat="server"
+                        RepeatDirection="Horizontal"
+                        AutoPostBack="true"
+                        OnSelectedIndexChanged="rbl_Isdiscount_DEdit_SelectedIndexChanged">
+                        <asp:ListItem Text="دارد" Value="1" />
+                        <asp:ListItem Text="ندارد" Value="0" Selected="True" />
+                    </asp:RadioButtonList>
+                </div>
+            </div>
+
+
+            <div runat="server"
+                id="div_OldPrive_DEdit"
+                visible="false"
+                 style="margin-top: 5px; margin-right: 25px;">
                 <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 133px;">
                     <asp:Label ID="Label11" runat="server" Text="قیمت برای شما :" Font-Bold="true" /></span>
                 <asp:TextBox ID="txt_NewPrice_Dedit" runat="server" Width="310px" Height="25px" BackColor="#ECEEF3" BorderColor="#006699" BorderWidth="1px" ValidationGroup="Group_Login" />
@@ -215,7 +261,7 @@
                 <asp:FileUpload ID="FileUpload_Picture_DEdit" runat="server" Width="310px" Height="25px" BackColor="#ECEEF3" BorderColor="#006699" BorderWidth="1px" />
             </div>
             <div style="margin-top: 5px; margin-right: 25px;">
-                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 160px;">
+                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 163px;">
                     <asp:Label ID="Label12" runat="server" Text="توضیحات :" Font-Bold="true" /></span>
                 <asp:TextBox ID="txt_Description_DEdit" runat="server" Width="310px" Height="75px" BackColor="#ECEEF3" BorderColor="#006699" BorderWidth="1px" ValidationGroup="Group_Login" />
             </div>

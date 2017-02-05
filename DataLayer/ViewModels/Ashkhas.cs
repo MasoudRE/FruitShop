@@ -158,6 +158,7 @@ namespace DataLayer.Models
                 {
                     var model = db.Ashkhas.Single(x => x.AshkhasID == shakhs.AshkhasID);
                     model.Name = shakhs.Name;
+                    model.CodeMeli = shakhs.CodeMeli;
                     model.Family = shakhs.Family;
                     model.Tel = shakhs.Tel;
                     model.Mobile = shakhs.Mobile;

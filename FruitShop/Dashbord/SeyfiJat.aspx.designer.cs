@@ -121,13 +121,31 @@ namespace FruitShop.Dashbord {
         protected global::System.Web.UI.WebControls.TextBox txt_OldPrice_DAdd;
         
         /// <summary>
-        /// Label7 control.
+        /// Label10 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
+        protected global::System.Web.UI.WebControls.Label Label10;
+        
+        /// <summary>
+        /// rbl_Isdiscount_DAdd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList rbl_Isdiscount_DAdd;
+        
+        /// <summary>
+        /// div_OldPrive_DAdd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_OldPrive_DAdd;
         
         /// <summary>
         /// lb_Family control.
@@ -299,6 +317,33 @@ namespace FruitShop.Dashbord {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_OldPrice_Dedit;
+        
+        /// <summary>
+        /// Label7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label7;
+        
+        /// <summary>
+        /// rbl_Isdiscount_DEdit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList rbl_Isdiscount_DEdit;
+        
+        /// <summary>
+        /// div_OldPrive_DEdit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_OldPrive_DEdit;
         
         /// <summary>
         /// Label11 control.
