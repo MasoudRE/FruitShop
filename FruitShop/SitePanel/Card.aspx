@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <%--page style--%>
-    <link href="../Theme/css/PageStyle/DetailsFruitStype.css" rel="stylesheet" />
+    <link href="/Theme/css/PageStyle/MiheStyle.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid" style="padding: 20px;">
@@ -17,10 +17,11 @@
             <div class="mdl-cell mdl-cell--12-col" style="overflow-x: auto;">
                 <%--GridView List --%>
                 <asp:GridView ID="GridView_Card"
+                    OnRowDataBound="GridView_Card_RowDataBound"
                     runat="server"
                     CssClass="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-cell mdl-cell--12-col"
                     AutoGenerateColumns="false"
-                    EmptyDataText="جدول دیتابس خالی می باشد"
+                    EmptyDataText="محصولی به سبد خرید اضافه نشده است"
                     GridLines="Horizontal"
                     PagerSettings-Mode="NextPreviousFirstLast"
                     PagerSettings-FirstPageImageUrl="~/image/Icon/Arrow/ic_last_page_black_24px.svg"
@@ -36,35 +37,47 @@
 
                         <asp:TemplateField HeaderText="کد میوه">
                             <ItemTemplate>
-                                <asp:Label Text='<%# Eval("MahsolatID") %>' runat="server" />
                             </ItemTemplate>
                         </asp:TemplateField>
 
                         <asp:TemplateField HeaderText="نام میوه">
                             <ItemTemplate>
-                                <asp:Label Text='<%# Eval("Name") %>' runat="server" />
+                                <asp:Label Text='<%# Eval("Mahsol.Name") %>' runat="server" />
                             </ItemTemplate>
                         </asp:TemplateField>
 
-
-                        <asp:TemplateField HeaderText="قیمت برای شما">
+                        <asp:TemplateField HeaderText="قیمت">
                             <ItemTemplate>
                                 <div style="text-align: center;">
-                                    <asp:Label Text='<%# Eval("NewPrice") %>' runat="server" />
+                                    <asp:Label
+                                        ID="lbl_Price"
+                                        Text='<%# Eval("Mahsol.NewPrice") %>' runat="server" />
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
 
-                        <asp:TemplateField HeaderText="توضیحات">
+                        <asp:TemplateField HeaderText="تعداد سفارش">
                             <ItemTemplate>
-                                <asp:Label Text='<%# Eval("Description") %>' runat="server" />
+                                <asp:Label
+                                    ID="txt_Count"
+                                    Text='<%# Eval("Count") %>'
+                                    runat="server" />
+                            </ItemTemplate>
+                        </asp:TemplateField>
+
+                        <asp:TemplateField HeaderText="قیمت کل">
+                            <ItemTemplate>
+                                <div style="text-align: center;">
+                                    <asp:Label ID="lbl_CountTotalPrice"
+                                        runat="server" />
+                                </div>
                             </ItemTemplate>
                         </asp:TemplateField>
 
                         <asp:TemplateField HeaderText="تصویر">
                             <ItemTemplate>
                                 <a href="#" class="thumbnail image-item">
-                                    <img src='<%# DataLayer.Models.Mahsolat.GetImagePath(Eval("ImageUrl"))%>' alt="Image" class="slider-image">
+                                    <img src='<%# DataLayer.Models.Mahsolat.GetImagePath(Eval("Mahsol.ImageUrl"))%>' alt="Image" class="slider-image">
                                 </a>
                             </ItemTemplate>
                         </asp:TemplateField>
@@ -72,7 +85,8 @@
                         <asp:TemplateField>
                             <ItemTemplate>
                                 <asp:LinkButton runat="server"
-                                    ID="LinkButton_Edit"
+                                    ID="LinkButton_Delete"
+                                    OnClick="LinkButton_Delete_Click"
                                     CssClass="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
                                  <i class="material-icons">delete</i>
                                 </asp:LinkButton>
