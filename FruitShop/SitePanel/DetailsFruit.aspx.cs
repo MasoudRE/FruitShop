@@ -40,7 +40,6 @@ namespace FruitShop.SitePanel
                     list = Session["CARD"] as List<Mahsolat>;
                 }
 
-
                 //add to card
                 var model = Mahsolat.Get(productId);
                 list.Add(model);

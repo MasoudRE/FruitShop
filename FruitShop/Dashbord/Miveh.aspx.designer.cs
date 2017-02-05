@@ -400,6 +400,15 @@ namespace FruitShop.Dashbord {
         protected global::System.Web.UI.WebControls.TextBox txt_Description_DEdit;
         
         /// <summary>
+        /// img control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage img;
+        
+        /// <summary>
         /// btn_EditMiveh_DEdit control.
         /// </summary>
         /// <remarks>
@@ -407,15 +416,6 @@ namespace FruitShop.Dashbord {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_EditMiveh_DEdit;
-        
-        /// <summary>
-        /// btn_Repeat_DEdit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_Repeat_DEdit;
         
         /// <summary>
         /// btn_Exit_DEdit control.

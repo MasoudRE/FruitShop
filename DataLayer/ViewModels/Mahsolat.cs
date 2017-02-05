@@ -204,6 +204,9 @@ namespace DataLayer.Models
 
                     model.Name = mahsolat.Name;
 
+                    if (!string.IsNullOrEmpty(mahsolat.ImageUrl))
+                        model.ImageUrl = mahsolat.ImageUrl;
+
                     db.SaveChanges();
                 }
 
@@ -219,7 +222,7 @@ namespace DataLayer.Models
         {
             try
             {
-                return Utils.Image.DIRECTORY_FRUIT + imageUrl;
+                return Utils.Image.DIRECTORY_IMAGE + imageUrl;
             }
             catch (Exception)
             {

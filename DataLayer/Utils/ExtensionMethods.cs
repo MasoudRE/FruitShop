@@ -50,5 +50,18 @@ namespace DataLayer.Utils
                 return false;
             }
         }
+
+
+        public static long? ToLong(this string value)
+        {
+            try
+            {
+                return long.Parse(value);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
     }
 }

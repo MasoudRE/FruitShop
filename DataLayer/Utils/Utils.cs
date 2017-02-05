@@ -24,12 +24,12 @@ namespace DataLayer.Utils
             Error
         }
 
-        public UploadErrors SaveImage(FileUpload fileUpload, out string filePath)
+        public static UploadErrors SaveImage(FileUpload fileUpload, out string fileName)
         {
-            filePath = "";
+            fileName = "";
             try
             {
-                int max_FileSize_Byte = 50000;
+                int max_FileSize_Byte = int.MaxValue;
 
                 //فایل وجود ندارد
                 if (!fileUpload.HasFile)
@@ -39,7 +39,9 @@ namespace DataLayer.Utils
                 if (fileUpload.PostedFile.ContentLength > max_FileSize_Byte)
                     return UploadErrors.BigFile;
 
-                filePath = HttpContext.Current.Server.MapPath(DIRECTORY_IMAGE) + fileUpload.FileName;
+                //اپلود عکس
+                fileName = Path.GetRandomFileName() + "_" + fileUpload.FileName;
+                string filePath = HttpContext.Current.Server.MapPath(DIRECTORY_IMAGE) + fileName;
 
                 fileUpload.SaveAs(filePath);
 

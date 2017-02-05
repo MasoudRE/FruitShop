@@ -171,7 +171,7 @@
             </div>
 
             <div style="margin-right: 105px; margin-top: -30px;">
-                <asp:Button ID="btn_Repeat_DAdd" runat="server" Text="دوباره" ValidationGroup="Group_Login" Font-Bold="true" Width="45px" Height="30px" Font-Names="B Nazanin" Font-Size="Medium" BackColor="#E1E1E1" BorderColor="#333333" ForeColor="#000066" BorderWidth="1px" OnClick="btn_Repeat_DAdd_Click"/>
+                <asp:Button ID="btn_Repeat_DAdd" runat="server" Text="دوباره" ValidationGroup="Group_Login" Font-Bold="true" Width="45px" Height="30px" Font-Names="B Nazanin" Font-Size="Medium" BackColor="#E1E1E1" BorderColor="#333333" ForeColor="#000066" BorderWidth="1px" OnClick="btn_Repeat_DAdd_Click" />
             </div>
 
             <div style="margin-right: 160px; margin-top: -30px;">
@@ -244,16 +244,21 @@
                 <asp:TextBox ID="txt_Description_DEdit" runat="server" Width="310px" Height="75px" BackColor="#ECEEF3" BorderColor="#006699" BorderWidth="1px" ValidationGroup="Group_Login" />
             </div>
 
+
+            <div>
+                <a href="#" class="thumbnail image-item">
+                    <img runat="server"
+                        id="img"
+                        alt="Image" class="slider-image">
+                </a>
+            </div>
+
             <div style="margin-right: 20px; margin-top: 30px;">
                 <asp:Button ID="btn_EditMiveh_DEdit" runat="server" Text="ثبت ویرایش" ValidationGroup="Group_Login" Font-Bold="true" Width="80px" Height="30px" Font-Names="B Nazanin" Font-Size="Medium" BackColor="#E1E1E1" BorderColor="#333333" ForeColor="#000066" BorderWidth="1px" OnClick="btn_EditMiveh_DEdit_Click" />
             </div>
 
-            <div style="margin-right: 105px; margin-top: -30px;">
-                <asp:Button ID="btn_Repeat_DEdit" runat="server" Text="دوباره" ValidationGroup="Group_Login" Font-Bold="true" Width="45px" Height="30px" Font-Names="B Nazanin" Font-Size="Medium" BackColor="#E1E1E1" BorderColor="#333333" ForeColor="#000066" BorderWidth="1px" OnClick="btn_Repeat_DEdit_Click"/>
-            </div>
-
             <div style="margin-right: 160px; margin-top: -30px;">
-                <asp:Button ID="btn_Exit_DEdit" runat="server" Text="انصراف" ValidationGroup="Group_Login" Font-Bold="true" Width="55px" Height="30px" Font-Names="B Nazanin" Font-Size="Medium" BackColor="#E1E1E1" BorderColor="#333333" ForeColor="#000066" BorderWidth="1px" OnClick="btn_Exit_DEdit_Click"/>
+                <asp:Button ID="btn_Exit_DEdit" runat="server" Text="انصراف" ValidationGroup="Group_Login" Font-Bold="true" Width="55px" Height="30px" Font-Names="B Nazanin" Font-Size="Medium" BackColor="#E1E1E1" BorderColor="#333333" ForeColor="#000066" BorderWidth="1px" OnClick="btn_Exit_DEdit_Click" />
             </div>
 
             <div style="text-align: center; margin-top: -30px;">

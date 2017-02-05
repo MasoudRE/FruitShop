@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
+using DataLayer.Utils;
 
 namespace FruitShop.Dashbord
 {
@@ -76,15 +77,41 @@ namespace FruitShop.Dashbord
             txt_NewPrice_DEdit.Text = mahsol.NewPrice.ToString();
             txt_Description_DEdit.Text = mahsol.Description;
 
+
+            img.Src = DataLayer.Models.Mahsolat.GetImagePath(mahsol.ImageUrl);
         }
+
         protected void btn_AddMiveh_Click(object sender, EventArgs e)
         {
+            string imageUrl = "";
+            var resUpload = DataLayer.Utils.Image.SaveImage(FileUpload_Picture_DAdd, out imageUrl);
+
+            switch (resUpload)
+            {
+                case DataLayer.Utils.Image.UploadErrors.BigFile:
+                    {
+                        //lblStat="";
+                        return;
+                    }
+                case DataLayer.Utils.Image.UploadErrors.NoFile:
+                    {
+                        //lblStat="";
+                        return;
+                    }
+                case DataLayer.Utils.Image.UploadErrors.Error:
+                    {
+                        //lblStat="";
+                        return;
+                    }
+            }
+
+
             var mahsol = new Mahsolat()
             {
                 MahsolatID = MahsolatID,
                 Name = txt_Name_DEdit.Text,
-                OldPrice = long.Parse(txt_OldPrice_DEdit.Text),
-                NewPrice = long.Parse(txt_NewPrice_DEdit.Text),
+                OldPrice = txt_OldPrice_DEdit.Text.ToLong(),
+                NewPrice = txt_NewPrice_DEdit.Text.ToLong(),
                 Description = txt_Description_DEdit.Text,
             };
 
@@ -116,13 +143,33 @@ namespace FruitShop.Dashbord
 
         protected void btn_EditMiveh_DEdit_Click(object sender, EventArgs e)
         {
+            string imageUrl = "";
+            var resUpload = DataLayer.Utils.Image.SaveImage(FileUpload_Picture_DEdit, out imageUrl);
+
+
+            switch (resUpload)
+            {
+                case DataLayer.Utils.Image.UploadErrors.BigFile:
+                    {
+                        //lblStat="";
+                        return;
+                    }
+                case DataLayer.Utils.Image.UploadErrors.Error:
+                    {
+                        //lblStat="";
+                        return;
+                    }
+            }
+
             var mahsol = new Mahsolat()
             {
+                ImageUrl = imageUrl,
+
                 MahsolatID = MahsolatID,
                 Name = txt_Name_DEdit.Text,
-                OldPrice = long.Parse(txt_OldPrice_DEdit.Text),
-                NewPrice = long.Parse(txt_NewPrice_DEdit.Text),
-                Description=txt_Description_DEdit.Text,
+                OldPrice = txt_OldPrice_DEdit.Text.ToLong(),
+                NewPrice = txt_NewPrice_DEdit.Text.ToLong(),
+                Description = txt_Description_DEdit.Text,
             };
             if (Mahsolat.Update(mahsol))
             {
@@ -142,6 +189,8 @@ namespace FruitShop.Dashbord
             Div_MivehShow.Visible = true;
 
             Div_EditMiveh.Visible = false;
+
+            Mahsolat.Show(GridView_listMiveh, Mahsolat_Type.Miveh);
         }
 
         protected void Unnamed_ServerClick(object sender, EventArgs e)
