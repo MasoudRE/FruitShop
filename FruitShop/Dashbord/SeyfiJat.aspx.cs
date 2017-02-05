@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using DataLayer.Models;
 using System.Web.UI.HtmlControls;
+using DataLayer.Utils;
 
 namespace FruitShop.Dashbord
 {
@@ -62,13 +63,43 @@ namespace FruitShop.Dashbord
 
         protected void btn_AddSeyfiJat_DAdd_Click(object sender, EventArgs e)
         {
+            string imageUrl = "";
+            var resUpload = DataLayer.Utils.Image.SaveImage(FileUpload_DAdd, out imageUrl);
+
+            switch (resUpload)
+            {
+                case DataLayer.Utils.Image.UploadErrors.BigFile:
+                    {
+                        lb_Status_DEdit.Visible = true;
+                        lb_Status_DEdit.Text = "اندازه فایل زیاد می باشد";
+                        lb_Status_DEdit.ForeColor = System.Drawing.Color.Green;
+                        return;
+                    }
+                case DataLayer.Utils.Image.UploadErrors.NoFile:
+                    {
+                        lb_Status_DEdit.Visible = true;
+                        lb_Status_DEdit.Text = "فایلی وجود ندارد";
+                        lb_Status_DEdit.ForeColor = System.Drawing.Color.Green;
+                        return;
+                    }
+                case DataLayer.Utils.Image.UploadErrors.Error:
+                    {
+                        lb_Status_DEdit.Visible = true;
+                        lb_Status_DEdit.Text = "مشکل سیستمی";
+                        lb_Status_DEdit.ForeColor = System.Drawing.Color.Green;
+                        return;
+                    }
+            }
+
+
             var mahsol = new Mahsolat()
             {
+                ImageUrl = imageUrl,
                 MahsolatID = MahsolatID,
-                Name = txt_Name_DEdit.Text,
-                OldPrice = long.Parse(txt_OldPrice_DAdd.Text),
-                NewPrice = long.Parse(txt_NewPrice_DAdd.Text),
-                Description = txt_Description_DEdit.Text,
+                Name = txt_Name_DAdd.Text,
+                OldPrice = txt_OldPrice_DAdd.Text.ToLong(),
+                NewPrice = txt_NewPrice_DAdd.Text.ToLong(),
+                Description = txt_Description_DAdd.Text,
             };
 
             if (Mahsolat.Add(mahsol))
@@ -125,6 +156,53 @@ namespace FruitShop.Dashbord
         {
             Div_EditSeyfiJat.Visible = false;
             Div_ShowSeyfiJat.Visible = true;
+        }
+
+        protected void btn_EditSeyfiJat_DEdit_Click(object sender, EventArgs e)
+        {
+            string imageUrl = "";
+            var resUpload = DataLayer.Utils.Image.SaveImage(FileUpload_Picture_DEdit, out imageUrl);
+
+
+            switch (resUpload)
+            {
+                case DataLayer.Utils.Image.UploadErrors.BigFile:
+                    {
+                        lb_Status_DEdit.Visible = true;
+                        lb_Status_DEdit.Text = "اندازه فایل زیاد می باشد";
+                        lb_Status_DEdit.ForeColor = System.Drawing.Color.Green;
+                        return;
+                    }
+                case DataLayer.Utils.Image.UploadErrors.Error:
+                    {
+                        lb_Status_DEdit.Visible = true;
+                        lb_Status_DEdit.Text = "خطا سیستمی";
+                        lb_Status_DEdit.ForeColor = System.Drawing.Color.Green;
+                        return;
+                    }
+            }
+
+            var mahsol = new Mahsolat()
+            {
+                ImageUrl = imageUrl,
+
+                MahsolatID = MahsolatID,
+                Name = txt_Name_DEdit.Text,
+                OldPrice = txt_OldPrice_Dedit.Text.ToLong(),
+                NewPrice = txt_NewPrice_Dedit.Text.ToLong(),
+                Description = txt_Description_DEdit.Text,
+            };
+            if (Mahsolat.Update(mahsol))
+            {
+                lb_Status_DEdit.Visible = true;
+                lb_Status_DEdit.Text = "ویرایش با موفقیت انجام شد";
+                lb_Status_DEdit.ForeColor = System.Drawing.Color.Green;
+
+            }
+            else
+            {
+                lb_Status_DEdit.Text = "مشکل در ویرایش";
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="محیط کاربری" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="Profile" %>
+﻿<%@ Page Title="محیط کاربری" Language="C#" MasterPageFile="~/SitePanel/SiteMaster.master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="Profile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

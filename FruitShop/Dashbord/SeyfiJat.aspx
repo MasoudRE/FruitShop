@@ -15,7 +15,7 @@
         </ul>
         <h2 style="font-family: 'B Nazanin'; text-align: center; font-size: 30px; color: #0c0939;">نمایش صیفی جات</h2>
 
-        <div runat="server" visible="true" id="Div_ShowSeyfiJat" style="width: 1105px; margin-right: 18px; margin-top: 5px; background-color: cadetblue;">
+        <div runat="server" visible="false" id="Div_ShowSeyfiJat" style="width: 1105px; margin-right: 18px; margin-top: 5px; background-color: cadetblue;">
 
             <div runat="server" visible="true" id="GridView_ShowSeyfiJat">
                 <div class="mdl-cell mdl-cell--12-col" style="overflow-x: auto;">
@@ -109,7 +109,7 @@
             </div>
 
             <div style="margin-top: 20px; margin-right: 25px;">
-                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 140px;">
+                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 136px;">
                     <asp:Label ID="Label5" runat="server" Text="کد صیفی جات :" Font-Bold="true" /></span>
                 <asp:TextBox ID="txt_MahsolatID_DAdd" runat="server" Width="310px" Height="25px" BackColor="#C9C9C9" BorderColor="#006699" BorderWidth="1px" ValidationGroup="Group_Login" ReadOnly="True" />
             </div>
@@ -120,14 +120,14 @@
                     </asp:Label></span>
             </div>
             <div style="margin-top: 5px; margin-right: 25px;">
-                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 140px;">
+                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 136px;">
                     <asp:Label ID="Label2" runat="server" Text="نام صیفی جات :" Font-Bold="true" /></span>
                 <asp:TextBox ID="txt_Name_DAdd" runat="server" Width="310px" Height="25px" BackColor="#ECEEF3" BorderColor="#006699" BorderWidth="1px" ValidationGroup="Group_Login" />
             </div>
 
             <div style="margin-top: 5px; margin-right: 25px;">
-                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 79px;">
-                    <asp:Label ID="Label6" runat="server" Text="قیمت پیشنهادی محصول :" Font-Bold="true" /></span>
+                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 185px;">
+                    <asp:Label ID="Label6" runat="server" Text="قیمت :" Font-Bold="true" /></span>
                 <asp:TextBox ID="txt_OldPrice_DAdd" runat="server" Width="310px" Height="25px" BackColor="#C9C9C9" BorderColor="#006699" BorderWidth="1px" ValidationGroup="Group_Login" />
             </div>
             <div style="margin-top: -25px; margin-right: 570px;">
@@ -138,14 +138,17 @@
             </div>
 
             <div style="margin-top: 5px; margin-right: 25px;">
-                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 148px;">
-                    <asp:Label ID="lb_Family" runat="server" Text="قیمت فروش :" Font-Bold="true" /></span>
+                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 133px;">
+                    <asp:Label ID="lb_Family" runat="server" Text="قیمت برای شما :" Font-Bold="true" /></span>
                 <asp:TextBox ID="txt_NewPrice_DAdd" runat="server" Width="310px" Height="25px" BackColor="#ECEEF3" BorderColor="#006699" BorderWidth="1px" ValidationGroup="Group_Login" />
             </div>
 
             <div style="margin-top: 5px; margin-right: 25px;">
-                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 163px;">
+                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 160px;">
                     <asp:Label ID="lb_User" runat="server" Text="تصویر :" Font-Bold="true" /></span>
+            </div>
+              <div style="margin-top: -22px; margin-right: 253px;">
+                <asp:FileUpload ID="FileUpload_DAdd" runat="server" Width="310px" Height="25px" BackColor="#ECEEF3" BorderColor="#006699" BorderWidth="1px" />
             </div>
             <div style="margin-top: 5px; margin-right: 25px;">
                 <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 163px;">
@@ -154,13 +157,13 @@
             </div>
 
             <div style="margin-right: 20px; margin-top: 30px;">
-                <asp:Button ID="btn_AddSeyfiJat_DAdd" runat="server" Text="ثبت صیفی جات" ValidationGroup="Group_Login" Font-Bold="true" Width="80px" Height="30px" Font-Names="B Nazanin" Font-Size="Medium" BackColor="#E1E1E1" BorderColor="#333333" ForeColor="#000066" BorderWidth="1px" OnClick="btn_AddSeyfiJat_DAdd_Click" />
+                <asp:Button ID="btn_AddSeyfiJat_DAdd" runat="server" Text="ثبت صیفی جات" ValidationGroup="Group_Login" Font-Bold="true" Width="100px" Height="30px" Font-Names="B Nazanin" Font-Size="Medium" BackColor="#E1E1E1" BorderColor="#333333" ForeColor="#000066" BorderWidth="1px" OnClick="btn_AddSeyfiJat_DAdd_Click" />
             </div>
 
-            <div style="margin-right: 105px; margin-top: -30px;">
+            <div style="margin-right: 125px; margin-top: -30px;">
                 <asp:Button ID="txt_Repeat_DAdd" runat="server" Text="دوباره" ValidationGroup="Group_Login" Font-Bold="true" Width="45px" Height="30px" Font-Names="B Nazanin" Font-Size="Medium" BackColor="#E1E1E1" BorderColor="#333333" ForeColor="#000066" BorderWidth="1px" OnClick="txt_Repeat_DAdd_Click" />
             </div>
-            <div style="margin-right: 160px; margin-top: -30px;">
+            <div style="margin-right: 180px; margin-top: -30px;">
                 <asp:Button ID="Exit_DAdd" runat="server" Text="انصراف" ValidationGroup="Group_Login" Font-Bold="true" Width="55px" Height="30px" Font-Names="B Nazanin" Font-Size="Medium" BackColor="#E1E1E1" BorderColor="#333333" ForeColor="#000066" BorderWidth="1px" OnClick="Exit_DAdd_Click" />
             </div>
             <div style="text-align: center; margin-top: -30px;">
@@ -170,7 +173,7 @@
         </div>
 
         <%--Div EditSeyfiJat--%>
-        <div runat="server" visible="false" id="Div_EditSeyfiJat" style="border: 1px solid #2c2b3d; border-radius: 10px; width: 1000px; height: 400px; margin-top: 50px; margin-right: 70px;">
+        <div runat="server" visible="true" id="Div_EditSeyfiJat" style="border: 1px solid #2c2b3d; border-radius: 10px; width: 1000px; height: 400px; margin-top: 50px; margin-right: 70px;">
             <div style="margin-top: -45px; text-align: center;">
                 <asp:Image ID="Image2" runat="server" ImageUrl="~/Panel Management/image/Miveh.png" Width="80px" Height="80px" />
             </div>
@@ -193,37 +196,34 @@
             </div>
 
             <div style="margin-top: 5px; margin-right: 25px;">
-                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 79px;">
-                    <asp:Label ID="Label9" runat="server" Text="قیمت پیشنهادی محصول :" Font-Bold="true" /></span>
+                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 185px;">
+                    <asp:Label ID="Label9" runat="server" Text="قیمت :" Font-Bold="true" /></span>
                 <asp:TextBox ID="txt_OldPrice_Dedit" runat="server" Width="310px" Height="25px" BackColor="#C9C9C9" BorderColor="#006699" BorderWidth="1px" ValidationGroup="Group_Login" />
-            </div>
-            <div style="margin-top: -25px; margin-right: 570px;">
-                <span style="font-family: 'B Nazanin'; font-size: 15px;">
-                    <asp:Label ID="Label10" runat="server" Text="Label" Font-Bold="true" ForeColor="#CC0000">
-                جهت نمایش
-                    </asp:Label></span>
             </div>
 
             <div style="margin-top: 5px; margin-right: 25px;">
-                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 148px;">
-                    <asp:Label ID="Label11" runat="server" Text="قیمت فروش :" Font-Bold="true" /></span>
+                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 133px;">
+                    <asp:Label ID="Label11" runat="server" Text="قیمت برای شما :" Font-Bold="true" /></span>
                 <asp:TextBox ID="txt_NewPrice_Dedit" runat="server" Width="310px" Height="25px" BackColor="#ECEEF3" BorderColor="#006699" BorderWidth="1px" ValidationGroup="Group_Login" />
             </div>
 
             <div style="margin-top: 5px; margin-right: 25px;">
-                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 163px;">
+                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 160px;">
                     <asp:Label ID="Label13" runat="server" Text="تصویر :" Font-Bold="true" /></span>
             </div>
+            <div style="margin-top: -22px; margin-right: 253px;">
+                <asp:FileUpload ID="FileUpload_Picture_DEdit" runat="server" Width="310px" Height="25px" BackColor="#ECEEF3" BorderColor="#006699" BorderWidth="1px" />
+            </div>
             <div style="margin-top: 5px; margin-right: 25px;">
-                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 163px;">
+                <span style="font-family: 'B Nazanin'; font-size: 16px; color: #173976; margin-left: 160px;">
                     <asp:Label ID="Label12" runat="server" Text="توضیحات :" Font-Bold="true" /></span>
                 <asp:TextBox ID="txt_Description_DEdit" runat="server" Width="310px" Height="75px" BackColor="#ECEEF3" BorderColor="#006699" BorderWidth="1px" ValidationGroup="Group_Login" />
             </div>
 
             <div style="margin-right: 20px; margin-top: 30px;">
-                <asp:Button ID="btn_EditSeyfiJat_DEdit" runat="server" Text="ثبت صیفی جات" ValidationGroup="Group_Login" Font-Bold="true" Width="80px" Height="30px" Font-Names="B Nazanin" Font-Size="Medium" BackColor="#E1E1E1" BorderColor="#333333" ForeColor="#000066" BorderWidth="1px" />
+                <asp:Button ID="btn_EditSeyfiJat_DEdit" runat="server" Text="ثبت ویرایش" ValidationGroup="Group_Login" Font-Bold="true" Width="80px" Height="30px" Font-Names="B Nazanin" Font-Size="Medium" BackColor="#E1E1E1" BorderColor="#333333" ForeColor="#000066" BorderWidth="1px" OnClick="btn_EditSeyfiJat_DEdit_Click"/>
             </div>
-             <div style="margin-right: 160px; margin-top: -30px;">
+             <div style="margin-right: 105px; margin-top: -30px;">
                 <asp:Button ID="Exit_DEdit" runat="server" Text="انصراف" ValidationGroup="Group_Login" Font-Bold="true" Width="55px" Height="30px" Font-Names="B Nazanin" Font-Size="Medium" BackColor="#E1E1E1" BorderColor="#333333" ForeColor="#000066" BorderWidth="1px" OnClick="Exit_DEdit_Click" />
             </div>
             <div style="text-align: center; margin-top: -30px;">

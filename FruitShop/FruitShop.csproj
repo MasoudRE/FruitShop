@@ -337,7 +337,6 @@
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
     <Content Include="Contact.aspx" />
     <Content Include="DefaultMag.aspx" />
-    <Content Include="Gallery.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="obj\Debug\FruitShop.csproj.FileListAbsolute.txt" />
@@ -362,7 +361,6 @@
     <Content Include="Panel Management\image\statistics.png" />
     <Content Include="Panel Management\jquery.flot.js" />
     <Content Include="Panel Management\jquery.min.js" />
-    <Content Include="Sabad.aspx" />
     <Content Include="Sabt_Pardakhti.aspx" />
     <Content Include="Slider\images\Slid1-tn.jpg" />
     <Content Include="Slider\images\Slid1.jpg" />
@@ -529,10 +527,6 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-    <Compile Include="Sabad.aspx.cs">
-      <DependentUpon>Sabad.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Sabt_Pardakhti.aspx.cs">
       <DependentUpon>Sabt_Pardakhti.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -604,10 +598,6 @@
     </Compile>
     <Compile Include="DefaultMag.aspx.cs">
       <DependentUpon>DefaultMag.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Gallery.aspx.cs">
-      <DependentUpon>Gallery.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Global.asax.cs">

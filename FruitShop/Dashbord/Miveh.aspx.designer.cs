@@ -265,13 +265,13 @@ namespace FruitShop.Dashbord {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// txt_AshkasID_DEdit control.
+        /// txt_MahsolatID_DEdit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_AshkasID_DEdit;
+        protected global::System.Web.UI.WebControls.TextBox txt_MahsolatID_DEdit;
         
         /// <summary>
         /// Label3 control.
@@ -301,24 +301,6 @@ namespace FruitShop.Dashbord {
         protected global::System.Web.UI.WebControls.TextBox txt_Name_DEdit;
         
         /// <summary>
-        /// Label5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
-        
-        /// <summary>
-        /// txt_OldPrice_DEdit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_OldPrice_DEdit;
-        
-        /// <summary>
         /// Label6 control.
         /// </summary>
         /// <remarks>
@@ -335,6 +317,24 @@ namespace FruitShop.Dashbord {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_NewPrice_DEdit;
+        
+        /// <summary>
+        /// Label5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label5;
+        
+        /// <summary>
+        /// txt_OldPrice_DEdit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_OldPrice_DEdit;
         
         /// <summary>
         /// Label7 control.
@@ -400,15 +400,6 @@ namespace FruitShop.Dashbord {
         protected global::System.Web.UI.WebControls.TextBox txt_Description_DEdit;
         
         /// <summary>
-        /// img control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage img;
-        
-        /// <summary>
         /// btn_EditMiveh_DEdit control.
         /// </summary>
         /// <remarks>
@@ -434,5 +425,14 @@ namespace FruitShop.Dashbord {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lb_Status_DEdit;
+        
+        /// <summary>
+        /// img control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage img;
     }
 }

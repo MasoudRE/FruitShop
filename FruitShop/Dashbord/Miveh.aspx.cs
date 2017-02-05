@@ -90,17 +90,23 @@ namespace FruitShop.Dashbord
             {
                 case DataLayer.Utils.Image.UploadErrors.BigFile:
                     {
-                        //lblStat="";
+                        lb_Status_DAdd.Visible = true;
+                        lb_Status_DAdd.Text = "اندازه فایل زیاد می باشد";
+                        lb_Status_DAdd.ForeColor = System.Drawing.Color.Green;
                         return;
                     }
                 case DataLayer.Utils.Image.UploadErrors.NoFile:
                     {
-                        //lblStat="";
+                        lb_Status_DAdd.Visible = true;
+                        lb_Status_DAdd.Text = "فایلی وجود ندارد";
+                        lb_Status_DAdd.ForeColor = System.Drawing.Color.Green;
                         return;
                     }
                 case DataLayer.Utils.Image.UploadErrors.Error:
                     {
-                        //lblStat="";
+                        lb_Status_DAdd.Visible = true;
+                        lb_Status_DAdd.Text = "مشکل سیستمی";
+                        lb_Status_DAdd.ForeColor = System.Drawing.Color.Green;
                         return;
                     }
             }
@@ -108,11 +114,12 @@ namespace FruitShop.Dashbord
 
             var mahsol = new Mahsolat()
             {
+                ImageUrl = imageUrl,
                 MahsolatID = MahsolatID,
-                Name = txt_Name_DEdit.Text,
-                OldPrice = txt_OldPrice_DEdit.Text.ToLong(),
-                NewPrice = txt_NewPrice_DEdit.Text.ToLong(),
-                Description = txt_Description_DEdit.Text,
+                Name = txt_Name_DAdd.Text,
+                OldPrice = txt_OldPrice_DAdd.Text.ToLong(),
+                NewPrice = txt_NewPrice_DAdd.Text.ToLong(),
+                Description = txt_Description_DAdd.Text,
             };
 
             if (Mahsolat.Add(mahsol))
@@ -151,12 +158,16 @@ namespace FruitShop.Dashbord
             {
                 case DataLayer.Utils.Image.UploadErrors.BigFile:
                     {
-                        //lblStat="";
+                        lb_Status_DEdit.Visible = true;
+                        lb_Status_DEdit.Text = "اندازه فایل زیاد می باشد";
+                        lb_Status_DEdit.ForeColor = System.Drawing.Color.Green;
                         return;
                     }
                 case DataLayer.Utils.Image.UploadErrors.Error:
                     {
-                        //lblStat="";
+                        lb_Status_DEdit.Visible = true;
+                        lb_Status_DEdit.Text = "خطا سیستمی";
+                        lb_Status_DEdit.ForeColor = System.Drawing.Color.Green;
                         return;
                     }
             }
