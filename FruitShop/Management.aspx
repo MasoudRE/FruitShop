@@ -10,37 +10,37 @@
         <ul data-collapse="collapse" class="quick">
             <li>
                 <a href="Access.aspx">
-                    <img src="Panel Management/image/statistics.png">
+                    <img src="/Panel Management/image/statistics.png">
                     <span>مدیریت کاربران</span>
                 </a>
             </li>
             <li>
                 <a href="Varizi.aspx">
-                    <img alt="" src="Panel Management/image/order-149.png">
+                    <img alt="" src="/Panel Management/image/order-149.png">
                     <span>مدیریت مالی</span>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img alt="" src="Panel Management/image/shipping.png">
+                    <img alt="" src="/Panel Management/image/shipping.png">
                     <span>بخش گزارش ها</span>
                 </a>
             </li>
             <li>
                 <a href="Miveh.aspx">
-                    <img alt="" src="Panel Management/image/my-account.png">
+                    <img alt="" src="/Panel Management/image/my-account.png">
                     <span>میوه</span>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img alt="" src="Panel Management/image/full-time.png">
+                    <img alt="" src="/Panel Management/image/full-time.png">
                     <span>پیام ها</span>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img alt="" src="Panel Management/image/lock.png">
+                    <img alt="" src="/Panel Management/image/lock.png">
                     <span>تنظیمات</span>
                 </a>
             </li>

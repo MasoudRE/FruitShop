@@ -13,5 +13,10 @@ namespace FruitShop.Dashbord
         {
 
         }
+
+        protected void Unnamed_ServerClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }
