@@ -74,6 +74,7 @@ namespace FruitShop.Dashbord
             txt_Name_DEdit.Text = mahsol.Name;
             txt_OldPrice_DEdit.Text = mahsol.OldPrice.ToString();
             txt_NewPrice_DEdit.Text = mahsol.NewPrice.ToString();
+            txt_Description_DEdit.Text = mahsol.Description;
 
         }
         protected void btn_AddMiveh_Click(object sender, EventArgs e)
@@ -108,7 +109,9 @@ namespace FruitShop.Dashbord
 
         protected void Exit_DAdd_Click(object sender, EventArgs e)
         {
+            Div_MivehShow.Visible = true;
 
+            Div_AddMiveh.Visible = false;
         }
 
         protected void btn_EditMiveh_DEdit_Click(object sender, EventArgs e)
@@ -134,14 +137,11 @@ namespace FruitShop.Dashbord
             }
         }
 
-        protected void btn_Repeat_DEdit_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         protected void btn_Exit_DEdit_Click(object sender, EventArgs e)
         {
+            Div_MivehShow.Visible = true;
 
+            Div_EditMiveh.Visible = false;
         }
 
         protected void Unnamed_ServerClick(object sender, EventArgs e)

@@ -192,6 +192,7 @@
     <Compile Include="ViewModels\Mahsolat.cs" />
     <Compile Include="ViewModels\Ashkhas.cs" />
     <Compile Include="ViewModels\BarNameh.cs" />
+    <Compile Include="ViewModels\SeyfiJat.cs" />
     <Compile Include="ViewModels\Users.cs" />
   </ItemGroup>
   <ItemGroup>

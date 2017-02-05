@@ -97,11 +97,6 @@ namespace FruitShop.Dashbord
             Div_EditAshkhas.Visible = false;
         }
 
-        protected void Repeat_DivEdit_Click(object sender, EventArgs e)
-        {
-
-        }
-
         protected void Repeat_DivAdd_Click(object sender, EventArgs e)
         {
 
